@@ -55,7 +55,7 @@
 		C031FF0126638F030098E474 = {
 			isa = PBXGroup;
 			children = (
-				C031FF2526638F5B0098E474 /* Source */,
+				C031FF2526638F5B0098E474 /* Sources */,
 				C031FF0D26638F030098E474 /* Swift Package */,
 				C031FF1826638F030098E474 /* Swift PackageTests */,
 				C031FF0C26638F030098E474 /* Products */,
@@ -89,12 +89,12 @@
 			path = "Swift PackageTests";
 			sourceTree = "<group>";
 		};
-		C031FF2526638F5B0098E474 /* Source */ = {
+		C031FF2526638F5B0098E474 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				C031FF2626638F6E0098E474 /* SimpleLoginPackage */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		C031FF2626638F6E0098E474 /* SimpleLoginPackage */ = {
