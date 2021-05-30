@@ -11,7 +11,7 @@ import PackageDescription
 let package = Package(
     name: "SimpleLoginPackage",
     products: [
-        .library(name: "SimpleLoginPackage", targets: ["Swift Package"]),
+        .library(name: "SimpleLoginPackage", targets: ["SimpleLoginPackage"]),
     ],
     targets: [
         .target(
