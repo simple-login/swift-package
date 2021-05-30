@@ -1,3 +1,4 @@
+// swift-tools-version:5.4.0
 //
 //  Swift_PackageTests.swift
 //  Swift PackageTests
