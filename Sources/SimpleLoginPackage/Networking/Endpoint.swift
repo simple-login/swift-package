@@ -42,8 +42,9 @@ struct Endpoint {
     var baseUrl: URL
 }
 
+// MARK: - Account
 extension Endpoint {
-    // POST /api/auth/login
+    // MARK: - POST /api/auth/login
     // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthlogin
     func login(email: String, password: String, device: String) -> URLRequest {
         let url = baseUrl.appending(path: "/api/auth/login")
@@ -55,7 +56,7 @@ extension Endpoint {
         return request
     }
 
-    // POST /api/auth/mfa
+    // MARK: - POST /api/auth/mfa
     // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthmfa
     func mfa(token: String, key: String, device: String) -> URLRequest {
         let url = baseUrl.appending(path: "/api/auth/mfa")
@@ -64,6 +65,16 @@ extension Endpoint {
         request.addJsonRequestBody(["mfa_token": token,
                                     "mfa_key": key,
                                     "device": device])
+        return request
+    }
+
+    // MARK: - POST /api/auth/register
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthregister
+    func register(email: String, password: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/auth/register")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addJsonRequestBody(["email": email, "password": password])
         return request
     }
 }

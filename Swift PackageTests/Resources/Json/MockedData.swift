@@ -21,6 +21,7 @@ final class MockedData {
     static let errorResponse1 = jsonData(forJsonName: "ErrorResponse1")
     static let errorResponse2 = jsonData(forJsonName: "ErrorResponse2")
     static let errorResponse3 = jsonData(forJsonName: "ErrorResponse3")
+    static let message = jsonData(forJsonName: "Message")
     static let mfa = jsonData(forJsonName: "Mfa")
     static let userInfo1 = jsonData(forJsonName: "UserInfo1")
     static let userInfo2 = jsonData(forJsonName: "UserInfo2")

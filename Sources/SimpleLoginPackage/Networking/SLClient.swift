@@ -67,4 +67,9 @@ extension SLClient {
         let request = endpoint.mfa(token: token, key: key, device: device)
         return perform(request)
     }
+
+    func register(email: String, password: String) -> AnyPublisher<MessageResponse, SLClientError> {
+        let request = endpoint.register(email: email, password: password)
+        return perform(request)
+    }
 }
