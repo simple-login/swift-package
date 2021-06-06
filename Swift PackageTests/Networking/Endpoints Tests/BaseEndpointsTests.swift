@@ -10,7 +10,7 @@ import Mocker
 @testable import Swift_Package
 import XCTest
 
-class SLClientTests: XCTestCase {
+class BaseEndpointsTests: XCTestCase {
     var sut: SLClient!
     var cancellableSet: Set<AnyCancellable> = []
 
@@ -19,5 +19,9 @@ class SLClientTests: XCTestCase {
         let sessionConfig = URLSessionConfiguration.ephemeral
         sessionConfig.protocolClasses = [MockingURLProtocol.self]
         sut = SLClient(session: URLSession(configuration: sessionConfig))
+    }
+
+    func waitForExpectations() {
+        waitForExpectations(timeout: 5.0, handler: nil)
     }
 }

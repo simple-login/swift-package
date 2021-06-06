@@ -10,19 +10,22 @@ import Mocker
 @testable import Swift_Package
 import XCTest
 
-class SLClientLoginTests: SLClientTests {
+// https://github.com/simple-login/app/blob/master/docs/api.md#account-endpoints
+class AccountEndpointsTests: BaseEndpointsTests {}
+
+// MARK: - POST /api/auth/login
+// https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthlogin
+extension AccountEndpointsTests {
     func testLoginSuccess() throws {
         // given
         let expectation = expectation(description: "userLogin object is returned")
-        let email = String.randomEmail()
-        let password = String.randomPassword()
-        let device = String.randomName()
-        let loginRequestUrl = try XCTUnwrap(sut.endpoint.login(email: email,
-                                                               password: password,
-                                                               device: device).url)
+        let loginRequest = sut.endpoint.login(email: .randomEmail(),
+                                              password: .randomPassword(),
+                                              device: .randomName())
+        let loginUrl = try XCTUnwrap(loginRequest.url)
 
         // when
-        Mock(url: loginRequestUrl,
+        Mock(url: loginUrl,
              dataType: .json,
              statusCode: 200,
              data: [.post: MockedData.userInfo1]).register()
@@ -31,29 +34,32 @@ class SLClientLoginTests: SLClientTests {
         sut.login(email: .randomEmail(),
                   password: .randomPassword(),
                   device: .randomName())
-            .sink { _ in
+            .sink { fini in
+                switch fini {
+                case .failure: XCTFail("Request should not fail")
+                case .finished: break
+                }
             } receiveValue: { userLogin in
                 XCTAssertNotNil(userLogin)
                 expectation.fulfill()
             }
             .store(in: &cancellableSet)
 
-        waitForExpectations(timeout: 5.0, handler: nil)
+        waitForExpectations()
     }
 
     func testLoginFailureWithErrorResponse() throws {
         // given
-        let expectation = expectation(description: "errorResponse message is returned")
-        let email = String.randomEmail()
-        let password = String.randomPassword()
-        let device = String.randomName()
-        let loginRequestUrl = try XCTUnwrap(sut.endpoint.login(email: email,
-                                                               password: password,
-                                                               device: device).url)
-        let expectedError = try JSONDecoder().decode(ErrorResponse.self, from: MockedData.errorResponse1)
+        let expectation = expectation(description: "errorResponse object is returned")
+        let loginRequest = sut.endpoint.login(email: .randomEmail(),
+                                              password: .randomPassword(),
+                                              device: .randomName())
+        let loginUrl = try XCTUnwrap(loginRequest.url)
+        let expectedError = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse1)
 
         // when
-        Mock(url: loginRequestUrl,
+        Mock(url: loginUrl,
              dataType: .json,
              statusCode: 400,
              data: [.post: MockedData.errorResponse1]).register()
@@ -70,24 +76,23 @@ class SLClientLoginTests: SLClientTests {
                 case .finished: break
                 }
             } receiveValue: { _ in
+                XCTFail("Request should not succeed")
             }
             .store(in: &cancellableSet)
 
-        waitForExpectations(timeout: 5.0, handler: nil)
+        waitForExpectations()
     }
 
     func testLoginFailureWithUnknownErrorResponse() throws {
         // given
-        let expectation = expectation(description: "errorResponse message is returned")
-        let email = String.randomEmail()
-        let password = String.randomPassword()
-        let device = String.randomName()
-        let loginRequestUrl = try XCTUnwrap(sut.endpoint.login(email: email,
-                                                               password: password,
-                                                               device: device).url)
+        let expectation = expectation(description: "errorResponse object is returned")
+        let loginRequest = sut.endpoint.login(email: .randomEmail(),
+                                              password: .randomPassword(),
+                                              device: .randomName())
+        let loginUrl = try XCTUnwrap(loginRequest.url)
 
         // when
-        Mock(url: loginRequestUrl,
+        Mock(url: loginUrl,
              dataType: .json,
              statusCode: 406,
              data: [.post: MockedData.dummy]).register()
@@ -104,24 +109,23 @@ class SLClientLoginTests: SLClientTests {
                 case .finished: break
                 }
             } receiveValue: { _ in
+                XCTFail("Request should not succeed")
             }
             .store(in: &cancellableSet)
 
-        waitForExpectations(timeout: 5.0, handler: nil)
+        waitForExpectations()
     }
 
     func testLoginFailureWithServerError() throws {
         // given
-        let expectation = expectation(description: "errorResponse message is returned")
-        let email = String.randomEmail()
-        let password = String.randomPassword()
-        let device = String.randomName()
-        let loginRequestUrl = try XCTUnwrap(sut.endpoint.login(email: email,
-                                                               password: password,
-                                                               device: device).url)
+        let expectation = expectation(description: "errorResponse object is returned")
+        let loginRequest = sut.endpoint.login(email: .randomEmail(),
+                                              password: .randomPassword(),
+                                              device: .randomName())
+        let loginUrl = try XCTUnwrap(loginRequest.url)
 
         // when
-        Mock(url: loginRequestUrl,
+        Mock(url: loginUrl,
              dataType: .json,
              statusCode: 500,
              data: [.post: MockedData.dummy]).register()
@@ -138,9 +142,10 @@ class SLClientLoginTests: SLClientTests {
                 case .finished: break
                 }
             } receiveValue: { _ in
+                XCTFail("Request should not succeed")
             }
             .store(in: &cancellableSet)
 
-        waitForExpectations(timeout: 5.0, handler: nil)
+        waitForExpectations()
     }
 }

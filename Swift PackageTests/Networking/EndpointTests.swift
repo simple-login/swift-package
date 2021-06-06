@@ -25,7 +25,11 @@ final class EndpointTests: XCTestCase {
     func assertContentTypeIsJson(_ request: URLRequest) {
         XCTAssertEqual(request.allHTTPHeaderFields?["Content-Type"], "application/json")
     }
+}
 
+// MARK: - Account
+// https://github.com/simple-login/app/blob/master/docs/api.md#account-endpoints
+extension EndpointTests {
     func testLoginEndpoint() throws {
         // given
         let email = String.randomEmail()
