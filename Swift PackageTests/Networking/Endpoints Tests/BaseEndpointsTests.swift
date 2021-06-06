@@ -21,6 +21,18 @@ class BaseEndpointsTests: XCTestCase {
         sut = SLClient(session: URLSession(configuration: sessionConfig))
     }
 
+    func expectObject<T>(ofType: T.Type) -> XCTestExpectation {
+        expectation(description: "Expect \(T.self) object")
+    }
+
+    func shouldNotFail() {
+        XCTFail("Should not fail")
+    }
+
+    func shouldNotSucceed() {
+        XCTFail("Should not succeed")
+    }
+
     func waitForExpectations() {
         waitForExpectations(timeout: 5.0, handler: nil)
     }

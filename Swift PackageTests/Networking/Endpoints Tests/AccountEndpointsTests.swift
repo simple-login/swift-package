@@ -18,7 +18,7 @@ class AccountEndpointsTests: BaseEndpointsTests {}
 extension AccountEndpointsTests {
     func testLoginSuccess() throws {
         // given
-        let expectation = expectation(description: "userLogin object is returned")
+        let expectation = expectObject(ofType: UserLogin.self)
         let loginRequest = sut.endpoint.login(email: .randomEmail(),
                                               password: .randomPassword(),
                                               device: .randomName())
@@ -34,9 +34,9 @@ extension AccountEndpointsTests {
         sut.login(email: .randomEmail(),
                   password: .randomPassword(),
                   device: .randomName())
-            .sink { fini in
+            .sink { [weak self] fini in
                 switch fini {
-                case .failure: XCTFail("Request should not fail")
+                case .failure: self?.shouldNotFail()
                 case .finished: break
                 }
             } receiveValue: { userLogin in
@@ -50,13 +50,14 @@ extension AccountEndpointsTests {
 
     func testLoginFailureWithErrorResponse() throws {
         // given
-        let expectation = expectation(description: "errorResponse object is returned")
+        let expectation = expectObject(ofType: ErrorResponse.self)
         let loginRequest = sut.endpoint.login(email: .randomEmail(),
                                               password: .randomPassword(),
                                               device: .randomName())
         let loginUrl = try XCTUnwrap(loginRequest.url)
-        let expectedError = try JSONDecoder().decode(ErrorResponse.self,
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
                                                      from: MockedData.errorResponse1)
+        let expectedError = SLClientError.clientError(errorResponse)
 
         // when
         Mock(url: loginUrl,
@@ -71,12 +72,12 @@ extension AccountEndpointsTests {
             .sink { fini in
                 switch fini {
                 case let .failure(error):
-                    XCTAssertEqual(error, SLClientError.clientError(expectedError))
+                    XCTAssertEqual(error, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
-            } receiveValue: { _ in
-                XCTFail("Request should not succeed")
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
             }
             .store(in: &cancellableSet)
 
@@ -85,7 +86,7 @@ extension AccountEndpointsTests {
 
     func testLoginFailureWithUnknownErrorResponse() throws {
         // given
-        let expectation = expectation(description: "errorResponse object is returned")
+        let expectation = expectObject(ofType: ErrorResponse.self)
         let loginRequest = sut.endpoint.login(email: .randomEmail(),
                                               password: .randomPassword(),
                                               device: .randomName())
@@ -104,12 +105,12 @@ extension AccountEndpointsTests {
             .sink { fini in
                 switch fini {
                 case let .failure(error):
-                    XCTAssertEqual(error, SLClientError.unknown(statusCode: 406))
+                    XCTAssertEqual(error, .unknown(statusCode: 406))
                     expectation.fulfill()
                 case .finished: break
                 }
-            } receiveValue: { _ in
-                XCTFail("Request should not succeed")
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
             }
             .store(in: &cancellableSet)
 
@@ -118,7 +119,7 @@ extension AccountEndpointsTests {
 
     func testLoginFailureWithServerError() throws {
         // given
-        let expectation = expectation(description: "errorResponse object is returned")
+        let expectation = expectObject(ofType: ErrorResponse.self)
         let loginRequest = sut.endpoint.login(email: .randomEmail(),
                                               password: .randomPassword(),
                                               device: .randomName())
@@ -137,12 +138,86 @@ extension AccountEndpointsTests {
             .sink { fini in
                 switch fini {
                 case let .failure(error):
-                    XCTAssertEqual(error, SLClientError.unknown(statusCode: 500))
+                    XCTAssertEqual(error, .unknown(statusCode: 500))
                     expectation.fulfill()
                 case .finished: break
                 }
-            } receiveValue: { _ in
-                XCTFail("Request should not succeed")
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+}
+
+// MARK: - POST /api/auth/mfa
+// https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthmfa
+extension AccountEndpointsTests {
+    func testMfaSuccess() throws {
+        // given
+        let expectation = expectObject(ofType: ApiKey.self)
+        let mfaRequest = sut.endpoint.mfa(token: .randomPassword(),
+                                          key: .randomPassword(),
+                                          device: .randomName())
+        let mfaUrl = try XCTUnwrap(mfaRequest.url)
+
+        // when
+        Mock(url: mfaUrl,
+             dataType: .json,
+             statusCode: 200,
+             data: [.post: MockedData.mfa]).register()
+
+        // then
+        sut.mfa(token: .randomPassword(),
+                key: .randomPassword(),
+                device: .randomName())
+            .sink { [weak self] fini in
+                switch fini {
+                case let .failure(error):
+                    print(error.description)
+                    self?.shouldNotFail()
+                case .finished: break
+                }
+            } receiveValue: { apiKey in
+                XCTAssertEqual(apiKey.value, "eww3jkfeygmbdwmymniociltiabnodmibtbnc")
+                expectation.fulfill()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testMfaFailure() throws {
+        // given
+        let expectation = expectObject(ofType: ErrorResponse.self)
+        let mfaRequest = sut.endpoint.mfa(token: .randomPassword(),
+                                          key: .randomPassword(),
+                                          device: .randomName())
+        let mfaUrl = try XCTUnwrap(mfaRequest.url)
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse2)
+        let expectedError = SLClientError.clientError(errorResponse)
+
+        // when
+        Mock(url: mfaUrl,
+             dataType: .json,
+             statusCode: 400,
+             data: [.post: MockedData.errorResponse2]).register()
+
+        // then
+        sut.mfa(token: .randomPassword(),
+                key: .randomPassword(),
+                device: .randomName())
+            .sink { fini in
+                switch fini {
+                case let .failure(error):
+                    XCTAssertEqual(error, expectedError)
+                    expectation.fulfill()
+                case .finished: break
+                }
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
             }
             .store(in: &cancellableSet)
 

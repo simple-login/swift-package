@@ -30,6 +30,8 @@ final class EndpointTests: XCTestCase {
 // MARK: - Account
 // https://github.com/simple-login/app/blob/master/docs/api.md#account-endpoints
 extension EndpointTests {
+    // POST /api/auth/login
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthlogin
     func testLoginEndpoint() throws {
         // given
         let email = String.randomEmail()
@@ -48,5 +50,27 @@ extension EndpointTests {
         XCTAssertEqual(loginBody["email"] as? String, email)
         XCTAssertEqual(loginBody["password"] as? String, password)
         XCTAssertEqual(loginBody["device"] as? String, device)
+    }
+
+    // POST /api/auth/mfa
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthmfa
+    func testMfaEndpoint() throws {
+        // given
+        let token = String.randomPassword()
+        let key = String.randomPassword()
+        let device = String.randomName()
+        let url = sut.baseUrl.appending(path: "/api/auth/mfa")
+
+        // when
+        let mfaRequest = try XCTUnwrap(sut.mfa(token: token, key: key, device: device))
+        let mfaBody = try XCTUnwrap(mfaRequest.bodyDict)
+
+        // then
+        XCTAssertEqual(mfaRequest.url, url)
+        XCTAssertEqual(mfaRequest.httpMethod, HttpMethod.post)
+        assertContentTypeIsJson(mfaRequest)
+        XCTAssertEqual(mfaBody["mfa_token"] as? String, token)
+        XCTAssertEqual(mfaBody["mfa_key"] as? String, key)
+        XCTAssertEqual(mfaBody["device"] as? String, device)
     }
 }

@@ -14,6 +14,7 @@
 		C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2CFE266ACDA8008E7108 /* UserInfo1.json */; };
 		C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2D00266ACDBB008E7108 /* UserInfo2.json */; };
 		C00B2D03266ACDD8008E7108 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2D02266ACDD8008E7108 /* MockedData.swift */; };
+		C02924F6266CB01500AFFE20 /* Mfa.json in Resources */ = {isa = PBXBuildFile; fileRef = C02924F5266CB01500AFFE20 /* Mfa.json */; };
 		C031FF1526638F030098E474 /* Swift_Package.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C031FF0B26638F030098E474 /* Swift_Package.framework */; };
 		C031FF1C26638F030098E474 /* Swift_Package.h in Headers */ = {isa = PBXBuildFile; fileRef = C031FF0E26638F030098E474 /* Swift_Package.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C031FF2A26638FEF0098E474 /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = C031FF2926638FEF0098E474 /* Alias.swift */; };
@@ -60,6 +61,7 @@
 		C00B2CFE266ACDA8008E7108 /* UserInfo1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo1.json; sourceTree = "<group>"; };
 		C00B2D00266ACDBB008E7108 /* UserInfo2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo2.json; sourceTree = "<group>"; };
 		C00B2D02266ACDD8008E7108 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		C02924F5266CB01500AFFE20 /* Mfa.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mfa.json; sourceTree = "<group>"; };
 		C031FF0B26638F030098E474 /* Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C031FF0E26638F030098E474 /* Swift_Package.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swift_Package.h; sourceTree = "<group>"; };
 		C031FF0F26638F030098E474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,10 +123,12 @@
 		C00B2CFD266ACD97008E7108 /* Json */ = {
 			isa = PBXGroup;
 			children = (
+				C00B2D02266ACDD8008E7108 /* MockedData.swift */,
 				C0727EF5266C1B3D000C0B36 /* Dummy.json */,
 				C0727EE1266C0C41000C0B36 /* ErrorResponse1.json */,
 				C0727EE3266C0C6B000C0B36 /* ErrorResponse2.json */,
 				C0727EE5266C0C90000C0B36 /* ErrorResponse3.json */,
+				C02924F5266CB01500AFFE20 /* Mfa.json */,
 				C00B2CFE266ACDA8008E7108 /* UserInfo1.json */,
 				C00B2D00266ACDBB008E7108 /* UserInfo2.json */,
 			);
@@ -178,7 +182,6 @@
 				C00B2CFC266ACD91008E7108 /* Resources */,
 				C0727ED3266B70E5000C0B36 /* Test Types */,
 				C031FF1B26638F030098E474 /* Info.plist */,
-				C00B2D02266ACDD8008E7108 /* MockedData.swift */,
 			);
 			path = "Swift PackageTests";
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */,
 				C0727EE4266C0C6B000C0B36 /* ErrorResponse2.json in Resources */,
 				C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */,
+				C02924F6266CB01500AFFE20 /* Mfa.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

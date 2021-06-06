@@ -43,12 +43,26 @@ struct Endpoint {
 }
 
 extension Endpoint {
+    // POST /api/auth/login
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthlogin
     func login(email: String, password: String, device: String) -> URLRequest {
         let url = baseUrl.appending(path: "/api/auth/login")
         var request = URLRequest(url: url)
         request.httpMethod = HttpMethod.post
         request.addJsonRequestBody(["email": email,
                                     "password": password,
+                                    "device": device])
+        return request
+    }
+
+    // POST /api/auth/mfa
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthmfa
+    func mfa(token: String, key: String, device: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/auth/mfa")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addJsonRequestBody(["mfa_token": token,
+                                    "mfa_key": key,
                                     "device": device])
         return request
     }

@@ -16,7 +16,11 @@ public struct UserLogin: Decodable {
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
-        self.apiKey = try container.decodeIfPresent(ApiKey.self, forKey: .apiKey)
+        if let apiKeyValue = try container.decodeIfPresent(String.self, forKey: .apiKey) {
+            self.apiKey = ApiKey(value: apiKeyValue)
+        } else {
+            self.apiKey = nil
+        }
         self.email = try container.decode(String.self, forKey: .email)
         self.isMfaEnabled = try container.decode(Bool.self, forKey: .isMfaEnabled)
         self.mfaKey = try container.decodeIfPresent(String.self, forKey: .mfaKey)

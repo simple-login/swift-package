@@ -12,8 +12,13 @@ public struct ApiKey {
 }
 
 extension ApiKey: Decodable {
+    // swiftlint:disable:next type_name
+    private enum Key: String, CodingKey {
+        case value = "api_key"
+    }
+
     public init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        self.value = try container.decode(String.self)
+        let container = try decoder.container(keyedBy: Key.self)
+        self.value = try container.decode(String.self, forKey: .value)
     }
 }
