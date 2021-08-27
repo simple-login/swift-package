@@ -82,4 +82,9 @@ extension SLClient {
         let request = endpoint.reactivate(email: email)
         return perform(request)
     }
+
+    func forgotPassword(email: String) -> AnyPublisher<OkResponse, SLClientError> {
+        let request = endpoint.forgotPassword(email: email)
+        return perform(request)
+    }
 }

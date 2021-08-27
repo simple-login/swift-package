@@ -415,3 +415,66 @@ extension AccountEndpointsTests {
         waitForExpectations()
     }
 }
+
+// MARK: - POST /api/auth/forgot_password
+// https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthforgot_password
+extension AccountEndpointsTests {
+    func testForgotPasswordSuccess() throws {
+        // given
+        let expectation = expectObject(ofType: OkResponse.self)
+        let forgotPasswordRequest = sut.endpoint.forgotPassword(email: .randomEmail())
+        let forgotPasswordUrl = try XCTUnwrap(forgotPasswordRequest.url)
+
+        // when
+        Mock(url: forgotPasswordUrl,
+             dataType: .json,
+             statusCode: 200,
+             data: [.post: MockedData.ok]).register()
+
+        // then
+        sut.forgotPassword(email: .randomEmail())
+            .sink { [weak self] fini in
+                switch fini {
+                case .failure: self?.shouldNotFail()
+                case .finished: break
+                }
+            } receiveValue: { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testForgotPasswordFailure() throws {
+        // given
+        let expectation = expectObject(ofType: ErrorResponse.self)
+        let forgotPasswordRequest = sut.endpoint.forgotPassword(email: .randomEmail())
+        let forgotPasswordUrl = try XCTUnwrap(forgotPasswordRequest.url)
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse3)
+        let expectedError = SLClientError.clientError(errorResponse)
+
+        // when
+        Mock(url: forgotPasswordUrl,
+             dataType: .json,
+             statusCode: 400,
+             data: [.post: MockedData.errorResponse3]).register()
+
+        // then
+        sut.forgotPassword(email: .randomEmail())
+            .sink { fini in
+                switch fini {
+                case let .failure(error):
+                    XCTAssertEqual(error, expectedError)
+                    expectation.fulfill()
+                case .finished: break
+                }
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+}

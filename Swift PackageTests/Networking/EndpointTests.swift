@@ -131,4 +131,22 @@ extension EndpointTests {
         assertContentTypeIsJson(reactivateRequest)
         XCTAssertEqual(reactivateBody["email"] as? String, email)
     }
+
+    // MARK: - POST /api/auth/forgot_password
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthforgot_password
+    func testForgotPasswordEndpoint() throws {
+        // given
+        let email = String.randomEmail()
+        let url = sut.baseUrl.appending(path: "/api/auth/forgot_password")
+
+        // when
+        let forgotPasswordRequest = try XCTUnwrap(sut.forgotPassword(email: email))
+        let forgotPasswordBody = try XCTUnwrap(forgotPasswordRequest.bodyDict)
+
+        // then
+        XCTAssertEqual(forgotPasswordRequest.url, url)
+        XCTAssertEqual(forgotPasswordRequest.httpMethod, HttpMethod.post)
+        assertContentTypeIsJson(forgotPasswordRequest)
+        XCTAssertEqual(forgotPasswordBody["email"] as? String, email)
+    }
 }

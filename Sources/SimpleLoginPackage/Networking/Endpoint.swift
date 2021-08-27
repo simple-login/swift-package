@@ -98,4 +98,14 @@ extension Endpoint {
         request.addJsonRequestBody(["email": email])
         return request
     }
+
+    // MARK: - POST /api/auth/forgot_password
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthforgot_password
+    func forgotPassword(email: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/auth/forgot_password")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addJsonRequestBody(["email": email])
+        return request
+    }
 }
