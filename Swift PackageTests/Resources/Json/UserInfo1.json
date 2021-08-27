@@ -1,7 +1,7 @@
 {
-    "api_key": "eacfxawdwmymniociltiabnodmibtbnc",
-    "email": "john.doe@example.com",
-    "mfa_enabled": false,
-    "mfa_key": null,
-    "name": "John Doe"
+  "name": "John Doe",
+  "is_premium": false,
+  "email": "john@doe.com",
+  "in_trial": true,
+  "profile_picture_url": "https://profile.png"
 }

@@ -25,6 +25,10 @@ final class EndpointTests: XCTestCase {
     func assertContentTypeIsJson(_ request: URLRequest) {
         XCTAssertEqual(request.allHTTPHeaderFields?["Content-Type"], "application/json")
     }
+
+    func assertApiKeyAttached(_ request: URLRequest, apiKey: ApiKey) {
+        XCTAssertEqual(request.allHTTPHeaderFields?["Authentication"], apiKey.value)
+    }
 }
 
 // MARK: - Account
@@ -148,5 +152,21 @@ extension EndpointTests {
         XCTAssertEqual(forgotPasswordRequest.httpMethod, HttpMethod.post)
         assertContentTypeIsJson(forgotPasswordRequest)
         XCTAssertEqual(forgotPasswordBody["email"] as? String, email)
+    }
+
+    // MARK: - GET /api/user_info
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiuser_info
+    func testGetUserInfoEndpoint() throws {
+        // given
+        let apiKey = ApiKey.random()
+        let url = sut.baseUrl.appending(path: "/api/user_info")
+
+        // when
+        let getUserInfoRequest = try XCTUnwrap(sut.getUserInfo(apiKey: apiKey))
+
+        // then
+        XCTAssertEqual(getUserInfoRequest.url, url)
+        XCTAssertEqual(getUserInfoRequest.httpMethod, HttpMethod.get)
+        assertApiKeyAttached(getUserInfoRequest, apiKey: apiKey)
     }
 }

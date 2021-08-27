@@ -11,4 +11,6 @@ extension ApiKey: Equatable {
     public static func == (lhs: ApiKey, rhs: ApiKey) -> Bool {
         lhs.value == rhs.value
     }
+
+    static func random() -> ApiKey { .init(value: UUID().uuidString) }
 }

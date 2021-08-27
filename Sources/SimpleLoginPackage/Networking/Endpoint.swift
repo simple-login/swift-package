@@ -108,4 +108,14 @@ extension Endpoint {
         request.addJsonRequestBody(["email": email])
         return request
     }
+
+    // MARK: - GET /api/user_info
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiuser_info
+    func getUserInfo(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/user_info")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }

@@ -16,6 +16,8 @@
 		C00B2D03266ACDD8008E7108 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2D02266ACDD8008E7108 /* MockedData.swift */; };
 		C020018226D97B6D0057C345 /* OkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020018126D97B6D0057C345 /* OkResponse.swift */; };
 		C020018426D97C100057C345 /* Ok.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018326D97C100057C345 /* Ok.json */; };
+		C020018626D9815A0057C345 /* UserLogin1.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018526D9815A0057C345 /* UserLogin1.json */; };
+		C020018826D981670057C345 /* UserLogin2.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018726D981670057C345 /* UserLogin2.json */; };
 		C02924F6266CB01500AFFE20 /* Mfa.json in Resources */ = {isa = PBXBuildFile; fileRef = C02924F5266CB01500AFFE20 /* Mfa.json */; };
 		C02924F8266CBBC300AFFE20 /* MessageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02924F7266CBBC300AFFE20 /* MessageResponse.swift */; };
 		C02924FA266CBC3700AFFE20 /* Message.json in Resources */ = {isa = PBXBuildFile; fileRef = C02924F9266CBC3700AFFE20 /* Message.json */; };
@@ -68,6 +70,8 @@
 		C00B2D02266ACDD8008E7108 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		C020018126D97B6D0057C345 /* OkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkResponse.swift; sourceTree = "<group>"; };
 		C020018326D97C100057C345 /* Ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ok.json; sourceTree = "<group>"; };
+		C020018526D9815A0057C345 /* UserLogin1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserLogin1.json; sourceTree = "<group>"; };
+		C020018726D981670057C345 /* UserLogin2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserLogin2.json; sourceTree = "<group>"; };
 		C02924F5266CB01500AFFE20 /* Mfa.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mfa.json; sourceTree = "<group>"; };
 		C02924F7266CBBC300AFFE20 /* MessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageResponse.swift; sourceTree = "<group>"; };
 		C02924F9266CBC3700AFFE20 /* Message.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Message.json; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				C020018326D97C100057C345 /* Ok.json */,
 				C00B2CFE266ACDA8008E7108 /* UserInfo1.json */,
 				C00B2D00266ACDBB008E7108 /* UserInfo2.json */,
+				C020018526D9815A0057C345 /* UserLogin1.json */,
+				C020018726D981670057C345 /* UserLogin2.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -407,8 +413,10 @@
 				C02924FA266CBC3700AFFE20 /* Message.json in Resources */,
 				C0727EE2266C0C41000C0B36 /* ErrorResponse1.json in Resources */,
 				C0727EE6266C0C90000C0B36 /* ErrorResponse3.json in Resources */,
+				C020018826D981670057C345 /* UserLogin2.json in Resources */,
 				C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */,
 				C0727EE4266C0C6B000C0B36 /* ErrorResponse2.json in Resources */,
+				C020018626D9815A0057C345 /* UserLogin1.json in Resources */,
 				C020018426D97C100057C345 /* Ok.json in Resources */,
 				C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */,
 				C02924F6266CB01500AFFE20 /* Mfa.json in Resources */,

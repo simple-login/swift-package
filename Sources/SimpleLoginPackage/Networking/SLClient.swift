@@ -87,4 +87,9 @@ extension SLClient {
         let request = endpoint.forgotPassword(email: email)
         return perform(request)
     }
+
+    func getUserInfo(apiKey: ApiKey) -> AnyPublisher<UserInfo, SLClientError> {
+        let request = endpoint.getUserInfo(apiKey: apiKey)
+        return perform(request)
+    }
 }

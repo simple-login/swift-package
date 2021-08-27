@@ -10,7 +10,7 @@ import XCTest
 
 final class UserLoginTests: XCTestCase {
     func testUserLoginWithApiKey() throws {
-        let sut = try JSONDecoder().decode(UserLogin.self, from: MockedData.userInfo1)
+        let sut = try JSONDecoder().decode(UserLogin.self, from: MockedData.userLogin1)
         XCTAssertEqual(sut.apiKey, ApiKey(value: "eacfxawdwmymniociltiabnodmibtbnc"))
         XCTAssertEqual(sut.email, "john.doe@example.com")
         XCTAssertFalse(sut.isMfaEnabled)
@@ -19,7 +19,7 @@ final class UserLoginTests: XCTestCase {
     }
 
     func testUserLoginWithoutApiKey() throws {
-        let sut = try JSONDecoder().decode(UserLogin.self, from: MockedData.userInfo2)
+        let sut = try JSONDecoder().decode(UserLogin.self, from: MockedData.userLogin2)
         XCTAssertNil(sut.apiKey)
         XCTAssertEqual(sut.email, "jane.doe@example.com")
         XCTAssertTrue(sut.isMfaEnabled)

@@ -28,7 +28,7 @@ extension AccountEndpointsTests {
         Mock(url: loginUrl,
              dataType: .json,
              statusCode: 200,
-             data: [.post: MockedData.userInfo1]).register()
+             data: [.post: MockedData.userLogin1]).register()
 
         // then
         sut.login(email: .randomEmail(),
@@ -463,6 +463,69 @@ extension AccountEndpointsTests {
 
         // then
         sut.forgotPassword(email: .randomEmail())
+            .sink { fini in
+                switch fini {
+                case let .failure(error):
+                    XCTAssertEqual(error, expectedError)
+                    expectation.fulfill()
+                case .finished: break
+                }
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+}
+
+// MARK: - GET /api/user_info
+// https://github.com/simple-login/app/blob/master/docs/api.md#get-apiuser_info
+extension AccountEndpointsTests {
+    func testGetUserInfoSuccess() throws {
+        // given
+        let expectation = expectObject(ofType: UserInfo.self)
+        let getUserInfoRequest = sut.endpoint.getUserInfo(apiKey: .random())
+        let getUserInfoUrl = try XCTUnwrap(getUserInfoRequest.url)
+
+        // when
+        Mock(url: getUserInfoUrl,
+             dataType: .json,
+             statusCode: 200,
+             data: [.get: MockedData.userInfo2]).register()
+
+        // then
+        sut.getUserInfo(apiKey: .random())
+            .sink { [weak self] fini in
+                switch fini {
+                case .failure: self?.shouldNotFail()
+                case .finished: break
+                }
+            } receiveValue: { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testGetUserInfoFailure() throws {
+        // given
+        let expectation = expectObject(ofType: ErrorResponse.self)
+        let getUserInfoRequest = sut.endpoint.getUserInfo(apiKey: .random())
+        let getUserInfoUrl = try XCTUnwrap(getUserInfoRequest.url)
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse1)
+        let expectedError = SLClientError.clientError(errorResponse)
+
+        // when
+        Mock(url: getUserInfoUrl,
+             dataType: .json,
+             statusCode: 400,
+             data: [.get: MockedData.errorResponse1]).register()
+
+        // then
+        sut.getUserInfo(apiKey: .random())
             .sink { fini in
                 switch fini {
                 case let .failure(error):

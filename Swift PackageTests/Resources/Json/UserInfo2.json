@@ -1,7 +1,7 @@
 {
-    "api_key": null,
-    "email": "jane.doe@example.com",
-    "mfa_enabled": true,
-    "mfa_key": "dnkjhq73n1i945umxux21oe38yn",
-    "name": "Jane Doe"
+  "name": "Jane Doe",
+  "is_premium": true,
+  "email": "jane@doe.com",
+  "in_trial": false,
+  "profile_picture_url": "https://profile.png"
 }
