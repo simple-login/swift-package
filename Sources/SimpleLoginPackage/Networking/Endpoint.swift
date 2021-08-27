@@ -88,4 +88,14 @@ extension Endpoint {
         request.addJsonRequestBody(["email": email, "code": code])
         return request
     }
+
+    // MARK: - POST /api/auth/reactivate
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthreactivate
+    func reactivate(email: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/auth/reactivate")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addJsonRequestBody(["email": email])
+        return request
+    }
 }

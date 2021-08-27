@@ -352,3 +352,66 @@ extension AccountEndpointsTests {
         waitForExpectations()
     }
 }
+
+// MARK: - POST /api/auth/reactivate
+// https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthreactivate
+extension AccountEndpointsTests {
+    func testReactivateSuccess() throws {
+        // given
+        let expectation = expectObject(ofType: MessageResponse.self)
+        let reactivateRequest = sut.endpoint.reactivate(email: .randomEmail())
+        let reactivateUrl = try XCTUnwrap(reactivateRequest.url)
+
+        // when
+        Mock(url: reactivateUrl,
+             dataType: .json,
+             statusCode: 200,
+             data: [.post: MockedData.message]).register()
+
+        // then
+        sut.reactivate(email: .randomEmail())
+            .sink { [weak self] fini in
+                switch fini {
+                case .failure: self?.shouldNotFail()
+                case .finished: break
+                }
+            } receiveValue: { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testReactivateFailure() throws {
+        // given
+        let expectation = expectObject(ofType: ErrorResponse.self)
+        let reactivateRequest = sut.endpoint.reactivate(email: .randomEmail())
+        let reactivateUrl = try XCTUnwrap(reactivateRequest.url)
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse2)
+        let expectedError = SLClientError.clientError(errorResponse)
+
+        // when
+        Mock(url: reactivateUrl,
+             dataType: .json,
+             statusCode: 400,
+             data: [.post: MockedData.errorResponse2]).register()
+
+        // then
+        sut.reactivate(email: .randomEmail())
+            .sink { fini in
+                switch fini {
+                case let .failure(error):
+                    XCTAssertEqual(error, expectedError)
+                    expectation.fulfill()
+                case .finished: break
+                }
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+}
