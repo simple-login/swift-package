@@ -72,4 +72,9 @@ extension SLClient {
         let request = endpoint.register(email: email, password: password)
         return perform(request)
     }
+
+    func activate(email: String, code: String) -> AnyPublisher<MessageResponse, SLClientError> {
+        let request = endpoint.activate(email: email, code: code)
+        return perform(request)
+    }
 }

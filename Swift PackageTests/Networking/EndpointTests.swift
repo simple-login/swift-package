@@ -93,4 +93,24 @@ extension EndpointTests {
         XCTAssertEqual(registerBody["email"] as? String, email)
         XCTAssertEqual(registerBody["password"] as? String, password)
     }
+
+    // MARK: - POST /api/auth/activate
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthactivate
+    func testActivateEndpoint() throws {
+        // given
+        let email = String.randomEmail()
+        let code = String.randomName()
+        let url = sut.baseUrl.appending(path: "/api/auth/activate")
+
+        // when
+        let activateRequest = try XCTUnwrap(sut.activate(email: email, code: code))
+        let activateBody = try XCTUnwrap(activateRequest.bodyDict)
+
+        // then
+        XCTAssertEqual(activateRequest.url, url)
+        XCTAssertEqual(activateRequest.httpMethod, HttpMethod.post)
+        assertContentTypeIsJson(activateRequest)
+        XCTAssertEqual(activateBody["email"] as? String, email)
+        XCTAssertEqual(activateBody["code"] as? String, code)
+    }
 }
