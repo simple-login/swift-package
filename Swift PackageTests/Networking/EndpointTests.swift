@@ -169,4 +169,45 @@ extension EndpointTests {
         XCTAssertEqual(getUserInfoRequest.httpMethod, HttpMethod.get)
         assertApiKeyAttached(getUserInfoRequest, apiKey: apiKey)
     }
+
+    // MARK: - PATCH /api/user_info
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apiuser_info
+    func testUpdateProfilePictureEndpoint() throws {
+        // given
+        let apiKey = ApiKey.random()
+        let profilePicture = String.randomNullableName()
+        let url = sut.baseUrl.appending(path: "/api/user_info")
+
+        // when
+        let updateProfilePictureRequest =
+            try XCTUnwrap(sut.updateProfilePicture(apiKey: apiKey,
+                                                   profilePicture: profilePicture))
+        let updateProfilePictureBody = try XCTUnwrap(updateProfilePictureRequest.bodyDict)
+
+        // then
+        XCTAssertEqual(updateProfilePictureRequest.url, url)
+        XCTAssertEqual(updateProfilePictureRequest.httpMethod, HttpMethod.patch)
+        assertContentTypeIsJson(updateProfilePictureRequest)
+        assertApiKeyAttached(updateProfilePictureRequest, apiKey: apiKey)
+        XCTAssertEqual(updateProfilePictureBody["profile_picture"] as? String, profilePicture)
+    }
+
+    func testUpdateProfileNameEndpoint() throws {
+        // given
+        let apiKey = ApiKey.random()
+        let name = String.randomNullableName()
+        let url = sut.baseUrl.appending(path: "/api/user_info")
+
+        // when
+        let updateProfileNameRequest = try XCTUnwrap(sut.updateProfileName(apiKey: apiKey,
+                                                                           name: name))
+        let updateProfileNameBody = try XCTUnwrap(updateProfileNameRequest.bodyDict)
+
+        // then
+        XCTAssertEqual(updateProfileNameRequest.url, url)
+        XCTAssertEqual(updateProfileNameRequest.httpMethod, HttpMethod.patch)
+        assertContentTypeIsJson(updateProfileNameRequest)
+        assertApiKeyAttached(updateProfileNameRequest, apiKey: apiKey)
+        XCTAssertEqual(updateProfileNameBody["name"] as? String, name)
+    }
 }

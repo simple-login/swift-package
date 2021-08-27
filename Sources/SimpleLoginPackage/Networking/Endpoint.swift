@@ -118,4 +118,24 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - PATCH /api/user_info
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apiuser_info
+    func updateProfilePicture(apiKey: ApiKey, profilePicture: String?) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/user_info")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.patch
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(["profile_picture": profilePicture])
+        return request
+    }
+
+    func updateProfileName(apiKey: ApiKey, name: String?) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/user_info")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.patch
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(["name": name])
+        return request
+    }
 }

@@ -541,3 +541,133 @@ extension AccountEndpointsTests {
         waitForExpectations()
     }
 }
+
+// MARK: - PATCH /api/user_info
+// https://github.com/simple-login/app/blob/master/docs/api.md#patch-apiuser_info
+extension AccountEndpointsTests {
+    func testUpdateProfilePictureSuccess() throws {
+        // given
+        let expectation = expectObject(ofType: UserInfo.self)
+        let updateProfilePictureRequest =
+            sut.endpoint.updateProfilePicture(apiKey: .random(),
+                                              profilePicture: .randomNullableName())
+        let updateProfilePictureUrl = try XCTUnwrap(updateProfilePictureRequest.url)
+
+        // when
+        Mock(url: updateProfilePictureUrl,
+             dataType: .json,
+             statusCode: 200,
+             data: [.patch: MockedData.userInfo1]).register()
+
+        // then
+        sut.updateProfilePicture(apiKey: .random(),
+                                 base64ProfilePicture: .randomNullableName())
+            .sink { [weak self] fini in
+                switch fini {
+                case .failure: self?.shouldNotFail()
+                case .finished: break
+                }
+            } receiveValue: { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testUpdateProfilePictureFailure() throws {
+        // given
+        let expectation = expectObject(ofType: ErrorResponse.self)
+        let updateProfilePictureRequest =
+            sut.endpoint.updateProfilePicture(apiKey: .random(),
+                                              profilePicture: .randomNullableName())
+        let updateProfilePictureUrl = try XCTUnwrap(updateProfilePictureRequest.url)
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse1)
+        let expectedError = SLClientError.clientError(errorResponse)
+
+        // when
+        Mock(url: updateProfilePictureUrl,
+             dataType: .json,
+             statusCode: 400,
+             data: [.patch: MockedData.errorResponse1]).register()
+
+        // then
+        sut.updateProfilePicture(apiKey: .random(), base64ProfilePicture: .randomNullableName())
+            .sink { fini in
+                switch fini {
+                case let .failure(error):
+                    XCTAssertEqual(error, expectedError)
+                    expectation.fulfill()
+                case .finished: break
+                }
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testUpdateProfileNameSuccess() throws {
+        // given
+        let expectation = expectObject(ofType: UserInfo.self)
+        let updateProfileNameRequest = sut.endpoint.updateProfileName(apiKey: .random(),
+                                                                      name: .randomNullableName())
+        let updateProfileNameUrl = try XCTUnwrap(updateProfileNameRequest.url)
+
+        // when
+        Mock(url: updateProfileNameUrl,
+             dataType: .json,
+             statusCode: 200,
+             data: [.patch: MockedData.userInfo1]).register()
+
+        // then
+        sut.updateProfileName(apiKey: .random(),
+                              name: .randomNullableName())
+            .sink { [weak self] fini in
+                switch fini {
+                case .failure: self?.shouldNotFail()
+                case .finished: break
+                }
+            } receiveValue: { _ in
+                expectation.fulfill()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+
+    func testUpdateProfileNameFailure() throws {
+        // given
+        let expectation = expectObject(ofType: ErrorResponse.self)
+        let updateProfileNameRequest = sut.endpoint.updateProfileName(apiKey: .random(),
+                                                                      name: .randomNullableName())
+        let updateProfileNameUrl = try XCTUnwrap(updateProfileNameRequest.url)
+        let errorResponse = try JSONDecoder().decode(ErrorResponse.self,
+                                                     from: MockedData.errorResponse1)
+        let expectedError = SLClientError.clientError(errorResponse)
+
+        // when
+        Mock(url: updateProfileNameUrl,
+             dataType: .json,
+             statusCode: 400,
+             data: [.patch: MockedData.errorResponse1]).register()
+
+        // then
+        sut.updateProfileName(apiKey: .random(), name: .randomNullableName())
+            .sink { fini in
+                switch fini {
+                case let .failure(error):
+                    XCTAssertEqual(error, expectedError)
+                    expectation.fulfill()
+                case .finished: break
+                }
+            } receiveValue: { [weak self] _ in
+                self?.shouldNotSucceed()
+            }
+            .store(in: &cancellableSet)
+
+        waitForExpectations()
+    }
+}

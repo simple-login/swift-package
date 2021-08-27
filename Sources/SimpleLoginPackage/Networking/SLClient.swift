@@ -92,4 +92,16 @@ extension SLClient {
         let request = endpoint.getUserInfo(apiKey: apiKey)
         return perform(request)
     }
+
+    func updateProfilePicture(apiKey: ApiKey,
+                              base64ProfilePicture: String?) -> AnyPublisher<UserInfo, SLClientError> {
+        let request = endpoint.updateProfilePicture(apiKey: apiKey,
+                                                    profilePicture: base64ProfilePicture)
+        return perform(request)
+    }
+
+    func updateProfileName(apiKey: ApiKey, name: String?) -> AnyPublisher<UserInfo, SLClientError> {
+        let request = endpoint.updateProfileName(apiKey: apiKey, name: name)
+        return perform(request)
+    }
 }
