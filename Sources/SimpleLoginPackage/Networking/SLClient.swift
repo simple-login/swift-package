@@ -57,7 +57,7 @@ public struct SLClient {
 }
 
 // MARK: - Login
-extension SLClient {
+public extension SLClient {
     func login(email: String, password: String, device: String) -> AnyPublisher<UserLogin, SLClientError> {
         let request = endpoint.login(email: email, password: password, device: device)
         return perform(request)

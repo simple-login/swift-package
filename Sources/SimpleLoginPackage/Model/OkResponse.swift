@@ -11,14 +11,14 @@ import Foundation
 /**
  Hold response from server in cases like update alias's mailboxes
  */
-struct OkResponse: Decodable {
+public struct OkResponse: Decodable {
     let value: Bool
 
     private enum Key: String, CodingKey {
         case value = "ok"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
 
         self.value = try container.decode(Bool.self, forKey: .value)

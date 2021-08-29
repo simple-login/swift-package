@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum SLClientError: Error, CustomStringConvertible {
+public enum SLClientError: Error, CustomStringConvertible {
     case clientError(ErrorResponse)
     case invalidServerResponse
     case other(Error)
     case unknown(statusCode: Int)
 
-    var description: String {
+    public var description: String {
         switch self {
         case let .clientError(error):
             return error.message
