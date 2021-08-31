@@ -8,7 +8,11 @@
 import Foundation
 
 public struct ApiKey {
-    let value: String
+    public let value: String
+
+    public init(value: String) {
+        self.value = value
+    }
 }
 
 extension ApiKey: Decodable {
