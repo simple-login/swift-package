@@ -211,3 +211,40 @@ extension EndpointTests {
         XCTAssertEqual(updateProfileNameBody["name"] as? String, name)
     }
 }
+
+// MARK: - Alias
+extension EndpointTests {
+    // MARK: - GET /api/v5/alias/options
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv5aliasoptions
+    func testGetAliasOptionsWithHostnameEndpoint() throws {
+        // given
+        let apiKey = ApiKey.random()
+        let hostname = String.randomName()
+        let url = sut.baseUrl.appending(path: "/api/v5/alias/options",
+                                        queryItems: [.init(name: "hostname", value: hostname)])
+
+        // when
+        let getAliasOptionsRequest = try XCTUnwrap(sut.getAliasOptions(apiKey: apiKey,
+                                                                       hostname: hostname))
+
+        // then
+        XCTAssertEqual(getAliasOptionsRequest.url, url)
+        XCTAssertEqual(getAliasOptionsRequest.httpMethod, HttpMethod.get)
+        assertApiKeyAttached(getAliasOptionsRequest, apiKey: apiKey)
+    }
+
+    func testGetAliasOptionsWithoutHostnameEndpoint() throws {
+        // given
+        let apiKey = ApiKey.random()
+        let url = sut.baseUrl.appending(path: "/api/v5/alias/options")
+
+        // when
+        let getAliasOptionsRequest = try XCTUnwrap(sut.getAliasOptions(apiKey: apiKey,
+                                                                       hostname: nil))
+
+        // then
+        XCTAssertEqual(getAliasOptionsRequest.url, url)
+        XCTAssertEqual(getAliasOptionsRequest.httpMethod, HttpMethod.get)
+        assertApiKeyAttached(getAliasOptionsRequest, apiKey: apiKey)
+    }
+}

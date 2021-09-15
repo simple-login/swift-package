@@ -105,3 +105,11 @@ public extension SLClient {
         return perform(request)
     }
 }
+
+// MARK: - Alias
+extension SLClient {
+    func getAliasOptions(apiKey: ApiKey, hostname: String?) -> AnyPublisher<AliasOptions, SLClientError> {
+        let request = endpoint.getAliasOptions(apiKey: apiKey, hostname: hostname)
+        return perform(request)
+    }
+}

@@ -139,3 +139,22 @@ extension Endpoint {
         return request
     }
 }
+
+// MARK: - Alias
+extension Endpoint {
+    // MARK: - GET /api/v5/alias/options
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv5aliasoptions
+    func getAliasOptions(apiKey: ApiKey, hostname: String?) -> URLRequest {
+        let path = "/api/v5/alias/options"
+        let url: URL
+        if let hostname = hostname {
+            url = baseUrl.appending(path: path, queryItems: [.init(name: "hostname", value: hostname)])
+        } else {
+            url = baseUrl.appending(path: path)
+        }
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+}

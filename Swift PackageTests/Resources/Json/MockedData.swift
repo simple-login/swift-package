@@ -17,6 +17,7 @@ final class MockedData {
         try! Data(contentsOf: bundle.url(forResource: name, withExtension: "json")!)
     }
 
+    static let aliasOptions = jsonData(forJsonName: "AliasOptions")
     static let dummy = jsonData(forJsonName: "Dummy")
     static let errorResponse1 = jsonData(forJsonName: "ErrorResponse1")
     static let errorResponse2 = jsonData(forJsonName: "ErrorResponse2")
