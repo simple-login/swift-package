@@ -37,7 +37,7 @@ public struct AliasCreationOptions {
          "name": name]
     }
 
-    public func queryItem() -> URLQueryItem {
-        .init(name: "hostname", value: hostname)
+    public func queryItems() -> [URLQueryItem] {
+        [.init(name: "hostname", value: hostname)]
     }
 }

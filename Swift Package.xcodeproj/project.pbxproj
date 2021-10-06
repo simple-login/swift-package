@@ -55,6 +55,7 @@
 		C07DB033270E3B8000AE3969 /* Alias.json in Resources */ = {isa = PBXBuildFile; fileRef = C07DB032270E3B8000AE3969 /* Alias.json */; };
 		C07DB035270E3C2C00AE3969 /* AliasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB034270E3C2C00AE3969 /* AliasTests.swift */; };
 		C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */; };
+		C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +124,7 @@
 		C07DB032270E3B8000AE3969 /* Alias.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Alias.json; sourceTree = "<group>"; };
 		C07DB034270E3C2C00AE3969 /* AliasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasTests.swift; sourceTree = "<group>"; };
 		C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasCreationOptions.swift; sourceTree = "<group>"; };
+		C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasRandomOptions.swift; sourceTree = "<group>"; };
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -253,6 +255,7 @@
 				C07DB02E270E346800AE3969 /* AliasActivity.swift */,
 				C07DB030270E352300AE3969 /* AliasContact.swift */,
 				C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */,
+				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
 				C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */,
 				C063DCD526F28E0000BDBD5C /* AliasOptions.swift */,
 				C00B2CF5266ACCFA008E7108 /* ApiKey.swift */,
@@ -560,6 +563,7 @@
 				C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */,
 				C07DB031270E352300AE3969 /* AliasContact.swift in Sources */,
 				C031FF2A26638FEF0098E474 /* Alias.swift in Sources */,
+				C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */,
 				C00B2CF8266ACD2F008E7108 /* SLClient.swift in Sources */,
 				C0727EDE266B8C52000C0B36 /* SLClientError.swift in Sources */,
 			);

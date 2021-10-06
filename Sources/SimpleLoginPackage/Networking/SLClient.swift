@@ -117,4 +117,9 @@ extension SLClient {
         let request = endpoint.createAlias(apiKey: apiKey, options: options)
         return perform(request)
     }
+
+    func randomAlias(apiKey: ApiKey, options: AliasRandomOptions) -> AnyPublisher<Alias, SLClientError> {
+        let request = endpoint.randomAlias(apiKey: apiKey, options: options)
+        return perform(request)
+    }
 }
