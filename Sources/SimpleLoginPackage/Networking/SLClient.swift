@@ -112,4 +112,9 @@ extension SLClient {
         let request = endpoint.getAliasOptions(apiKey: apiKey, hostname: hostname)
         return perform(request)
     }
+
+    func createAlias(apiKey: ApiKey, options: AliasCreationOptions) -> AnyPublisher<Alias, SLClientError> {
+        let request = endpoint.createAlias(apiKey: apiKey, options: options)
+        return perform(request)
+    }
 }

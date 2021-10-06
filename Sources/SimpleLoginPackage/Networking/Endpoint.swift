@@ -157,4 +157,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - POST /api/v3/alias/custom/new
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiv3aliascustomnew
+    func createAlias(apiKey: ApiKey, options: AliasCreationOptions) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/v3/alias/custom/new", queryItems: [options.queryItem()])
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(options.requestBody())
+        return request
+    }
 }
