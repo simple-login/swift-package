@@ -1,0 +1,29 @@
+//
+//  AliasContact.swift
+//  Swift Package
+//
+//  Created by Thanh-Nhon Nguyen on 06/10/2021.
+//
+
+import Foundation
+
+public struct AliasContact {
+    public let email: String
+    public let name: String?
+    public let reverseAlias: String
+}
+
+extension AliasContact: Decodable {
+    private enum Key: String, CodingKey {
+        case email = "email"
+        case name = "name"
+        case reverseAlias = "reverse_alias"
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: Key.self)
+        self.email = try container.decode(String.self, forKey: .email)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        self.reverseAlias = try container.decode(String.self, forKey: .reverseAlias)
+    }
+}

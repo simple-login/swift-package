@@ -7,11 +7,12 @@
 
 import Foundation
 
-public struct ErrorResponse: Decodable {
+public struct ErrorResponse {
     public let message: String
     public let code: String?
+}
 
-    // swiftlint:disable:next type_name
+extension ErrorResponse: Decodable {
     private enum Key: String, CodingKey {
         case message = "error"
         case code = "error_code"

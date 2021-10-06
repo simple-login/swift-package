@@ -7,21 +7,20 @@
 
 import Foundation
 
-struct AliasOptions {
-    let canCreate: Bool
-    let prefixSuggestion: String
-    let suffixes: [Suffix]
+public struct AliasOptions {
+    public let canCreate: Bool
+    public let prefixSuggestion: String
+    public let suffixes: [Suffix]
 }
 
 extension AliasOptions: Decodable {
-    // swiftlint:disable:next type_name
     private enum Key: String, CodingKey {
         case canCreate = "can_create"
         case prefixSuggestion = "prefix_suggestion"
         case suffixes = "suffixes"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
 
         self.canCreate = try container.decode(Bool.self, forKey: .canCreate)

@@ -14,7 +14,6 @@ public struct UserInfo: Decodable {
     public let isPremium: Bool
     public let inTrial: Bool
 
-    // swiftlint:disable:next type_name
     private enum Key: String, CodingKey {
         case name = "name"
         case email = "email"

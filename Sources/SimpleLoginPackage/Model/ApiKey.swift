@@ -16,7 +16,6 @@ public struct ApiKey {
 }
 
 extension ApiKey: Decodable {
-    // swiftlint:disable:next type_name
     private enum Key: String, CodingKey {
         case value = "api_key"
     }

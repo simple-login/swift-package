@@ -7,19 +7,18 @@
 
 import Foundation
 
-struct Suffix {
-    let value: String
-    let signature: String
+public struct Suffix {
+    public let value: String
+    public let signature: String
 }
 
 extension Suffix: Decodable {
-    // swiftlint:disable:next type_name
     private enum Key: String, CodingKey {
         case value = "suffix"
         case signature = "signed_suffix"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: Key.self)
 
         self.value = try container.decode(String.self, forKey: .value)

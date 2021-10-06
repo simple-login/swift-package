@@ -1,0 +1,30 @@
+{
+    "creation_date": "2020-02-04 16:26:21+00:00",
+    "creation_timestamp": 1580833581,
+    "disable_pgp": false,
+    "email": "john.doe.alias@example.com",
+    "enabled": true,
+    "id": 3716,
+    "latest_activity": {
+        "action": "forward",
+        "contact": {
+            "email": "jane.doe@example.com",
+            "name": "Jane Doe",
+            "reverse_alias": "Jane Doe <reply+uodvumu43fdfzidbzzqnt@simplelogin.co>"
+        },
+        "timestamp": 1633534347
+    },
+    "mailboxes": [
+        {
+            "email": "john.doe@example.com",
+            "id": 175
+        }
+    ],
+    "name": "John Doe",
+    "nb_block": 111,
+    "nb_forward": 222,
+    "nb_reply": 333,
+    "note": null,
+    "pinned": true,
+    "support_pgp": false
+}
