@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		947409E05512A9C15234AED3 /* Pods_Swift_Package.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */; };
+		C0012DA42717774D00D18A7D /* AliasArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA32717774D00D18A7D /* AliasArray.swift */; };
+		C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA5271779FA00D18A7D /* DeletedResponse.swift */; };
+		C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA727177AB300D18A7D /* EnabledResponse.swift */; };
 		C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2CF5266ACCFA008E7108 /* ApiKey.swift */; };
 		C00B2CF8266ACD2F008E7108 /* SLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2CF7266ACD2F008E7108 /* SLClient.swift */; };
 		C00B2CFB266ACD8E008E7108 /* AccountEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2CFA266ACD8E008E7108 /* AccountEndpointsTests.swift */; };
@@ -74,6 +77,9 @@
 		60FDE1EA1ED05E5A9A836048 /* Pods-Swift Package-Swift PackageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package-Swift PackageTests.release.xcconfig"; path = "Target Support Files/Pods-Swift Package-Swift PackageTests/Pods-Swift Package-Swift PackageTests.release.xcconfig"; sourceTree = "<group>"; };
 		61E127680AD0BD59CF8CFA17 /* Pods-Swift Package.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.debug.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.debug.xcconfig"; sourceTree = "<group>"; };
 		AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package_Swift_PackageTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0012DA32717774D00D18A7D /* AliasArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasArray.swift; sourceTree = "<group>"; };
+		C0012DA5271779FA00D18A7D /* DeletedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedResponse.swift; sourceTree = "<group>"; };
+		C0012DA727177AB300D18A7D /* EnabledResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledResponse.swift; sourceTree = "<group>"; };
 		C00B2CF5266ACCFA008E7108 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		C00B2CF7266ACD2F008E7108 /* SLClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLClient.swift; sourceTree = "<group>"; };
 		C00B2CFA266ACD8E008E7108 /* AccountEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEndpointsTests.swift; sourceTree = "<group>"; };
@@ -252,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				C031FF2926638FEF0098E474 /* Alias.swift */,
+				C0012DA32717774D00D18A7D /* AliasArray.swift */,
 				C07DB02E270E346800AE3969 /* AliasActivity.swift */,
 				C07DB030270E352300AE3969 /* AliasContact.swift */,
 				C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */,
@@ -259,6 +266,8 @@
 				C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */,
 				C063DCD526F28E0000BDBD5C /* AliasOptions.swift */,
 				C00B2CF5266ACCFA008E7108 /* ApiKey.swift */,
+				C0012DA5271779FA00D18A7D /* DeletedResponse.swift */,
+				C0012DA727177AB300D18A7D /* EnabledResponse.swift */,
 				C03760F426DC0C4700E5ECAC /* ErrorResponse.swift */,
 				C02924F7266CBBC300AFFE20 /* MessageResponse.swift */,
 				C020018126D97B6D0057C345 /* OkResponse.swift */,
@@ -549,10 +558,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */,
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
+				C0012DA42717774D00D18A7D /* AliasArray.swift in Sources */,
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
+				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
 				C07DB02F270E346800AE3969 /* AliasActivity.swift in Sources */,
 				C07DB02D270E33FE00AE3969 /* AliasMailbox.swift in Sources */,
 				C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */,

@@ -122,4 +122,24 @@ extension SLClient {
         let request = endpoint.randomAlias(apiKey: apiKey, options: options)
         return perform(request)
     }
+
+    func getAliases(apiKey: ApiKey, page: Int) -> AnyPublisher<AliasArray, SLClientError> {
+        let request = endpoint.getAliases(apiKey: apiKey, page: page)
+        return perform(request)
+    }
+
+    func getAlias(apiKey: ApiKey, id: Int) -> AnyPublisher<Alias, SLClientError> {
+        let request = endpoint.getAlias(apiKey: apiKey, id: id)
+        return perform(request)
+    }
+
+    func deleteAlias(apiKey: ApiKey, id: Int) -> AnyPublisher<DeletedResponse, SLClientError> {
+        let request = endpoint.deleteAlias(apiKey: apiKey, id: id)
+        return perform(request)
+    }
+
+    func toggleAliasStatus(apiKey: ApiKey, id: Int) -> AnyPublisher<EnabledResponse, SLClientError> {
+        let request = endpoint.toggleAliasStatus(apiKey: apiKey, id: id)
+        return perform(request)
+    }
 }

@@ -180,4 +180,45 @@ extension Endpoint {
         request.addJsonRequestBody(options.requestBody())
         return request
     }
+
+    // MARK: - GET /api/v2/aliases
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2aliases
+    func getAliases(apiKey: ApiKey, page: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/v2/aliases",
+                                    queryItems: [.init(name: "page_id", value: "\(page)")])
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+
+    // MARK: - GET /api/aliases/:alias_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apialiasesalias_id
+    func getAlias(apiKey: ApiKey, id: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/aliases/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+
+    // MARK: - DELETE /api/aliases/:alias_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apialiasesalias_id
+    func deleteAlias(apiKey: ApiKey, id: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/aliases/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.delete
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+
+    // MARK: - POST /api/aliases/:alias_id/toggle
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apialiasesalias_idtoggle
+    func toggleAliasStatus(apiKey: ApiKey, id: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/aliases/\(id)/toggle")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }
