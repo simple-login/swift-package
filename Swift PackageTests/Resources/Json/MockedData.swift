@@ -18,6 +18,7 @@ final class MockedData {
     }
 
     static let alias = jsonData(forJsonName: "Alias")
+    static let aliasActivity = jsonData(forJsonName: "AliasActivity")
     static let aliasOptions = jsonData(forJsonName: "AliasOptions")
     static let dummy = jsonData(forJsonName: "Dummy")
     static let errorResponse1 = jsonData(forJsonName: "ErrorResponse1")

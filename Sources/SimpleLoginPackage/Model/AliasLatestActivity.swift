@@ -8,14 +8,7 @@
 import Foundation
 
 public struct AliasLatestActivity: Decodable {
-    public enum Action: String, Decodable {
-        case block = "block"
-        case bounced = "bounced"
-        case forward = "forward"
-        case reply = "reply"
-    }
-
-    public let action: Action
+    public let action: ActivityAction
     public let contact: AliasContact
     public let timestamp: TimeInterval
 }

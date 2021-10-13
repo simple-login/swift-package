@@ -221,4 +221,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - GET /api/aliases/:alias_id/activities
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apialiasesalias_idactivities
+    func getAliasActivities(apiKey: ApiKey, id: Int, page: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/aliases/\(id)/activities",
+                                    queryItems: [.init(name: "page_id", value: "\(page)")])
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }

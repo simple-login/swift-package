@@ -60,3 +60,7 @@ extension Alias: Decodable {
         self.pinned = try container.decode(Bool.self, forKey: .pinned)
     }
 }
+
+public struct AliasArray: Decodable {
+    public let aliases: [Alias]
+}

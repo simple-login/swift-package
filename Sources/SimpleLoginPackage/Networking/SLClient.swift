@@ -142,4 +142,11 @@ extension SLClient {
         let request = endpoint.toggleAliasStatus(apiKey: apiKey, id: id)
         return perform(request)
     }
+
+    func getAliasActivities(apiKey: ApiKey,
+                            id: Int,
+                            page: Int) -> AnyPublisher<AliasActivityArray, SLClientError> {
+        let request = endpoint.getAliasActivities(apiKey: apiKey, id: id, page: page)
+        return perform(request)
+    }
 }
