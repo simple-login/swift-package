@@ -53,7 +53,7 @@
 		C0727EF4266C18E7000C0B36 /* ErrorResponseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0727EF3266C18E7000C0B36 /* ErrorResponseExtensions.swift */; };
 		C0727EF6266C1B3D000C0B36 /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = C0727EF5266C1B3D000C0B36 /* Dummy.json */; };
 		C07DB02D270E33FE00AE3969 /* AliasMailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */; };
-		C07DB02F270E346800AE3969 /* AliasActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB02E270E346800AE3969 /* AliasActivity.swift */; };
+		C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */; };
 		C07DB031270E352300AE3969 /* AliasContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB030270E352300AE3969 /* AliasContact.swift */; };
 		C07DB033270E3B8000AE3969 /* Alias.json in Resources */ = {isa = PBXBuildFile; fileRef = C07DB032270E3B8000AE3969 /* Alias.json */; };
 		C07DB035270E3C2C00AE3969 /* AliasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB034270E3C2C00AE3969 /* AliasTests.swift */; };
@@ -125,7 +125,7 @@
 		C0727EF3266C18E7000C0B36 /* ErrorResponseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseExtensions.swift; sourceTree = "<group>"; };
 		C0727EF5266C1B3D000C0B36 /* Dummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
 		C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasMailbox.swift; sourceTree = "<group>"; };
-		C07DB02E270E346800AE3969 /* AliasActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasActivity.swift; sourceTree = "<group>"; };
+		C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasLatestActivity.swift; sourceTree = "<group>"; };
 		C07DB030270E352300AE3969 /* AliasContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasContact.swift; sourceTree = "<group>"; };
 		C07DB032270E3B8000AE3969 /* Alias.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Alias.json; sourceTree = "<group>"; };
 		C07DB034270E3C2C00AE3969 /* AliasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasTests.swift; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 			children = (
 				C031FF2926638FEF0098E474 /* Alias.swift */,
 				C0012DA32717774D00D18A7D /* AliasArray.swift */,
-				C07DB02E270E346800AE3969 /* AliasActivity.swift */,
+				C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */,
 				C07DB030270E352300AE3969 /* AliasContact.swift */,
 				C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */,
 				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
@@ -565,7 +565,7 @@
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
 				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
-				C07DB02F270E346800AE3969 /* AliasActivity.swift in Sources */,
+				C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */,
 				C07DB02D270E33FE00AE3969 /* AliasMailbox.swift in Sources */,
 				C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */,
 				C0727ECE266B682F000C0B36 /* Endpoint.swift in Sources */,

@@ -20,7 +20,7 @@ public struct Alias {
     public let pgpSupported: Bool
     public let pgpDisabled: Bool
     public let mailboxes: [AliasMailbox]
-    public let latestActivity: AliasActivity?
+    public let latestActivity: AliasLatestActivity?
     public let pinned: Bool
 }
 
@@ -56,7 +56,7 @@ extension Alias: Decodable {
         self.pgpSupported = try container.decode(Bool.self, forKey: .pgpSupported)
         self.pgpDisabled = try container.decode(Bool.self, forKey: .pgpDisabled)
         self.mailboxes = try container.decode([AliasMailbox].self, forKey: .mailboxes)
-        self.latestActivity = try container.decodeIfPresent(AliasActivity.self, forKey: .latestActivity)
+        self.latestActivity = try container.decodeIfPresent(AliasLatestActivity.self, forKey: .latestActivity)
         self.pinned = try container.decode(Bool.self, forKey: .pinned)
     }
 }

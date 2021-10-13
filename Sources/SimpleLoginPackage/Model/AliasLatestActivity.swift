@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AliasActivity: Decodable {
+public struct AliasLatestActivity: Decodable {
     public enum Action: String, Decodable {
         case block = "block"
         case bounced = "bounced"
