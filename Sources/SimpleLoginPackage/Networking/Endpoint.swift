@@ -278,4 +278,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - POST /api/mailboxes
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apimailboxes
+    func createMailbox(apiKey: ApiKey, email: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/mailboxes")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(["email": email])
+        return request
+    }
 }

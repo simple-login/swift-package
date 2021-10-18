@@ -174,4 +174,9 @@ extension SLClient {
         let request = endpoint.getMailboxes(apiKey: apiKey)
         return perform(request)
     }
+
+    func createMailbox(apiKey: ApiKey, email: String) -> AnyPublisher<Mailbox, SLClientError> {
+        let request = endpoint.createMailbox(apiKey: apiKey, email: email)
+        return perform(request)
+    }
 }
