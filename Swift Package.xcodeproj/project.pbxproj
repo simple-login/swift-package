@@ -21,6 +21,10 @@
 		C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2D00266ACDBB008E7108 /* UserInfo2.json */; };
 		C00B2D03266ACDD8008E7108 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2D02266ACDD8008E7108 /* MockedData.swift */; };
 		C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */; };
+		C01CCD18271E019F00B84B63 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD17271E019F00B84B63 /* Contact.swift */; };
+		C01CCD1C271E02A200B84B63 /* Contact1.json in Resources */ = {isa = PBXBuildFile; fileRef = C01CCD1B271E02A200B84B63 /* Contact1.json */; };
+		C01CCD1E271E02B100B84B63 /* Contact2.json in Resources */ = {isa = PBXBuildFile; fileRef = C01CCD1D271E02B100B84B63 /* Contact2.json */; };
+		C01CCD20271E02DE00B84B63 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD1F271E02DE00B84B63 /* ContactTests.swift */; };
 		C020018226D97B6D0057C345 /* OkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020018126D97B6D0057C345 /* OkResponse.swift */; };
 		C020018426D97C100057C345 /* Ok.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018326D97C100057C345 /* Ok.json */; };
 		C020018626D9815A0057C345 /* UserLogin1.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018526D9815A0057C345 /* UserLogin1.json */; };
@@ -94,6 +98,10 @@
 		C00B2D00266ACDBB008E7108 /* UserInfo2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo2.json; sourceTree = "<group>"; };
 		C00B2D02266ACDD8008E7108 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
 		C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasUpdateOption.swift; sourceTree = "<group>"; };
+		C01CCD17271E019F00B84B63 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		C01CCD1B271E02A200B84B63 /* Contact1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contact1.json; sourceTree = "<group>"; };
+		C01CCD1D271E02B100B84B63 /* Contact2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contact2.json; sourceTree = "<group>"; };
+		C01CCD1F271E02DE00B84B63 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
 		C020018126D97B6D0057C345 /* OkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkResponse.swift; sourceTree = "<group>"; };
 		C020018326D97C100057C345 /* Ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ok.json; sourceTree = "<group>"; };
 		C020018526D9815A0057C345 /* UserLogin1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserLogin1.json; sourceTree = "<group>"; };
@@ -179,6 +187,8 @@
 				C07DB032270E3B8000AE3969 /* Alias.json */,
 				C0012DAD2717838000D18A7D /* AliasActivity.json */,
 				C063DCD926F28F1300BDBD5C /* AliasOptions.json */,
+				C01CCD1B271E02A200B84B63 /* Contact1.json */,
+				C01CCD1D271E02B100B84B63 /* Contact2.json */,
 				C0727EF5266C1B3D000C0B36 /* Dummy.json */,
 				C0727EE1266C0C41000C0B36 /* ErrorResponse1.json */,
 				C0727EE3266C0C6B000C0B36 /* ErrorResponse2.json */,
@@ -277,6 +287,7 @@
 				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
 				C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */,
 				C00B2CF5266ACCFA008E7108 /* ApiKey.swift */,
+				C01CCD17271E019F00B84B63 /* Contact.swift */,
 				C0012DA5271779FA00D18A7D /* DeletedResponse.swift */,
 				C0012DA727177AB300D18A7D /* EnabledResponse.swift */,
 				C03760F426DC0C4700E5ECAC /* ErrorResponse.swift */,
@@ -325,6 +336,7 @@
 				C07DB034270E3C2C00AE3969 /* AliasTests.swift */,
 				C0012DAF271783AD00D18A7D /* AliasActivityTests.swift */,
 				C063DCDB26F28FEF00BDBD5C /* AliasOptionsTests.swift */,
+				C01CCD1F271E02DE00B84B63 /* ContactTests.swift */,
 				C0727EED266C1131000C0B36 /* ErrorResponseTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
 				C0727EE9266C0F46000C0B36 /* UserLoginTests.swift */,
@@ -469,12 +481,14 @@
 				C0727EF6266C1B3D000C0B36 /* Dummy.json in Resources */,
 				C02924FA266CBC3700AFFE20 /* Message.json in Resources */,
 				C0727EE2266C0C41000C0B36 /* ErrorResponse1.json in Resources */,
+				C01CCD1E271E02B100B84B63 /* Contact2.json in Resources */,
 				C063DCDA26F28F1300BDBD5C /* AliasOptions.json in Resources */,
 				C0727EE6266C0C90000C0B36 /* ErrorResponse3.json in Resources */,
 				C020018826D981670057C345 /* UserLogin2.json in Resources */,
 				C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */,
 				C0727EE4266C0C6B000C0B36 /* ErrorResponse2.json in Resources */,
 				C020018626D9815A0057C345 /* UserLogin1.json in Resources */,
+				C01CCD1C271E02A200B84B63 /* Contact1.json in Resources */,
 				C020018426D97C100057C345 /* Ok.json in Resources */,
 				C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */,
 				C0012DAE2717838000D18A7D /* AliasActivity.json in Resources */,
@@ -575,6 +589,7 @@
 				C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */,
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
 				C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */,
+				C01CCD18271E019F00B84B63 /* Contact.swift in Sources */,
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
 				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
@@ -608,6 +623,7 @@
 				C0727EEC266C100F000C0B36 /* ApiKeyExtensions.swift in Sources */,
 				C0727ED6266B7106000C0B36 /* StringExtensions.swift in Sources */,
 				C063DCDC26F28FEF00BDBD5C /* AliasOptionsTests.swift in Sources */,
+				C01CCD20271E02DE00B84B63 /* ContactTests.swift in Sources */,
 				C07DB035270E3C2C00AE3969 /* AliasTests.swift in Sources */,
 				C02924FC266CBC6800AFFE20 /* MessageResponseTests.swift in Sources */,
 				C0727ED2266B7023000C0B36 /* EndpointTests.swift in Sources */,
@@ -683,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -741,7 +757,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

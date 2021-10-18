@@ -1,0 +1,10 @@
+{
+    "id": 2,
+    "contact": "newsletter@example.com",
+    "creation_date": "2020-02-21 11:35:00+00:00",
+    "creation_timestamp": 1582284900,
+    "last_email_sent_date": "2020-02-21 11:35:00+00:00",
+    "last_email_sent_timestamp": 1582284900,
+    "reverse_alias": "newsletter at example.com <reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co>",
+    "reverse_alias_address": "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co"
+}

@@ -1,0 +1,11 @@
+{
+    "id": 1,
+    "contact": "marketing@example.com",
+    "creation_date": "2020-02-21 11:35:00+00:00",
+    "creation_timestamp": 1582284900,
+    "last_email_sent_date": null,
+    "last_email_sent_timestamp": null,
+    "reverse_alias": "marketing at example.com <reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co>",
+    "reverse_alias_address": "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co"
+}
+

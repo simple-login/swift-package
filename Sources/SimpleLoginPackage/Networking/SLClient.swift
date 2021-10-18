@@ -154,4 +154,9 @@ extension SLClient {
         let request = endpoint.updateAlias(apiKey: apiKey, id: id, option: option)
         return perform(request)
     }
+
+    func getAliasContacts(apiKey: ApiKey, id: Int, page: Int) -> AnyPublisher<ContactArray, SLClientError> {
+        let request = endpoint.getAliasContacts(apiKey: apiKey, id: id, page: page)
+        return perform(request)
+    }
 }
