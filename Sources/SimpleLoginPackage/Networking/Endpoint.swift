@@ -291,11 +291,23 @@ extension Endpoint {
     }
 
     // MARK: - DELETE /api/mailboxes/:mailbox_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apimailboxesmailbox_id
     func deleteMailbox(apiKey: ApiKey, id: Int) -> URLRequest {
         let url = baseUrl.appending(path: "/api/mailboxes/\(id)")
         var request = URLRequest(url: url)
         request.httpMethod = HttpMethod.delete
         request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+
+    // MARK: - PUT /api/mailboxes/:mailbox_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#put-apimailboxesmailbox_id
+    func updateMailbox(apiKey: ApiKey, id: Int, option: MailboxUpdateOption) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/mailboxes/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.put
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(option.requestBody)
         return request
     }
 }

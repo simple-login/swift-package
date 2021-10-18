@@ -184,4 +184,11 @@ extension SLClient {
         let request = endpoint.deleteMailbox(apiKey: apiKey, id: id)
         return perform(request)
     }
+
+    func updateMailbox(apiKey: ApiKey,
+                       id: Int,
+                       option: MailboxUpdateOption) -> AnyPublisher<Mailbox, SLClientError> {
+        let request = endpoint.updateMailbox(apiKey: apiKey, id: id, option: option)
+        return perform(request)
+    }
 }
