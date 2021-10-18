@@ -232,4 +232,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - PATCH /api/aliases/:alias_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apialiasesalias_id
+    func updateAlias(apiKey: ApiKey, id: Int, option: AliasUpdateOption) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/aliases/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.patch
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(option.requestBody)
+        return request
+    }
 }

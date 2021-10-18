@@ -20,6 +20,7 @@
 		C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2CFE266ACDA8008E7108 /* UserInfo1.json */; };
 		C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2D00266ACDBB008E7108 /* UserInfo2.json */; };
 		C00B2D03266ACDD8008E7108 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2D02266ACDD8008E7108 /* MockedData.swift */; };
+		C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */; };
 		C020018226D97B6D0057C345 /* OkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020018126D97B6D0057C345 /* OkResponse.swift */; };
 		C020018426D97C100057C345 /* Ok.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018326D97C100057C345 /* Ok.json */; };
 		C020018626D9815A0057C345 /* UserLogin1.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018526D9815A0057C345 /* UserLogin1.json */; };
@@ -92,6 +93,7 @@
 		C00B2CFE266ACDA8008E7108 /* UserInfo1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo1.json; sourceTree = "<group>"; };
 		C00B2D00266ACDBB008E7108 /* UserInfo2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo2.json; sourceTree = "<group>"; };
 		C00B2D02266ACDD8008E7108 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasUpdateOption.swift; sourceTree = "<group>"; };
 		C020018126D97B6D0057C345 /* OkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkResponse.swift; sourceTree = "<group>"; };
 		C020018326D97C100057C345 /* Ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ok.json; sourceTree = "<group>"; };
 		C020018526D9815A0057C345 /* UserLogin1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserLogin1.json; sourceTree = "<group>"; };
@@ -270,9 +272,10 @@
 				C07DB030270E352300AE3969 /* AliasContact.swift */,
 				C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */,
 				C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */,
-				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
 				C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */,
 				C063DCD526F28E0000BDBD5C /* AliasOptions.swift */,
+				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
+				C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */,
 				C00B2CF5266ACCFA008E7108 /* ApiKey.swift */,
 				C0012DA5271779FA00D18A7D /* DeletedResponse.swift */,
 				C0012DA727177AB300D18A7D /* EnabledResponse.swift */,
@@ -582,6 +585,7 @@
 				C03760F526DC0C4700E5ECAC /* ErrorResponse.swift in Sources */,
 				C063DCD626F28E0000BDBD5C /* AliasOptions.swift in Sources */,
 				C02924F8266CBBC300AFFE20 /* MessageResponse.swift in Sources */,
+				C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */,
 				C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */,
 				C0012DAC2717815100D18A7D /* ActivityAction.swift in Sources */,
 				C07DB031270E352300AE3969 /* AliasContact.swift in Sources */,
