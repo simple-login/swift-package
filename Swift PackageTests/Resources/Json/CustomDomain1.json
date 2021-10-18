@@ -1,0 +1,16 @@
+{
+    "catch_all": true,
+    "creation_timestamp": 1988412168,
+    "domain_name": "test.org",
+    "id": 78,
+    "is_verified": false,
+    "mailboxes": [
+        {
+            "email": "a@b.c",
+            "id": 5
+        }
+    ],
+    "name": "custom domain name test",
+    "nb_alias": 58,
+    "random_prefix_generation": true
+}

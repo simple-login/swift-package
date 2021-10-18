@@ -192,3 +192,11 @@ extension SLClient {
         return perform(request)
     }
 }
+
+// MARK: - Custom domain
+extension SLClient {
+    func getCustomDomains(apiKey: ApiKey) -> AnyPublisher<[CustomDomain], SLClientError> {
+        let request = endpoint.getCustomDomains(apiKey: apiKey)
+        return perform(request)
+    }
+}

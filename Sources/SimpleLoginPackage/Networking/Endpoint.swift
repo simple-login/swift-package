@@ -311,3 +311,16 @@ extension Endpoint {
         return request
     }
 }
+
+// MARK: - Custom domain
+extension Endpoint {
+    // MARK: - GET /api/custom_domains
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apicustom_domains
+    func getCustomDomains(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/custom_domains")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+}

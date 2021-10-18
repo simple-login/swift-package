@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct AliasMailbox: Decodable {
+public struct MailboxLite: Decodable {
     public let id: Int
     public let email: String
 }

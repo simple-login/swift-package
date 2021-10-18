@@ -29,6 +29,10 @@
 		C01CCD24271E0A7900B84B63 /* Mailbox.json in Resources */ = {isa = PBXBuildFile; fileRef = C01CCD23271E0A7900B84B63 /* Mailbox.json */; };
 		C01CCD26271E0AA300B84B63 /* MailboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD25271E0AA300B84B63 /* MailboxTests.swift */; };
 		C01CCD29271E0EB000B84B63 /* MailboxUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD27271E0EAD00B84B63 /* MailboxUpdateOption.swift */; };
+		C01CCD2C271E110E00B84B63 /* CustomDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD2A271E108400B84B63 /* CustomDomain.swift */; };
+		C01CCD2E271E128900B84B63 /* CustomDomain1.json in Resources */ = {isa = PBXBuildFile; fileRef = C01CCD2D271E128900B84B63 /* CustomDomain1.json */; };
+		C01CCD30271E129600B84B63 /* CustomDomain2.json in Resources */ = {isa = PBXBuildFile; fileRef = C01CCD2F271E129600B84B63 /* CustomDomain2.json */; };
+		C01CCD32271E130500B84B63 /* CustomDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD31271E130500B84B63 /* CustomDomainTests.swift */; };
 		C020018226D97B6D0057C345 /* OkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C020018126D97B6D0057C345 /* OkResponse.swift */; };
 		C020018426D97C100057C345 /* Ok.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018326D97C100057C345 /* Ok.json */; };
 		C020018626D9815A0057C345 /* UserLogin1.json in Resources */ = {isa = PBXBuildFile; fileRef = C020018526D9815A0057C345 /* UserLogin1.json */; };
@@ -64,7 +68,7 @@
 		C0727EF2266C188D000C0B36 /* SLClientErrorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0727EF1266C188D000C0B36 /* SLClientErrorExtensions.swift */; };
 		C0727EF4266C18E7000C0B36 /* ErrorResponseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0727EF3266C18E7000C0B36 /* ErrorResponseExtensions.swift */; };
 		C0727EF6266C1B3D000C0B36 /* Dummy.json in Resources */ = {isa = PBXBuildFile; fileRef = C0727EF5266C1B3D000C0B36 /* Dummy.json */; };
-		C07DB02D270E33FE00AE3969 /* AliasMailbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */; };
+		C07DB02D270E33FE00AE3969 /* MailboxLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB02C270E33FE00AE3969 /* MailboxLite.swift */; };
 		C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */; };
 		C07DB031270E352300AE3969 /* AliasContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB030270E352300AE3969 /* AliasContact.swift */; };
 		C07DB033270E3B8000AE3969 /* Alias.json in Resources */ = {isa = PBXBuildFile; fileRef = C07DB032270E3B8000AE3969 /* Alias.json */; };
@@ -110,6 +114,10 @@
 		C01CCD23271E0A7900B84B63 /* Mailbox.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mailbox.json; sourceTree = "<group>"; };
 		C01CCD25271E0AA300B84B63 /* MailboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxTests.swift; sourceTree = "<group>"; };
 		C01CCD27271E0EAD00B84B63 /* MailboxUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxUpdateOption.swift; sourceTree = "<group>"; };
+		C01CCD2A271E108400B84B63 /* CustomDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDomain.swift; sourceTree = "<group>"; };
+		C01CCD2D271E128900B84B63 /* CustomDomain1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomDomain1.json; sourceTree = "<group>"; };
+		C01CCD2F271E129600B84B63 /* CustomDomain2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomDomain2.json; sourceTree = "<group>"; };
+		C01CCD31271E130500B84B63 /* CustomDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDomainTests.swift; sourceTree = "<group>"; };
 		C020018126D97B6D0057C345 /* OkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkResponse.swift; sourceTree = "<group>"; };
 		C020018326D97C100057C345 /* Ok.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Ok.json; sourceTree = "<group>"; };
 		C020018526D9815A0057C345 /* UserLogin1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserLogin1.json; sourceTree = "<group>"; };
@@ -148,7 +156,7 @@
 		C0727EF1266C188D000C0B36 /* SLClientErrorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLClientErrorExtensions.swift; sourceTree = "<group>"; };
 		C0727EF3266C18E7000C0B36 /* ErrorResponseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseExtensions.swift; sourceTree = "<group>"; };
 		C0727EF5266C1B3D000C0B36 /* Dummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Dummy.json; sourceTree = "<group>"; };
-		C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasMailbox.swift; sourceTree = "<group>"; };
+		C07DB02C270E33FE00AE3969 /* MailboxLite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailboxLite.swift; sourceTree = "<group>"; };
 		C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasLatestActivity.swift; sourceTree = "<group>"; };
 		C07DB030270E352300AE3969 /* AliasContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasContact.swift; sourceTree = "<group>"; };
 		C07DB032270E3B8000AE3969 /* Alias.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Alias.json; sourceTree = "<group>"; };
@@ -197,6 +205,8 @@
 				C063DCD926F28F1300BDBD5C /* AliasOptions.json */,
 				C01CCD1B271E02A200B84B63 /* Contact1.json */,
 				C01CCD1D271E02B100B84B63 /* Contact2.json */,
+				C01CCD2D271E128900B84B63 /* CustomDomain1.json */,
+				C01CCD2F271E129600B84B63 /* CustomDomain2.json */,
 				C0727EF5266C1B3D000C0B36 /* Dummy.json */,
 				C0727EE1266C0C41000C0B36 /* ErrorResponse1.json */,
 				C0727EE3266C0C6B000C0B36 /* ErrorResponse2.json */,
@@ -291,16 +301,17 @@
 				C07DB030270E352300AE3969 /* AliasContact.swift */,
 				C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */,
 				C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */,
-				C07DB02C270E33FE00AE3969 /* AliasMailbox.swift */,
 				C063DCD526F28E0000BDBD5C /* AliasOptions.swift */,
 				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
 				C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */,
 				C00B2CF5266ACCFA008E7108 /* ApiKey.swift */,
 				C01CCD17271E019F00B84B63 /* Contact.swift */,
+				C01CCD2A271E108400B84B63 /* CustomDomain.swift */,
 				C0012DA5271779FA00D18A7D /* DeletedResponse.swift */,
 				C0012DA727177AB300D18A7D /* EnabledResponse.swift */,
 				C03760F426DC0C4700E5ECAC /* ErrorResponse.swift */,
 				C01CCD21271E095800B84B63 /* Mailbox.swift */,
+				C07DB02C270E33FE00AE3969 /* MailboxLite.swift */,
 				C01CCD27271E0EAD00B84B63 /* MailboxUpdateOption.swift */,
 				C02924F7266CBBC300AFFE20 /* MessageResponse.swift */,
 				C020018126D97B6D0057C345 /* OkResponse.swift */,
@@ -348,6 +359,7 @@
 				C0012DAF271783AD00D18A7D /* AliasActivityTests.swift */,
 				C063DCDB26F28FEF00BDBD5C /* AliasOptionsTests.swift */,
 				C01CCD1F271E02DE00B84B63 /* ContactTests.swift */,
+				C01CCD31271E130500B84B63 /* CustomDomainTests.swift */,
 				C0727EED266C1131000C0B36 /* ErrorResponseTests.swift */,
 				C01CCD25271E0AA300B84B63 /* MailboxTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
@@ -505,7 +517,9 @@
 				C020018426D97C100057C345 /* Ok.json in Resources */,
 				C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */,
 				C0012DAE2717838000D18A7D /* AliasActivity.json in Resources */,
+				C01CCD30271E129600B84B63 /* CustomDomain2.json in Resources */,
 				C07DB033270E3B8000AE3969 /* Alias.json in Resources */,
+				C01CCD2E271E128900B84B63 /* CustomDomain1.json in Resources */,
 				C02924F6266CB01500AFFE20 /* Mfa.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -598,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01CCD2C271E110E00B84B63 /* CustomDomain.swift in Sources */,
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */,
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
@@ -608,7 +623,7 @@
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
 				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
 				C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */,
-				C07DB02D270E33FE00AE3969 /* AliasMailbox.swift in Sources */,
+				C07DB02D270E33FE00AE3969 /* MailboxLite.swift in Sources */,
 				C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */,
 				C0727ECE266B682F000C0B36 /* Endpoint.swift in Sources */,
 				C03760F526DC0C4700E5ECAC /* ErrorResponse.swift in Sources */,
@@ -638,6 +653,7 @@
 				C0727EEC266C100F000C0B36 /* ApiKeyExtensions.swift in Sources */,
 				C0727ED6266B7106000C0B36 /* StringExtensions.swift in Sources */,
 				C063DCDC26F28FEF00BDBD5C /* AliasOptionsTests.swift in Sources */,
+				C01CCD32271E130500B84B63 /* CustomDomainTests.swift in Sources */,
 				C01CCD20271E02DE00B84B63 /* ContactTests.swift in Sources */,
 				C07DB035270E3C2C00AE3969 /* AliasTests.swift in Sources */,
 				C02924FC266CBC6800AFFE20 /* MessageResponseTests.swift in Sources */,
