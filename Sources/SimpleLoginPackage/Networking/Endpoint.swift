@@ -289,4 +289,13 @@ extension Endpoint {
         request.addJsonRequestBody(["email": email])
         return request
     }
+
+    // MARK: - DELETE /api/mailboxes/:mailbox_id
+    func deleteMailbox(apiKey: ApiKey, id: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/mailboxes/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.delete
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }

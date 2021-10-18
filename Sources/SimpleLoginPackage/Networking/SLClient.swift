@@ -179,4 +179,9 @@ extension SLClient {
         let request = endpoint.createMailbox(apiKey: apiKey, email: email)
         return perform(request)
     }
+
+    func deleteMailbox(apiKey: ApiKey, id: Int) -> AnyPublisher<DeletedResponse, SLClientError> {
+        let request = endpoint.deleteMailbox(apiKey: apiKey, id: id)
+        return perform(request)
+    }
 }
