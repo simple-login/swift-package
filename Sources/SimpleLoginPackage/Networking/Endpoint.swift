@@ -254,4 +254,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - POST /api/aliases/:alias_id/contacts
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apialiasesalias_idcontacts
+    func createContact(apiKey: ApiKey, aliasId: Int, contactEmail: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/aliases/\(aliasId)/contacts")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(["contact": contactEmail])
+        return request
+    }
 }

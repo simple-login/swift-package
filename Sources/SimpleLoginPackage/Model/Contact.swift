@@ -14,6 +14,7 @@ public struct Contact {
     public let lastEmailSentTimestamp: TimeInterval?
     public let reverseAlias: String
     public let reverseAliasAddress: String
+    public let existed: Bool // Used when creating a new contact
 }
 
 extension Contact: Decodable {
@@ -24,6 +25,7 @@ extension Contact: Decodable {
         case lastEmailSentTimestamp = "last_email_sent_timestamp"
         case reverseAlias = "reverse_alias"
         case reverseAliasAddress = "reverse_alias_address"
+        case existed = "existed"
     }
 
     public init(from decoder: Decoder) throws {
@@ -35,6 +37,7 @@ extension Contact: Decodable {
                                                                     forKey: .lastEmailSentTimestamp)
         self.reverseAlias = try container.decode(String.self, forKey: .reverseAlias)
         self.reverseAliasAddress = try container.decode(String.self, forKey: .reverseAliasAddress)
+        self.existed = try container.decodeIfPresent(Bool.self, forKey: .existed) ?? false
     }
 }
 

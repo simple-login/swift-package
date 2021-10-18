@@ -17,6 +17,7 @@ final class ContactTests: XCTestCase {
         XCTAssertEqual(sut.reverseAlias,
                        "marketing at example.com <reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co>")
         XCTAssertEqual(sut.reverseAliasAddress, "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co")
+        XCTAssertFalse(sut.existed)
     }
 
     func testDecodable2() throws {
@@ -27,5 +28,6 @@ final class ContactTests: XCTestCase {
         XCTAssertEqual(sut.reverseAlias,
                        "newsletter at example.com <reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co>")
         XCTAssertEqual(sut.reverseAliasAddress, "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co")
+        XCTAssertTrue(sut.existed)
     }
 }

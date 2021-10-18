@@ -159,4 +159,11 @@ extension SLClient {
         let request = endpoint.getAliasContacts(apiKey: apiKey, id: id, page: page)
         return perform(request)
     }
+
+    func createContact(apiKey: ApiKey,
+                       aliasId: Int,
+                       contactEmail: String) -> AnyPublisher<Contact, SLClientError> {
+        let request = endpoint.createContact(apiKey: apiKey, aliasId: aliasId, contactEmail: contactEmail)
+        return perform(request)
+    }
 }
