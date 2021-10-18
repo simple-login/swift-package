@@ -266,3 +266,16 @@ extension Endpoint {
         return request
     }
 }
+
+// MARK: - Mailbox
+extension Endpoint {
+    // MARK: - GET /api/v2/mailboxes
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2mailboxes
+    func getMailboxes(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/v2/mailboxes")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+}

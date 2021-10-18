@@ -167,3 +167,11 @@ extension SLClient {
         return perform(request)
     }
 }
+
+// MARK: - Mailbox
+extension SLClient {
+    func getMailboxes(apiKey: ApiKey) -> AnyPublisher<MailboxArray, SLClientError> {
+        let request = endpoint.getMailboxes(apiKey: apiKey)
+        return perform(request)
+    }
+}
