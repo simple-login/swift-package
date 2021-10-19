@@ -323,4 +323,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - PATCH /api/custom_domains/:custom_domain_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apicustom_domainscustom_domain_id
+    func updateCustomDomain(apiKey: ApiKey, id: Int, option: CustomDomainUpdateOption) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/custom_domains/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.patch
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(option.requestBody)
+        return request
+    }
 }
