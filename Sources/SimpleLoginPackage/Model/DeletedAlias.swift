@@ -24,3 +24,7 @@ extension DeletedAlias: Decodable {
         self.deletionTimestamp = try container.decode(TimeInterval.self, forKey: .deletionTimestamp)
     }
 }
+
+public struct DeletedAliasArray: Decodable {
+    public let aliases: [DeletedAlias]
+}

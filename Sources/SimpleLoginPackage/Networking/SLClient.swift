@@ -206,6 +206,11 @@ extension SLClient {
         let request = endpoint.updateCustomDomain(apiKey: apiKey, id: id, option: option)
         return perform(request)
     }
+
+    func getDeletedAliases(apiKey: ApiKey, customDomainId: Int) -> AnyPublisher<DeletedAliasArray, SLClientError> {
+        let request = endpoint.getDeletedAliases(apiKey: apiKey, customDomainId: customDomainId)
+        return perform(request)
+    }
 }
 
 // MARK: - Contact

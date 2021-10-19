@@ -334,6 +334,16 @@ extension Endpoint {
         request.addJsonRequestBody(option.requestBody)
         return request
     }
+
+    // MARK: - GET /api/custom_domains/:custom_domain_id/trash
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apicustom_domainscustom_domain_idtrash
+    func getDeletedAliases(apiKey: ApiKey, customDomainId: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/custom_domains/\(customDomainId)/trash")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }
 
 // MARK: - Contact
