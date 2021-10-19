@@ -207,3 +207,11 @@ extension SLClient {
         return perform(request)
     }
 }
+
+// MARK: - Contact
+extension SLClient {
+    func deleteContact(apiKey: ApiKey, id: Int) -> AnyPublisher<DeletedResponse, SLClientError> {
+        let request = endpoint.deleteContact(apiKey: apiKey, id: id)
+        return perform(request)
+    }
+}

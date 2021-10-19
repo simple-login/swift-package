@@ -335,3 +335,16 @@ extension Endpoint {
         return request
     }
 }
+
+// MARK: - Contact
+extension Endpoint {
+    // MARK: - DELETE /api/contacts/:contact_id
+    // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apicontactscontact_id
+    func deleteContact(apiKey: ApiKey, id: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/contacts/\(id)")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.delete
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+}

@@ -76,6 +76,7 @@
 		C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */; };
 		C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */; };
 		C0AC942E271F58E90036E694 /* CustomDomainUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC942D271F58E90036E694 /* CustomDomainUpdateOption.swift */; };
+		C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC942F271F5F080036E694 /* DeletedAlias.swift */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +166,7 @@
 		C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasCreationOptions.swift; sourceTree = "<group>"; };
 		C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasRandomOptions.swift; sourceTree = "<group>"; };
 		C0AC942D271F58E90036E694 /* CustomDomainUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDomainUpdateOption.swift; sourceTree = "<group>"; };
+		C0AC942F271F5F080036E694 /* DeletedAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedAlias.swift; sourceTree = "<group>"; };
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +312,7 @@
 				C01CCD17271E019F00B84B63 /* Contact.swift */,
 				C01CCD2A271E108400B84B63 /* CustomDomain.swift */,
 				C0AC942D271F58E90036E694 /* CustomDomainUpdateOption.swift */,
+				C0AC942F271F5F080036E694 /* DeletedAlias.swift */,
 				C0012DA5271779FA00D18A7D /* DeletedResponse.swift */,
 				C0012DA727177AB300D18A7D /* EnabledResponse.swift */,
 				C03760F426DC0C4700E5ECAC /* ErrorResponse.swift */,
@@ -621,6 +624,7 @@
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
 				C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */,
 				C01CCD22271E095800B84B63 /* Mailbox.swift in Sources */,
+				C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */,
 				C01CCD18271E019F00B84B63 /* Contact.swift in Sources */,
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
