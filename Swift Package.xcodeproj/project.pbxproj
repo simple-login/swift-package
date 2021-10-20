@@ -80,6 +80,10 @@
 		C0CE57E22720AD4700EC79C8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E12720AD4700EC79C8 /* UserSettings.swift */; };
 		C0CE57E42720AEF200EC79C8 /* UserSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C0CE57E32720AEF200EC79C8 /* UserSettings.json */; };
 		C0CE57E62720AF1B00EC79C8 /* UserSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */; };
+		C0CE57E82720B24F00EC79C8 /* UserSettingsUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E72720B24F00EC79C8 /* UserSettingsUpdateOption.swift */; };
+		C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */; };
+		C0CE57EC2720B43700EC79C8 /* UsableDomain.json in Resources */ = {isa = PBXBuildFile; fileRef = C0CE57EB2720B43700EC79C8 /* UsableDomain.json */; };
+		C0CE57EE2720B45D00EC79C8 /* UsableDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +177,10 @@
 		C0CE57E12720AD4700EC79C8 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		C0CE57E32720AEF200EC79C8 /* UserSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserSettings.json; sourceTree = "<group>"; };
 		C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
+		C0CE57E72720B24F00EC79C8 /* UserSettingsUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsUpdateOption.swift; sourceTree = "<group>"; };
+		C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsableDomain.swift; sourceTree = "<group>"; };
+		C0CE57EB2720B43700EC79C8 /* UsableDomain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsableDomain.json; sourceTree = "<group>"; };
+		C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsableDomainTests.swift; sourceTree = "<group>"; };
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +233,7 @@
 				C02924F9266CBC3700AFFE20 /* Message.json */,
 				C02924F5266CB01500AFFE20 /* Mfa.json */,
 				C020018326D97C100057C345 /* Ok.json */,
+				C0CE57EB2720B43700EC79C8 /* UsableDomain.json */,
 				C00B2CFE266ACDA8008E7108 /* UserInfo1.json */,
 				C00B2D00266ACDBB008E7108 /* UserInfo2.json */,
 				C020018526D9815A0057C345 /* UserLogin1.json */,
@@ -329,9 +338,11 @@
 				C02924F7266CBBC300AFFE20 /* MessageResponse.swift */,
 				C020018126D97B6D0057C345 /* OkResponse.swift */,
 				C063DCD726F28E8200BDBD5C /* Suffix.swift */,
+				C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */,
 				C0727EC4266B596F000C0B36 /* UserInfo.swift */,
 				C0727EC6266B59B7000C0B36 /* UserLogin.swift */,
 				C0CE57E12720AD4700EC79C8 /* UserSettings.swift */,
+				C0CE57E72720B24F00EC79C8 /* UserSettingsUpdateOption.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 				C0727EED266C1131000C0B36 /* ErrorResponseTests.swift */,
 				C01CCD25271E0AA300B84B63 /* MailboxTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
+				C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */,
 				C0727EE9266C0F46000C0B36 /* UserLoginTests.swift */,
 				C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */,
 			);
@@ -519,6 +531,7 @@
 			files = (
 				C01CCD24271E0A7900B84B63 /* Mailbox.json in Resources */,
 				C0727EF6266C1B3D000C0B36 /* Dummy.json in Resources */,
+				C0CE57EC2720B43700EC79C8 /* UsableDomain.json in Resources */,
 				C02924FA266CBC3700AFFE20 /* Message.json in Resources */,
 				C0727EE2266C0C41000C0B36 /* ErrorResponse1.json in Resources */,
 				C01CCD1E271E02B100B84B63 /* Contact2.json in Resources */,
@@ -648,11 +661,13 @@
 				C03760F526DC0C4700E5ECAC /* ErrorResponse.swift in Sources */,
 				C063DCD626F28E0000BDBD5C /* AliasOptions.swift in Sources */,
 				C02924F8266CBBC300AFFE20 /* MessageResponse.swift in Sources */,
+				C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */,
 				C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */,
 				C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */,
 				C0012DAC2717815100D18A7D /* ActivityAction.swift in Sources */,
 				C07DB031270E352300AE3969 /* AliasContact.swift in Sources */,
 				C031FF2A26638FEF0098E474 /* Alias.swift in Sources */,
+				C0CE57E82720B24F00EC79C8 /* UserSettingsUpdateOption.swift in Sources */,
 				C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */,
 				C01CCD29271E0EB000B84B63 /* MailboxUpdateOption.swift in Sources */,
 				C00B2CF8266ACD2F008E7108 /* SLClient.swift in Sources */,
@@ -685,6 +700,7 @@
 				C0727EEE266C1131000C0B36 /* ErrorResponseTests.swift in Sources */,
 				C0727EF0266C13AC000C0B36 /* SLClientInitTests.swift in Sources */,
 				C063DCDE26F2913100BDBD5C /* AliasEndpointsTests.swift in Sources */,
+				C0CE57EE2720B45D00EC79C8 /* UsableDomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

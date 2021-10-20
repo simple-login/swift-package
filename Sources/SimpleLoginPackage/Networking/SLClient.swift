@@ -227,4 +227,15 @@ extension SLClient {
         let request = endpoint.getUserSettings(apiKey: apiKey)
         return perform(request)
     }
+
+    func updateUserSettings(apiKey: ApiKey,
+                            option: UserSettingsUpdateOption) -> AnyPublisher<UserSettings, SLClientError> {
+        let request = endpoint.updateUserSettings(apiKey: apiKey, option: option)
+        return perform(request)
+    }
+
+    func getUsableDomains(apiKey: ApiKey) -> AnyPublisher<[UsableDomain], SLClientError> {
+        let request = endpoint.getUsableDomains(apiKey: apiKey)
+        return perform(request)
+    }
 }

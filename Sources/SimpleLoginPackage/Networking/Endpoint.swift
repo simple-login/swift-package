@@ -370,4 +370,25 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - PATCH /api/setting
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apisetting
+    func updateUserSettings(apiKey: ApiKey, option: UserSettingsUpdateOption) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/setting")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.patch
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(option.requestBody)
+        return request
+    }
+
+    // MARK: - GET /api/v2/setting/domains
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2settingdomains
+    func getUsableDomains(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/v2/setting/domains")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }
