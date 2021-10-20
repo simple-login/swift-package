@@ -77,6 +77,9 @@
 		C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */; };
 		C0AC942E271F58E90036E694 /* CustomDomainUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC942D271F58E90036E694 /* CustomDomainUpdateOption.swift */; };
 		C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC942F271F5F080036E694 /* DeletedAlias.swift */; };
+		C0CE57E22720AD4700EC79C8 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E12720AD4700EC79C8 /* UserSettings.swift */; };
+		C0CE57E42720AEF200EC79C8 /* UserSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = C0CE57E32720AEF200EC79C8 /* UserSettings.json */; };
+		C0CE57E62720AF1B00EC79C8 /* UserSettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +170,9 @@
 		C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasRandomOptions.swift; sourceTree = "<group>"; };
 		C0AC942D271F58E90036E694 /* CustomDomainUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDomainUpdateOption.swift; sourceTree = "<group>"; };
 		C0AC942F271F5F080036E694 /* DeletedAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedAlias.swift; sourceTree = "<group>"; };
+		C0CE57E12720AD4700EC79C8 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		C0CE57E32720AEF200EC79C8 /* UserSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserSettings.json; sourceTree = "<group>"; };
+		C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsTests.swift; sourceTree = "<group>"; };
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +229,7 @@
 				C00B2D00266ACDBB008E7108 /* UserInfo2.json */,
 				C020018526D9815A0057C345 /* UserLogin1.json */,
 				C020018726D981670057C345 /* UserLogin2.json */,
+				C0CE57E32720AEF200EC79C8 /* UserSettings.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -324,6 +331,7 @@
 				C063DCD726F28E8200BDBD5C /* Suffix.swift */,
 				C0727EC4266B596F000C0B36 /* UserInfo.swift */,
 				C0727EC6266B59B7000C0B36 /* UserLogin.swift */,
+				C0CE57E12720AD4700EC79C8 /* UserSettings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,6 +378,7 @@
 				C01CCD25271E0AA300B84B63 /* MailboxTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
 				C0727EE9266C0F46000C0B36 /* UserLoginTests.swift */,
+				C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -513,6 +522,7 @@
 				C02924FA266CBC3700AFFE20 /* Message.json in Resources */,
 				C0727EE2266C0C41000C0B36 /* ErrorResponse1.json in Resources */,
 				C01CCD1E271E02B100B84B63 /* Contact2.json in Resources */,
+				C0CE57E42720AEF200EC79C8 /* UserSettings.json in Resources */,
 				C063DCDA26F28F1300BDBD5C /* AliasOptions.json in Resources */,
 				C0727EE6266C0C90000C0B36 /* ErrorResponse3.json in Resources */,
 				C020018826D981670057C345 /* UserLogin2.json in Resources */,
@@ -628,6 +638,7 @@
 				C01CCD18271E019F00B84B63 /* Contact.swift in Sources */,
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
+				C0CE57E22720AD4700EC79C8 /* UserSettings.swift in Sources */,
 				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
 				C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */,
 				C07DB02D270E33FE00AE3969 /* MailboxLite.swift in Sources */,
@@ -657,6 +668,7 @@
 				C0727EF4266C18E7000C0B36 /* ErrorResponseExtensions.swift in Sources */,
 				C0727EEA266C0F46000C0B36 /* UserLoginTests.swift in Sources */,
 				C0727ED8266B73B6000C0B36 /* URLRequestExtensions.swift in Sources */,
+				C0CE57E62720AF1B00EC79C8 /* UserSettingsTests.swift in Sources */,
 				C00B2CFB266ACD8E008E7108 /* AccountEndpointsTests.swift in Sources */,
 				C0727EEC266C100F000C0B36 /* ApiKeyExtensions.swift in Sources */,
 				C0727ED6266B7106000C0B36 /* StringExtensions.swift in Sources */,

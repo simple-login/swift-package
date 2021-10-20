@@ -1,0 +1,6 @@
+{
+  "alias_generator": "word",
+  "notification": true,
+  "random_alias_default_domain": "sl.local",
+  "sender_format": "AT"
+}

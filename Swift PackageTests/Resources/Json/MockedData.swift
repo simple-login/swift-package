@@ -35,5 +35,6 @@ final class MockedData {
     static let userInfo2 = jsonData(forJsonName: "UserInfo2")
     static let userLogin1 = jsonData(forJsonName: "UserLogin1")
     static let userLogin2 = jsonData(forJsonName: "UserLogin2")
+    static let userSettings = jsonData(forJsonName: "UserSettings")
     static let ok = jsonData(forJsonName: "Ok")
 }

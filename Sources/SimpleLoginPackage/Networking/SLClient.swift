@@ -220,3 +220,11 @@ extension SLClient {
         return perform(request)
     }
 }
+
+// MARK: - Settings
+extension SLClient {
+    func getUserSettings(apiKey: ApiKey) -> AnyPublisher<UserSettings, SLClientError> {
+        let request = endpoint.getUserSettings(apiKey: apiKey)
+        return perform(request)
+    }
+}

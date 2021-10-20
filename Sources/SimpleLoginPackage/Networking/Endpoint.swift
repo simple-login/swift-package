@@ -358,3 +358,16 @@ extension Endpoint {
         return request
     }
 }
+
+// MARK: - Settings
+extension Endpoint {
+    // MARK: - GET /api/setting
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apisetting
+    func getUserSettings(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/setting")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
+}
