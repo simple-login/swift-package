@@ -12,3 +12,19 @@ public struct AliasLatestActivity: Decodable {
     public let contact: AliasContact
     public let timestamp: TimeInterval
 }
+
+// For SwiftUI preview purpose
+public extension AliasLatestActivity {
+    static let block = AliasLatestActivity(action: .block,
+                                           contact: .dmiller,
+                                           timestamp: 1_635_277_627)
+    static let bounced = AliasLatestActivity(action: .bounced,
+                                             contact: .louise,
+                                             timestamp: 1_635_277_668)
+    static let forward = AliasLatestActivity(action: .forward,
+                                             contact: .spadkins,
+                                             timestamp: 1_635_277_701)
+    static let reply = AliasLatestActivity(action: .reply,
+                                           contact: .pierce,
+                                           timestamp: 1_635_277_741)
+}

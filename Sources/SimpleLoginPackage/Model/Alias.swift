@@ -64,3 +64,36 @@ extension Alias: Decodable {
 public struct AliasArray: Decodable {
     public let aliases: [Alias]
 }
+
+// For SwiftUI preview purpose
+public extension Alias {
+    static let ccohen = Alias(id: 1,
+                              email: "ccohen@yahoo.ca",
+                              name: "Chris Cohen",
+                              enabled: true,
+                              creationTimestamp: 1_635_277_847,
+                              blockCount: 17,
+                              forwardCount: 580,
+                              replyCount: 3,
+                              note: nil,
+                              pgpSupported: true,
+                              pgpDisabled: true,
+                              mailboxes: [.frikazoyd, .grothoff],
+                              latestActivity: nil,
+                              pinned: false)
+
+    static let claypool = Alias(id: 2,
+                                email: "claypool@msn.com",
+                                name: nil,
+                                enabled: false,
+                                creationTimestamp: 1_635_277_906,
+                                blockCount: 893,
+                                forwardCount: 12,
+                                replyCount: 345,
+                                note: "For online shopping",
+                                pgpSupported: false,
+                                pgpDisabled: false,
+                                mailboxes: [.kmiller, .rafasgj, .scottlee, .grothoff],
+                                latestActivity: .bounced,
+                                pinned: true)
+}

@@ -27,3 +27,19 @@ extension AliasContact: Decodable {
         self.reverseAlias = try container.decode(String.self, forKey: .reverseAlias)
     }
 }
+
+// For SwiftUI preview purpose
+public extension AliasContact {
+    static let spadkins = AliasContact(email: "spadkins@mac.com",
+                                       name: "Spad Kins",
+                                       reverseAlias: "reverse.spadkins@mac.com")
+    static let louise = AliasContact(email: "louise@gmail.com",
+                                     name: "Louise",
+                                     reverseAlias: "reverse.louise@gmail.com")
+    static let dmiller = AliasContact(email: "dmiller@live.com",
+                                      name: "Don Miller",
+                                      reverseAlias: "reverse.dmiller@live.com")
+    static let pierce = AliasContact(email: "pierce@yahoo.ca",
+                                     name: "Pierce",
+                                     reverseAlias: "reverse.pierce@yahoo.ca")
+}
