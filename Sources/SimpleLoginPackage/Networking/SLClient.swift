@@ -107,7 +107,7 @@ public extension SLClient {
 }
 
 // MARK: - Alias
-extension SLClient {
+public extension SLClient {
     func getAliasOptions(apiKey: ApiKey, hostname: String?) -> AnyPublisher<AliasOptions, SLClientError> {
         let request = endpoint.getAliasOptions(apiKey: apiKey, hostname: hostname)
         return perform(request)
@@ -169,7 +169,7 @@ extension SLClient {
 }
 
 // MARK: - Mailbox
-extension SLClient {
+public extension SLClient {
     func getMailboxes(apiKey: ApiKey) -> AnyPublisher<MailboxArray, SLClientError> {
         let request = endpoint.getMailboxes(apiKey: apiKey)
         return perform(request)
@@ -194,7 +194,7 @@ extension SLClient {
 }
 
 // MARK: - Custom domain
-extension SLClient {
+public extension SLClient {
     func getCustomDomains(apiKey: ApiKey) -> AnyPublisher<[CustomDomain], SLClientError> {
         let request = endpoint.getCustomDomains(apiKey: apiKey)
         return perform(request)
@@ -214,7 +214,7 @@ extension SLClient {
 }
 
 // MARK: - Contact
-extension SLClient {
+public extension SLClient {
     func deleteContact(apiKey: ApiKey, id: Int) -> AnyPublisher<DeletedResponse, SLClientError> {
         let request = endpoint.deleteContact(apiKey: apiKey, id: id)
         return perform(request)
@@ -222,7 +222,7 @@ extension SLClient {
 }
 
 // MARK: - Settings
-extension SLClient {
+public extension SLClient {
     func getUserSettings(apiKey: ApiKey) -> AnyPublisher<UserSettings, SLClientError> {
         let request = endpoint.getUserSettings(apiKey: apiKey)
         return perform(request)
