@@ -37,37 +37,26 @@ extension AliasActivity: Decodable {
     }
 }
 
-public struct AliasActivityArray: Decodable {
-    public let activities: [AliasActivity]
+public extension AliasActivity {
+    var date: Date {
+        Date(timeIntervalSince1970: timestamp)
+    }
+
+    var dateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        formatter.doesRelativeDateFormatting = true
+        return formatter.string(from: date)
+    }
+
+    var relativeDateString: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.dateTimeStyle = .named
+        return formatter.string(for: date) ?? ""
+    }
 }
 
-// For SwiftUI preview purpose
-public extension AliasActivity {
-    static let block = AliasActivity(action: .block,
-                                     timestamp: 1_636_294_781,
-                                     from: "crimsane@att.net",
-                                     to: "godeke@sbcglobal.net",
-                                     reverseAlias: "Reversed Crimsane <reversed.crimsane@att.net>",
-                                     reverseAliasAddress: "reversed.crimsane@att.net")
-
-    static let bounced = AliasActivity(action: .bounced,
-                                       timestamp: 1_636_294_840,
-                                       from: "tromey@gmail.com",
-                                       to: "uqmcolyv@comcast.net",
-                                       reverseAlias: "Reversed Tromey <reversed.tromey@gmail.com>",
-                                       reverseAliasAddress: "reversed.tromey@gmail.com")
-
-    static let forward = AliasActivity(action: .forward,
-                                       timestamp: 1_636_294_874,
-                                       from: "grady@me.com",
-                                       to: "shaffei@hotmail.com",
-                                       reverseAlias: "Reversed Grady <reversed.grady@me.com>",
-                                       reverseAliasAddress: "reversed.grady@me.com")
-
-    static let reply = AliasActivity(action: .reply,
-                                     timestamp: 1_636_294_908,
-                                     from: "ewaters@yahoo.ca",
-                                     to: "uraeus@gmail.com",
-                                     reverseAlias: "Reversed Waters <reversed.ewaters@yahoo.ca>",
-                                     reverseAliasAddress: "reversed.ewaters@yahoo.ca")
+public struct AliasActivityArray: Decodable {
+    public let activities: [AliasActivity]
 }
