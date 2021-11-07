@@ -38,10 +38,6 @@ extension AliasActivity: Decodable {
 }
 
 public extension AliasActivity {
-    var id: UUID {
-        UUID()
-    }
-
     var date: Date {
         Date(timeIntervalSince1970: timestamp)
     }
