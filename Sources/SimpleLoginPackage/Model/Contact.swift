@@ -47,3 +47,18 @@ extension Contact: Decodable {
 public struct ContactArray: Decodable {
     public let contacts: [Contact]
 }
+
+public struct BlockForward {
+    public let value: Bool
+}
+
+extension BlockForward: Decodable {
+    private enum Key: String, CodingKey {
+        case value = "block_forward"
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: Key.self)
+        self.value = try container.decode(Bool.self, forKey: .value)
+    }
+}

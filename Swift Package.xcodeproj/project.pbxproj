@@ -84,6 +84,9 @@
 		C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */; };
 		C0CE57EC2720B43700EC79C8 /* UsableDomain.json in Resources */ = {isa = PBXBuildFile; fileRef = C0CE57EB2720B43700EC79C8 /* UsableDomain.json */; };
 		C0CE57EE2720B45D00EC79C8 /* UsableDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */; };
+		C0FDCCD02739CD1000370096 /* BlockForward1.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCCF2739CD1000370096 /* BlockForward1.json */; };
+		C0FDCCD22739CD2800370096 /* BlockForward2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCD12739CD2800370096 /* BlockForward2.json */; };
+		C0FDCCD42739CDBF00370096 /* BlockForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -181,6 +184,9 @@
 		C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsableDomain.swift; sourceTree = "<group>"; };
 		C0CE57EB2720B43700EC79C8 /* UsableDomain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsableDomain.json; sourceTree = "<group>"; };
 		C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsableDomainTests.swift; sourceTree = "<group>"; };
+		C0FDCCCF2739CD1000370096 /* BlockForward1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlockForward1.json; sourceTree = "<group>"; };
+		C0FDCCD12739CD2800370096 /* BlockForward2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlockForward2.json; sourceTree = "<group>"; };
+		C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockForwardTests.swift; sourceTree = "<group>"; };
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +231,8 @@
 				C01CCD1D271E02B100B84B63 /* Contact2.json */,
 				C01CCD2D271E128900B84B63 /* CustomDomain1.json */,
 				C01CCD2F271E129600B84B63 /* CustomDomain2.json */,
+				C0FDCCCF2739CD1000370096 /* BlockForward1.json */,
+				C0FDCCD12739CD2800370096 /* BlockForward2.json */,
 				C0727EF5266C1B3D000C0B36 /* Dummy.json */,
 				C0727EE1266C0C41000C0B36 /* ErrorResponse1.json */,
 				C0727EE3266C0C6B000C0B36 /* ErrorResponse2.json */,
@@ -385,6 +393,7 @@
 				C063DCDB26F28FEF00BDBD5C /* AliasOptionsTests.swift */,
 				C01CCD1F271E02DE00B84B63 /* ContactTests.swift */,
 				C01CCD31271E130500B84B63 /* CustomDomainTests.swift */,
+				C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */,
 				C0727EED266C1131000C0B36 /* ErrorResponseTests.swift */,
 				C01CCD25271E0AA300B84B63 /* MailboxTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
@@ -540,6 +549,7 @@
 				C0727EE6266C0C90000C0B36 /* ErrorResponse3.json in Resources */,
 				C020018826D981670057C345 /* UserLogin2.json in Resources */,
 				C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */,
+				C0FDCCD22739CD2800370096 /* BlockForward2.json in Resources */,
 				C0727EE4266C0C6B000C0B36 /* ErrorResponse2.json in Resources */,
 				C020018626D9815A0057C345 /* UserLogin1.json in Resources */,
 				C01CCD1C271E02A200B84B63 /* Contact1.json in Resources */,
@@ -550,6 +560,7 @@
 				C07DB033270E3B8000AE3969 /* Alias.json in Resources */,
 				C01CCD2E271E128900B84B63 /* CustomDomain1.json in Resources */,
 				C02924F6266CB01500AFFE20 /* Mfa.json in Resources */,
+				C0FDCCD02739CD1000370096 /* BlockForward1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,6 +709,7 @@
 				C0012DB0271783AD00D18A7D /* AliasActivityTests.swift in Sources */,
 				C0727EF2266C188D000C0B36 /* SLClientErrorExtensions.swift in Sources */,
 				C0727EEE266C1131000C0B36 /* ErrorResponseTests.swift in Sources */,
+				C0FDCCD42739CDBF00370096 /* BlockForwardTests.swift in Sources */,
 				C0727EF0266C13AC000C0B36 /* SLClientInitTests.swift in Sources */,
 				C063DCDE26F2913100BDBD5C /* AliasEndpointsTests.swift in Sources */,
 				C0CE57EE2720B45D00EC79C8 /* UsableDomainTests.swift in Sources */,
