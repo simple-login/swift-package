@@ -219,6 +219,11 @@ public extension SLClient {
         let request = endpoint.deleteContact(apiKey: apiKey, id: id)
         return perform(request)
     }
+
+    func toggleContact(apiKey: ApiKey, id: Int) -> AnyPublisher<BlockForward, SLClientError> {
+        let request = endpoint.toggleContact(apiKey: apiKey, id: id)
+        return perform(request)
+    }
 }
 
 // MARK: - Settings

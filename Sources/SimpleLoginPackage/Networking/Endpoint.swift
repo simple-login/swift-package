@@ -357,6 +357,16 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - POST /api/contacts/:contact_id/toggle
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apicontactscontact_idtoggle
+    func toggleContact(apiKey: ApiKey, id: Int) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/contacts/\(id)/toggle")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }
 
 // MARK: - Settings
