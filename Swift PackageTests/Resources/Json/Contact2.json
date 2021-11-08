@@ -7,5 +7,6 @@
     "last_email_sent_timestamp": 1582284900,
     "reverse_alias": "newsletter at example.com <reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co>",
     "reverse_alias_address": "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co",
-    "existed": true
+    "existed": true,
+    "block_forward": true
 }

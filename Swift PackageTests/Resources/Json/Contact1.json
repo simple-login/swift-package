@@ -6,5 +6,6 @@
     "last_email_sent_date": null,
     "last_email_sent_timestamp": null,
     "reverse_alias": "marketing at example.com <reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co>",
-    "reverse_alias_address": "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co"
+    "reverse_alias_address": "reply+bzvpazcdedcgcpztehxzgjgzmxskqa@sl.co",
+    "block_forward": false
 }

@@ -15,6 +15,7 @@ public struct Contact {
     public let reverseAlias: String
     public let reverseAliasAddress: String
     public let existed: Bool // Used when creating a new contact
+    public let blockForward: Bool
 }
 
 extension Contact: Decodable {
@@ -26,6 +27,7 @@ extension Contact: Decodable {
         case reverseAlias = "reverse_alias"
         case reverseAliasAddress = "reverse_alias_address"
         case existed = "existed"
+        case blockForward = "block_forward"
     }
 
     public init(from decoder: Decoder) throws {
@@ -38,6 +40,7 @@ extension Contact: Decodable {
         self.reverseAlias = try container.decode(String.self, forKey: .reverseAlias)
         self.reverseAliasAddress = try container.decode(String.self, forKey: .reverseAliasAddress)
         self.existed = try container.decodeIfPresent(Bool.self, forKey: .existed) ?? false
+        self.blockForward = try container.decode(Bool.self, forKey: .blockForward)
     }
 }
 
