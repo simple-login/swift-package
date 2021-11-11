@@ -55,7 +55,8 @@ extension Alias: Decodable {
         self.note = try container.decodeIfPresent(String.self, forKey: .note)
         self.pgpSupported = try container.decode(Bool.self, forKey: .pgpSupported)
         self.pgpDisabled = try container.decode(Bool.self, forKey: .pgpDisabled)
-        self.mailboxes = try container.decode([MailboxLite].self, forKey: .mailboxes)
+        let mailboxes = try container.decode([MailboxLite].self, forKey: .mailboxes)
+        self.mailboxes = mailboxes.sorted(by: { $0.id < $1.id } )
         self.latestActivity = try container.decodeIfPresent(AliasLatestActivity.self, forKey: .latestActivity)
         self.pinned = try container.decode(Bool.self, forKey: .pinned)
     }
