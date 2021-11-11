@@ -150,7 +150,9 @@ public extension SLClient {
         return perform(request)
     }
 
-    func updateAlias(apiKey: ApiKey, id: Int, option: AliasUpdateOption) -> AnyPublisher<Alias, SLClientError> {
+    func updateAlias(apiKey: ApiKey,
+                     id: Int,
+                     option: AliasUpdateOption) -> AnyPublisher<OkResponse, SLClientError> {
         let request = endpoint.updateAlias(apiKey: apiKey, id: id, option: option)
         return perform(request)
     }
