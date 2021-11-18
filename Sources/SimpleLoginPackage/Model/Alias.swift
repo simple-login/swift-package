@@ -22,6 +22,36 @@ public struct Alias {
     public let mailboxes: [MailboxLite]
     public let latestActivity: AliasLatestActivity?
     public let pinned: Bool
+
+    public init(id: Int,
+                email: String,
+                name: String?,
+                enabled: Bool,
+                creationTimestamp: TimeInterval,
+                blockCount: Int,
+                forwardCount: Int,
+                replyCount: Int,
+                note: String?,
+                pgpSupported: Bool,
+                pgpDisabled: Bool,
+                mailboxes: [MailboxLite],
+                latestActivity: AliasLatestActivity?,
+                pinned: Bool) {
+        self.id = id
+        self.email = email
+        self.name = name
+        self.enabled = enabled
+        self.creationTimestamp = creationTimestamp
+        self.blockCount = blockCount
+        self.forwardCount = forwardCount
+        self.replyCount = replyCount
+        self.note = note
+        self.pgpSupported = pgpSupported
+        self.pgpDisabled = pgpDisabled
+        self.mailboxes = mailboxes
+        self.latestActivity = latestActivity
+        self.pinned = pinned
+    }
 }
 
 extension Alias: Decodable {
@@ -56,7 +86,7 @@ extension Alias: Decodable {
         self.pgpSupported = try container.decode(Bool.self, forKey: .pgpSupported)
         self.pgpDisabled = try container.decode(Bool.self, forKey: .pgpDisabled)
         let mailboxes = try container.decode([MailboxLite].self, forKey: .mailboxes)
-        self.mailboxes = mailboxes.sorted(by: { $0.id < $1.id } )
+        self.mailboxes = mailboxes.sorted { $0.id < $1.id }
         self.latestActivity = try container.decodeIfPresent(AliasLatestActivity.self, forKey: .latestActivity)
         self.pinned = try container.decode(Bool.self, forKey: .pinned)
     }
