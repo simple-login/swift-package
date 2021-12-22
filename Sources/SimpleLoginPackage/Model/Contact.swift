@@ -62,3 +62,23 @@ extension BlockForward: Decodable {
         self.value = try container.decode(Bool.self, forKey: .value)
     }
 }
+
+public extension Contact {
+    var creationDate: Date {
+        Date(timeIntervalSince1970: creationTimestamp)
+    }
+
+    var creationDateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        formatter.doesRelativeDateFormatting = true
+        return formatter.string(from: creationDate)
+    }
+
+    var relativeCreationDateString: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.dateTimeStyle = .named
+        return formatter.string(for: creationDate) ?? ""
+    }
+}
