@@ -16,7 +16,7 @@ public enum UserSettingsUpdateOption {
     var requestBody: [String: Any] {
         switch self {
         case .randomMode(let randomMode):
-            return ["alias_generator": randomMode]
+            return ["alias_generator": randomMode.rawValue]
         case .notification(let notification):
             return ["notification": notification]
         case .randomAliasDefaultDomain(let domain):
