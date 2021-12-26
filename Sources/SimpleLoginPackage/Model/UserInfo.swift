@@ -30,4 +30,16 @@ public struct UserInfo: Decodable {
         self.isPremium = try container.decode(Bool.self, forKey: .isPremium)
         self.inTrial = try container.decode(Bool.self, forKey: .inTrial)
     }
+
+    public init(name: String,
+                email: String,
+                profilePictureUrl: String?,
+                isPremium: Bool,
+                inTrial: Bool) {
+        self.name = name
+        self.email = email
+        self.profilePictureUrl = profilePictureUrl
+        self.isPremium = isPremium
+        self.inTrial = inTrial
+    }
 }
