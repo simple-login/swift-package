@@ -28,7 +28,7 @@ public struct AliasRandomOptions {
     }
 }
 
-public enum RandomMode: String, Decodable {
+public enum RandomMode: String, Decodable, CaseIterable {
     case uuid = "uuid"
     case word = "word"
 }
