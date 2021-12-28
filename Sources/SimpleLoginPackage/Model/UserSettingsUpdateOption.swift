@@ -12,6 +12,7 @@ public enum UserSettingsUpdateOption {
     case notification(Bool)
     case randomAliasDefaultDomain(String)
     case senderFormat(SenderFormat)
+    case randomAliasSuffix(RandomAliasSuffix)
 
     var requestBody: [String: Any] {
         switch self {
@@ -23,6 +24,8 @@ public enum UserSettingsUpdateOption {
             return ["random_alias_default_domain": domain]
         case .senderFormat(let senderFormat):
             return ["sender_format": senderFormat.rawValue]
+        case .randomAliasSuffix(let randomAliasSuffix):
+            return ["random_alias_suffix": randomAliasSuffix.rawValue]
         }
     }
 }
