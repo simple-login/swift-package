@@ -15,5 +15,6 @@ final class UserSettingsTests: XCTestCase {
         XCTAssertTrue(sut.notification)
         XCTAssertEqual(sut.randomAliasDefaultDomain, "sl.local")
         XCTAssertEqual(sut.senderFormat, .at)
+        XCTAssertEqual(sut.randomAliasSuffix, .word)
     }
 }
