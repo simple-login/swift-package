@@ -246,3 +246,14 @@ public extension SLClient {
         return perform(request)
     }
 }
+
+public extension SLClient {
+    func processPayment(apiKey: ApiKey,
+                        receiptData: String,
+                        isMacApp: Bool) -> AnyPublisher<OkResponse, SLClientError> {
+        let request = endpoint.processPayment(apiKey: apiKey,
+                                              receiptData: receiptData,
+                                              isMacApp: isMacApp)
+        return perform(request)
+    }
+}

@@ -402,3 +402,18 @@ extension Endpoint {
         return request
     }
 }
+
+// MARK: - Misc
+extension Endpoint {
+    // MARK: - POST /api/apple/process_payment
+    // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiappleprocess_payment
+    func processPayment(apiKey: ApiKey, receiptData: String, isMacApp: Bool) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/apple/process_payment")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.post
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(["receipt_data": receiptData,
+                                    "is_macapp": isMacApp])
+        return request
+    }
+}
