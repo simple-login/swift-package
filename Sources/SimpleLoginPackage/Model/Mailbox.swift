@@ -14,6 +14,20 @@ public struct Mailbox {
     public let creationTimestamp: TimeInterval
     public let aliasCount: Int
     public let verified: Bool
+
+    public init(id: Int,
+                email: String,
+                default: Bool,
+                creationTimestamp: TimeInterval,
+                aliasCount: Int,
+                verified: Bool) {
+        self.id = id
+        self.email = email
+        self.default = `default`
+        self.creationTimestamp = creationTimestamp
+        self.aliasCount = aliasCount
+        self.verified = verified
+    }
 }
 
 extension Mailbox: Decodable {
