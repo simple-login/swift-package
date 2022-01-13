@@ -54,3 +54,39 @@ extension Mailbox: Decodable {
 public struct MailboxArray: Decodable {
     public let mailboxes: [Mailbox]
 }
+
+public extension Mailbox {
+    var creationDate: Date {
+        Date(timeIntervalSince1970: creationTimestamp)
+    }
+
+    var relativeCreationDateString: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.dateTimeStyle = .named
+        return formatter.string(for: creationDate) ?? ""
+    }
+}
+
+// For SwiftUI preview purpose
+public extension Mailbox {
+    static let defaultVerified = Mailbox(id: 0,
+                                         email: "john.doe@example.com",
+                                         default: true,
+                                         creationTimestamp: 1_641_852_987,
+                                         aliasCount: 10,
+                                         verified: true)
+
+    static let normalVerified = Mailbox(id: 0,
+                                        email: "jane.doe@example.com",
+                                        default: false,
+                                        creationTimestamp: 1_641_075_437,
+                                        aliasCount: 20,
+                                        verified: true)
+
+    static let normalUnverified = Mailbox(id: 0,
+                                          email: "jill.doe@example.com",
+                                          default: false,
+                                          creationTimestamp: 1_641_421_037,
+                                          aliasCount: 30,
+                                          verified: false)
+}
