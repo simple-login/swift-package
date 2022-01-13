@@ -39,6 +39,18 @@ public struct CustomDomain {
     }
 }
 
+public extension CustomDomain {
+    var creationDate: Date {
+        Date(timeIntervalSince1970: creationTimestamp)
+    }
+
+    var relativeCreationDateString: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.dateTimeStyle = .named
+        return formatter.string(for: creationDate) ?? ""
+    }
+}
+
 extension CustomDomain: Decodable {
     private enum Key: String, CodingKey {
         case id = "id"
