@@ -10,6 +10,11 @@ import Foundation
 public struct MailboxLite: Decodable {
     public let id: Int
     public let email: String
+
+    public init(id: Int, email: String) {
+        self.id = id
+        self.email = email
+    }
 }
 
 // For SwiftUI preview purpose

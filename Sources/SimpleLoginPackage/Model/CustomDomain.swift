@@ -17,6 +17,26 @@ public struct CustomDomain {
     public let randomPrefixGeneration: Bool
     public let mailboxes: [MailboxLite]
     public let catchAll: Bool
+
+    public init(id: Int,
+                creationTimestamp: TimeInterval,
+                domainName: String,
+                name: String?,
+                verified: Bool,
+                aliasCount: Int,
+                randomPrefixGeneration: Bool,
+                mailboxes: [MailboxLite],
+                catchAll: Bool) {
+        self.id = id
+        self.creationTimestamp = creationTimestamp
+        self.domainName = domainName
+        self.name = name
+        self.verified = verified
+        self.aliasCount = aliasCount
+        self.randomPrefixGeneration = randomPrefixGeneration
+        self.mailboxes = mailboxes
+        self.catchAll = catchAll
+    }
 }
 
 extension CustomDomain: Decodable {
@@ -44,4 +64,27 @@ extension CustomDomain: Decodable {
         self.mailboxes = try container.decode([MailboxLite].self, forKey: .mailboxes)
         self.catchAll = try container.decode(Bool.self, forKey: .catchAll)
     }
+}
+
+// For SwiftUI preview purpose
+public extension CustomDomain {
+    static let verified = CustomDomain(id: 0,
+                                       creationTimestamp: 1_641_852_987,
+                                       domainName: "johndoe.info",
+                                       name: "John Doe Domain",
+                                       verified: true,
+                                       aliasCount: 17,
+                                       randomPrefixGeneration: true,
+                                       mailboxes: [.frikazoyd, .grothoff],
+                                       catchAll: true)
+
+    static let unverified = CustomDomain(id: 1,
+                                         creationTimestamp: 1_641_421_037,
+                                         domainName: "janedoe.info",
+                                         name: "Jane Doe Domain",
+                                         verified: false,
+                                         aliasCount: 87,
+                                         randomPrefixGeneration: false,
+                                         mailboxes: [.scottlee, .rafasgj],
+                                         catchAll: false)
 }
