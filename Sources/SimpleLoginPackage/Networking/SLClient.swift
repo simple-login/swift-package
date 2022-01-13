@@ -189,7 +189,7 @@ public extension SLClient {
 
     func updateMailbox(apiKey: ApiKey,
                        id: Int,
-                       option: MailboxUpdateOption) -> AnyPublisher<Mailbox, SLClientError> {
+                       option: MailboxUpdateOption) -> AnyPublisher<UpdateResponse, SLClientError> {
         let request = endpoint.updateMailbox(apiKey: apiKey, id: id, option: option)
         return perform(request)
     }

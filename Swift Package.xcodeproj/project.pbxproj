@@ -84,6 +84,7 @@
 		C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */; };
 		C0CE57EC2720B43700EC79C8 /* UsableDomain.json in Resources */ = {isa = PBXBuildFile; fileRef = C0CE57EB2720B43700EC79C8 /* UsableDomain.json */; };
 		C0CE57EE2720B45D00EC79C8 /* UsableDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */; };
+		C0E9C3DF2790C4B600D1A463 /* UpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E9C3DE2790C4B600D1A463 /* UpdateResponse.swift */; };
 		C0FDCCD02739CD1000370096 /* BlockForward1.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCCF2739CD1000370096 /* BlockForward1.json */; };
 		C0FDCCD22739CD2800370096 /* BlockForward2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCD12739CD2800370096 /* BlockForward2.json */; };
 		C0FDCCD42739CDBF00370096 /* BlockForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */; };
@@ -184,6 +185,7 @@
 		C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsableDomain.swift; sourceTree = "<group>"; };
 		C0CE57EB2720B43700EC79C8 /* UsableDomain.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsableDomain.json; sourceTree = "<group>"; };
 		C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsableDomainTests.swift; sourceTree = "<group>"; };
+		C0E9C3DE2790C4B600D1A463 /* UpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponse.swift; sourceTree = "<group>"; };
 		C0FDCCCF2739CD1000370096 /* BlockForward1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlockForward1.json; sourceTree = "<group>"; };
 		C0FDCCD12739CD2800370096 /* BlockForward2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BlockForward2.json; sourceTree = "<group>"; };
 		C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockForwardTests.swift; sourceTree = "<group>"; };
@@ -346,6 +348,7 @@
 				C02924F7266CBBC300AFFE20 /* MessageResponse.swift */,
 				C020018126D97B6D0057C345 /* OkResponse.swift */,
 				C063DCD726F28E8200BDBD5C /* Suffix.swift */,
+				C0E9C3DE2790C4B600D1A463 /* UpdateResponse.swift */,
 				C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */,
 				C0727EC4266B596F000C0B36 /* UserInfo.swift */,
 				C0727EC6266B59B7000C0B36 /* UserLogin.swift */,
@@ -653,6 +656,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01CCD2C271E110E00B84B63 /* CustomDomain.swift in Sources */,
+				C0E9C3DF2790C4B600D1A463 /* UpdateResponse.swift in Sources */,
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */,
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
