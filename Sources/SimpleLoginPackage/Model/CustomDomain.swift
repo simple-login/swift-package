@@ -44,6 +44,14 @@ public extension CustomDomain {
         Date(timeIntervalSince1970: creationTimestamp)
     }
 
+    var creationDateString: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        formatter.doesRelativeDateFormatting = true
+        return formatter.string(from: creationDate)
+    }
+
     var relativeCreationDateString: String {
         let formatter = RelativeDateTimeFormatter()
         formatter.dateTimeStyle = .named
