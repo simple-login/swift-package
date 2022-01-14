@@ -78,6 +78,19 @@ extension CustomDomain: Decodable {
     }
 }
 
+public struct CustomDomainArray: Decodable {
+    public let customDomains: [CustomDomain]
+
+    private enum Key: String, CodingKey {
+        case customDomains = "custom_domains"
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: Key.self)
+        self.customDomains = try container.decode([CustomDomain].self, forKey: .customDomains)
+    }
+}
+
 // For SwiftUI preview purpose
 public extension CustomDomain {
     static let verified = CustomDomain(id: 0,

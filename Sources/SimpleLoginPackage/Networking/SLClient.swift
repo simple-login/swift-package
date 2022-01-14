@@ -197,7 +197,7 @@ public extension SLClient {
 
 // MARK: - Custom domain
 public extension SLClient {
-    func getCustomDomains(apiKey: ApiKey) -> AnyPublisher<[CustomDomain], SLClientError> {
+    func getCustomDomains(apiKey: ApiKey) -> AnyPublisher<CustomDomainArray, SLClientError> {
         let request = endpoint.getCustomDomains(apiKey: apiKey)
         return perform(request)
     }
