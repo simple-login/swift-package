@@ -204,7 +204,7 @@ public extension SLClient {
 
     func updateCustomDomain(apiKey: ApiKey,
                             id: Int,
-                            option: CustomDomainUpdateOption) -> AnyPublisher<CustomDomain, SLClientError> {
+                            option: CustomDomainUpdateOption) -> AnyPublisher<OkResponse, SLClientError> {
         let request = endpoint.updateCustomDomain(apiKey: apiKey, id: id, option: option)
         return perform(request)
     }
