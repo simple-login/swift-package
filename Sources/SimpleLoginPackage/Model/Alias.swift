@@ -126,6 +126,20 @@ public struct AliasArray: Decodable {
 
 // For SwiftUI preview purpose
 public extension Alias {
+    static let random = Alias(id: 0,
+                              email: "my.alias@simplelogin.co",
+                              name: "John Doe",
+                              enabled: true,
+                              creationTimestamp: 1_635_277_847,
+                              blockCount: 61,
+                              forwardCount: 379,
+                              replyCount: 17,
+                              note: nil,
+                              pgpSupported: false,
+                              pgpDisabled: false,
+                              mailboxes: [.johnDoe, .janeSmith],
+                              latestActivity: nil,
+                              pinned: true)
     static let ccohen = Alias(id: 1,
                               email: "ccohen@yahoo.ca",
                               name: "Chris Cohen",
