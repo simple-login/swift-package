@@ -10,6 +10,7 @@ import Foundation
 public struct ErrorResponse {
     public let message: String
     public let code: String?
+    public var statusCode = -1
 }
 
 extension ErrorResponse: Decodable {

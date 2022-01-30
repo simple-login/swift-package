@@ -36,7 +36,8 @@ public struct SLClient {
                 switch httpResponse.statusCode {
                 case 200...299: return data
                 case 400...499:
-                    if let errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
+                    if var errorResponse = try? JSONDecoder().decode(ErrorResponse.self, from: data) {
+                        errorResponse.statusCode = httpResponse.statusCode
                         throw SLClientError.clientError(errorResponse)
                     } else {
                         throw SLClientError.unknown(statusCode: httpResponse.statusCode)
