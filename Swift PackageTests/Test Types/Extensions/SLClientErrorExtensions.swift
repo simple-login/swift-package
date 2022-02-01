@@ -16,9 +16,6 @@ extension SLClientError: Equatable {
         case (.invalidServerResponse, .invalidServerResponse):
             return true
 
-        case let (.other(error1), .other(error2)):
-            return error1.localizedDescription == error2.localizedDescription
-
         case let (.unknown(statusCode1), .unknown(statusCode2)):
             return statusCode1 == statusCode2
 

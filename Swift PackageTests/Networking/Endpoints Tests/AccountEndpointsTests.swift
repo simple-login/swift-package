@@ -69,10 +69,10 @@ extension AccountEndpointsTests {
         sut.login(email: .randomEmail(),
                   password: .randomPassword(),
                   device: .randomName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -102,10 +102,10 @@ extension AccountEndpointsTests {
         sut.login(email: .randomEmail(),
                   password: .randomPassword(),
                   device: .randomName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, .unknown(statusCode: 406))
+                    XCTAssertEqual(error as? SLClientError, .unknown(statusCode: 406))
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -135,10 +135,10 @@ extension AccountEndpointsTests {
         sut.login(email: .randomEmail(),
                   password: .randomPassword(),
                   device: .randomName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, .unknown(statusCode: 500))
+                    XCTAssertEqual(error as? SLClientError, .unknown(statusCode: 500))
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -172,10 +172,10 @@ extension AccountEndpointsTests {
         sut.mfa(token: .randomPassword(),
                 key: .randomPassword(),
                 device: .randomName())
-            .sink { [weak self] fini in
-                switch fini {
+            .sink { [weak self] completion in
+                switch completion {
                 case let .failure(error):
-                    print(error.description)
+                    print(error.localizedDescription)
                     self?.shouldNotFail()
                 case .finished: break
                 }
@@ -209,10 +209,10 @@ extension AccountEndpointsTests {
         sut.mfa(token: .randomPassword(),
                 key: .randomPassword(),
                 device: .randomName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -274,10 +274,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.register(email: .randomEmail(), password: .randomPassword())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -337,10 +337,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.activate(email: .randomEmail(), code: .randomName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -400,10 +400,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.reactivate(email: .randomEmail())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -463,10 +463,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.forgotPassword(email: .randomEmail())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -526,10 +526,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.getUserInfo(apiKey: .random())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -594,10 +594,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.updateProfilePicture(apiKey: .random(), base64ProfilePicture: .randomNullableName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
@@ -656,10 +656,10 @@ extension AccountEndpointsTests {
 
         // then
         sut.updateProfileName(apiKey: .random(), name: .randomNullableName())
-            .sink { fini in
-                switch fini {
+            .sink { completion in
+                switch completion {
                 case let .failure(error):
-                    XCTAssertEqual(error, expectedError)
+                    XCTAssertEqual(error as? SLClientError, expectedError)
                     expectation.fulfill()
                 case .finished: break
                 }
