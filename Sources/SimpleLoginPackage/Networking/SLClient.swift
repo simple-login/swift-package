@@ -117,8 +117,8 @@ public extension SLClient {
         return perform(request)
     }
 
-    func getAliases(apiKey: ApiKey, page: Int) -> AnyPublisher<AliasArray, Error> {
-        let request = endpoint.getAliases(apiKey: apiKey, page: page)
+    func getAliases(apiKey: ApiKey, page: Int, pinned: Bool = false) -> AnyPublisher<AliasArray, Error> {
+        let request = endpoint.getAliases(apiKey: apiKey, page: page, pinned: pinned)
         return perform(request)
     }
 
