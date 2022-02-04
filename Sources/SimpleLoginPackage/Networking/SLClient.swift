@@ -27,11 +27,13 @@ public struct SLClient {
     }
 
     private func perform<T: Decodable>(_ request: URLRequest) -> AnyPublisher<T, Error> {
-        session.dataTaskPublisher(for: request)
+        printDebugInformation(for: request)
+        return session.dataTaskPublisher(for: request)
             .tryMap { data, response -> Data in
                 guard let httpResponse = response as? HTTPURLResponse else {
                     throw SLClientError.invalidServerResponse
                 }
+                printDebugInformation(for: httpResponse, data: data)
 
                 switch httpResponse.statusCode {
                 case 200...299: return data
@@ -47,6 +49,31 @@ public struct SLClient {
             }
             .decode(type: T.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
+    }
+
+    private func printDebugInformation(for request: URLRequest) {
+#if DEBUG
+        print("=====Request=====")
+        print("\(request.httpMethod ?? "") \(request.url?.absoluteString ?? "")")
+        if let header = request.allHTTPHeaderFields {
+            print(header)
+        }
+        if let data = request.httpBody,
+           let bodyString = String(data: data, encoding: .utf8) {
+            print(bodyString)
+        }
+#endif
+    }
+
+    private func printDebugInformation(for response: HTTPURLResponse, data: Data) {
+#if DEBUG
+        print("=====Response=====")
+        print("Status code: \(response.statusCode)")
+        print(response.allHeaderFields)
+        if let string = String(data: data, encoding: .utf8) {
+            print(string)
+        }
+#endif
     }
 }
 
