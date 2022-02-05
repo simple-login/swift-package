@@ -20,6 +20,7 @@
 		C00B2CFF266ACDA8008E7108 /* UserInfo1.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2CFE266ACDA8008E7108 /* UserInfo1.json */; };
 		C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */ = {isa = PBXBuildFile; fileRef = C00B2D00266ACDBB008E7108 /* UserInfo2.json */; };
 		C00B2D03266ACDD8008E7108 /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00B2D02266ACDD8008E7108 /* MockedData.swift */; };
+		C0126D0227AED57900B489E8 /* AliasEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0126D0127AED57900B489E8 /* AliasEndpointsTests.swift */; };
 		C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */; };
 		C01CCD18271E019F00B84B63 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01CCD17271E019F00B84B63 /* Contact.swift */; };
 		C01CCD1C271E02A200B84B63 /* Contact1.json in Resources */ = {isa = PBXBuildFile; fileRef = C01CCD1B271E02A200B84B63 /* Contact1.json */; };
@@ -49,7 +50,6 @@
 		C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063DCD726F28E8200BDBD5C /* Suffix.swift */; };
 		C063DCDA26F28F1300BDBD5C /* AliasOptions.json in Resources */ = {isa = PBXBuildFile; fileRef = C063DCD926F28F1300BDBD5C /* AliasOptions.json */; };
 		C063DCDC26F28FEF00BDBD5C /* AliasOptionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063DCDB26F28FEF00BDBD5C /* AliasOptionsTests.swift */; };
-		C063DCDE26F2913100BDBD5C /* AliasEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C063DCDD26F2913100BDBD5C /* AliasEndpointsTests.swift */; };
 		C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0727EC4266B596F000C0B36 /* UserInfo.swift */; };
 		C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0727EC6266B59B7000C0B36 /* UserLogin.swift */; };
 		C0727EC9266B5C24000C0B36 /* BaseEndpointsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0727EC8266B5C24000C0B36 /* BaseEndpointsTests.swift */; };
@@ -118,6 +118,7 @@
 		C00B2CFE266ACDA8008E7108 /* UserInfo1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo1.json; sourceTree = "<group>"; };
 		C00B2D00266ACDBB008E7108 /* UserInfo2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserInfo2.json; sourceTree = "<group>"; };
 		C00B2D02266ACDD8008E7108 /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		C0126D0127AED57900B489E8 /* AliasEndpointsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AliasEndpointsTests.swift; sourceTree = "<group>"; };
 		C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasUpdateOption.swift; sourceTree = "<group>"; };
 		C01CCD17271E019F00B84B63 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		C01CCD1B271E02A200B84B63 /* Contact1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Contact1.json; sourceTree = "<group>"; };
@@ -150,7 +151,6 @@
 		C063DCD726F28E8200BDBD5C /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 		C063DCD926F28F1300BDBD5C /* AliasOptions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AliasOptions.json; sourceTree = "<group>"; };
 		C063DCDB26F28FEF00BDBD5C /* AliasOptionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasOptionsTests.swift; sourceTree = "<group>"; };
-		C063DCDD26F2913100BDBD5C /* AliasEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AliasEndpointsTests.swift; path = ../../../../../../AliasEndpointsTests.swift; sourceTree = "<group>"; };
 		C0727EC4266B596F000C0B36 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		C0727EC6266B59B7000C0B36 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		C0727EC8266B5C24000C0B36 /* BaseEndpointsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEndpointsTests.swift; sourceTree = "<group>"; };
@@ -256,7 +256,7 @@
 		C02924F4266C97DC00AFFE20 /* Endpoints Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C063DCDD26F2913100BDBD5C /* AliasEndpointsTests.swift */,
+				C0126D0127AED57900B489E8 /* AliasEndpointsTests.swift */,
 				C0727EC8266B5C24000C0B36 /* BaseEndpointsTests.swift */,
 				C00B2CFA266ACD8E008E7108 /* AccountEndpointsTests.swift */,
 			);
@@ -714,8 +714,8 @@
 				C0727EF2266C188D000C0B36 /* SLClientErrorExtensions.swift in Sources */,
 				C0727EEE266C1131000C0B36 /* ErrorResponseTests.swift in Sources */,
 				C0FDCCD42739CDBF00370096 /* BlockForwardTests.swift in Sources */,
+				C0126D0227AED57900B489E8 /* AliasEndpointsTests.swift in Sources */,
 				C0727EF0266C13AC000C0B36 /* SLClientInitTests.swift in Sources */,
-				C063DCDE26F2913100BDBD5C /* AliasEndpointsTests.swift in Sources */,
 				C0CE57EE2720B45D00EC79C8 /* UsableDomainTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
