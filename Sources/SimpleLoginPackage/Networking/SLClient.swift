@@ -149,6 +149,11 @@ public extension SLClient {
         return perform(request)
     }
 
+    func searchAliases(apiKey: ApiKey, page: Int, searchTerm: String) -> AnyPublisher<AliasArray, Error> {
+        let request = endpoint.searchAliases(apiKey: apiKey, page: page, searchTerm: searchTerm)
+        return perform(request)
+    }
+
     func getAlias(apiKey: ApiKey, id: Int) -> AnyPublisher<Alias, Error> {
         let request = endpoint.getAlias(apiKey: apiKey, id: id)
         return perform(request)
