@@ -21,7 +21,7 @@ public enum SLClientError: Error {
             return "Invalid server response"
 
         case let .unknown(statusCode):
-            return "Unknown error with status (\(statusCode)"
+            return "Unknown error with status (\(statusCode))"
         }
     }
 }
