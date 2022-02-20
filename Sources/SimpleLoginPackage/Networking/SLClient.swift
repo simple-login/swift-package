@@ -20,10 +20,15 @@ public struct SLClient {
     let endpoint: Endpoint
     let session: URLSession
 
-    public init?(session: URLSession, baseUrlString: String = "https://simplelogin.io/") {
+    public init?(session: URLSession, baseUrlString: String) {
         guard let baseUrl = URL(string: baseUrlString) else { return nil }
         self.endpoint = Endpoint(baseUrl: baseUrl)
         self.session = session
+    }
+
+    static var `default`: SLClient {
+        // swiftlint:disable:next force_unwrapping
+        .init(session: .shared, baseUrlString: "https://app.simplelogin.io/")!
     }
 
     private func perform<T: Decodable>(_ request: URLRequest) -> AnyPublisher<T, Error> {
