@@ -26,7 +26,7 @@ public struct SLClient {
         self.session = session
     }
 
-    static var `default`: SLClient {
+    public static var `default`: SLClient {
         // swiftlint:disable:next force_unwrapping
         .init(session: .shared, baseUrlString: "https://app.simplelogin.io/")!
     }
