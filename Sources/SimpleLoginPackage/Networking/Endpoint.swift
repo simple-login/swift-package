@@ -426,8 +426,7 @@ extension Endpoint {
         var request = URLRequest(url: url)
         request.httpMethod = HttpMethod.post
         request.addApiKeyToHeaders(apiKey)
-        request.addJsonRequestBody(["receipt_data": receiptData,
-                                    "is_macapp": isMacApp])
+        request.addJsonRequestBody(["receipt_data": receiptData])
         return request
     }
 }
