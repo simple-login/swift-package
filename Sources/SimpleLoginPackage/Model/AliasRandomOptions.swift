@@ -12,7 +12,7 @@ public struct AliasRandomOptions {
     let mode: RandomMode
     let note: String?
 
-    public init(hostname: String? = nil, mode: RandomMode, note: String? = nil) {
+    public init(mode: RandomMode, hostname: String? = nil, note: String? = nil) {
         self.hostname = hostname
         self.mode = mode
         self.note = note

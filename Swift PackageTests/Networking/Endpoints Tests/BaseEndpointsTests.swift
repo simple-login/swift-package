@@ -18,7 +18,7 @@ class BaseEndpointsTests: XCTestCase {
         super.setUp()
         let sessionConfig = URLSessionConfiguration.ephemeral
         sessionConfig.protocolClasses = [MockingURLProtocol.self]
-        sut = SLClient(session: URLSession(configuration: sessionConfig))
+        sut = SLClient(session: URLSession(configuration: sessionConfig), baseUrlString: kDefaultBaseUrlString)
     }
 
     func expectObject<T>(ofType: T.Type) -> XCTestExpectation {

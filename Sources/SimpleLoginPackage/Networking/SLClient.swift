@@ -8,6 +8,8 @@
 import Combine
 import Foundation
 
+internal let kDefaultBaseUrlString = "https://app.simplelogin.io/"
+
 enum HttpMethod {
     static let delete = "DELETE"
     static let get = "GET"
@@ -28,7 +30,7 @@ public struct SLClient {
 
     public static var `default`: SLClient {
         // swiftlint:disable:next force_unwrapping
-        .init(session: .shared, baseUrlString: "https://app.simplelogin.io/")!
+        .init(session: .shared, baseUrlString: kDefaultBaseUrlString)!
     }
 
     private func perform<T: Decodable>(_ request: URLRequest) -> AnyPublisher<T, Error> {

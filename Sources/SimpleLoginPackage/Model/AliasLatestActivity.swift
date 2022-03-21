@@ -13,6 +13,18 @@ public struct AliasLatestActivity: Decodable {
     public let timestamp: TimeInterval
 }
 
+public extension AliasLatestActivity {
+    var date: Date {
+        Date(timeIntervalSince1970: timestamp)
+    }
+
+    var relativeDateString: String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.dateTimeStyle = .named
+        return formatter.string(for: date) ?? ""
+    }
+}
+
 // For SwiftUI preview purpose
 public extension AliasLatestActivity {
     static let block = AliasLatestActivity(action: .block,
