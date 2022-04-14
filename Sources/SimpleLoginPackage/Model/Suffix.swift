@@ -7,21 +7,16 @@
 
 import Foundation
 
-public struct Suffix {
+public struct Suffix: Decodable {
     public let value: String
     public let signature: String
-}
+    public let isCustom: Bool
+    public let isPremium: Bool
 
-extension Suffix: Decodable {
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case value = "suffix"
         case signature = "signed_suffix"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-
-        self.value = try container.decode(String.self, forKey: .value)
-        self.signature = try container.decode(String.self, forKey: .signature)
+        case isCustom = "is_custom"
+        case isPremium = "is_premium"
     }
 }

@@ -4,15 +4,21 @@
     "suffixes": [
         {
             "signed_suffix": ".cat@d1.test.X6_7OQ.0e9NbZHE_bQvuAapT6NdBml9m6Q",
-            "suffix": ".cat@d1.test"
+            "suffix": ".cat@d1.test",
+            "is_custom": true,
+            "is_premium": false
         },
         {
             "signed_suffix": ".chat@d2.test.X6_7OQ.TTgCrfqPj7UmlY723YsDTHhkess",
-            "suffix": ".chat@d2.test"
+            "suffix": ".chat@d2.test",
+            "is_custom": true,
+            "is_premium": true
         },
         {
             "signed_suffix": ".yeah@sl.local.X6_7OQ.i8XL4xsMsn7dxDEWU8eF-Zap0qo",
-            "suffix": ".yeah@sl.local"
+            "suffix": ".yeah@sl.local",
+            "is_custom": false,
+            "is_premium": false
         }
     ]
 }
