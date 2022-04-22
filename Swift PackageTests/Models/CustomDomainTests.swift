@@ -34,4 +34,18 @@ final class CustomDomainTests: XCTestCase {
         XCTAssertEqual(sut.mailboxes.count, 1)
         XCTAssertFalse(sut.catchAll)
     }
+
+    func testUpdate() throws {
+        let sut = try JSONDecoder().decode(CustomDomainUpdateResponse.self, from: MockedData.customDomainUpdate)
+        let customDomain = sut.customDomain
+        XCTAssertEqual(customDomain.id, 1)
+        XCTAssertEqual(customDomain.creationTimestamp, 1_698_412_168)
+        XCTAssertEqual(customDomain.domainName, "test1.org")
+        XCTAssertNil(customDomain.name)
+        XCTAssertTrue(customDomain.verified)
+        XCTAssertEqual(customDomain.aliasCount, 0)
+        XCTAssertFalse(customDomain.randomPrefixGeneration)
+        XCTAssertEqual(customDomain.mailboxes.count, 1)
+        XCTAssertFalse(customDomain.catchAll)
+    }
 }

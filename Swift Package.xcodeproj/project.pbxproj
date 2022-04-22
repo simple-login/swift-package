@@ -88,6 +88,7 @@
 		C0FDCCD02739CD1000370096 /* BlockForward1.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCCF2739CD1000370096 /* BlockForward1.json */; };
 		C0FDCCD22739CD2800370096 /* BlockForward2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCD12739CD2800370096 /* BlockForward2.json */; };
 		C0FDCCD42739CDBF00370096 /* BlockForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */; };
+		EF1209F42812DA2700D0362F /* CustomDomainUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EF1209F32812DA2700D0362F /* CustomDomainUpdate.json */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -191,6 +192,7 @@
 		C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockForwardTests.swift; sourceTree = "<group>"; };
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
+		EF1209F32812DA2700D0362F /* CustomDomainUpdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomDomainUpdate.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				C01CCD1D271E02B100B84B63 /* Contact2.json */,
 				C01CCD2D271E128900B84B63 /* CustomDomain1.json */,
 				C01CCD2F271E129600B84B63 /* CustomDomain2.json */,
+				EF1209F32812DA2700D0362F /* CustomDomainUpdate.json */,
 				C0FDCCCF2739CD1000370096 /* BlockForward1.json */,
 				C0FDCCD12739CD2800370096 /* BlockForward2.json */,
 				C0727EF5266C1B3D000C0B36 /* Dummy.json */,
@@ -562,6 +565,7 @@
 				C01CCD30271E129600B84B63 /* CustomDomain2.json in Resources */,
 				C07DB033270E3B8000AE3969 /* Alias.json in Resources */,
 				C01CCD2E271E128900B84B63 /* CustomDomain1.json in Resources */,
+				EF1209F42812DA2700D0362F /* CustomDomainUpdate.json in Resources */,
 				C02924F6266CB01500AFFE20 /* Mfa.json in Resources */,
 				C0FDCCD02739CD1000370096 /* BlockForward1.json in Resources */,
 			);

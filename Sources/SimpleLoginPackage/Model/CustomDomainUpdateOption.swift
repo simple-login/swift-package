@@ -22,3 +22,11 @@ public enum CustomDomainUpdateOption {
         }
     }
 }
+
+public struct CustomDomainUpdateResponse: Decodable {
+    public let customDomain: CustomDomain
+
+    private enum CodingKeys: String, CodingKey {
+        case customDomain = "custom_domain"
+    }
+}

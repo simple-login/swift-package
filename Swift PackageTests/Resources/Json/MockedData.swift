@@ -24,6 +24,7 @@ final class MockedData {
     static let contact2 = jsonData(forJsonName: "Contact2")
     static let customDomain1 = jsonData(forJsonName: "CustomDomain1")
     static let customDomain2 = jsonData(forJsonName: "CustomDomain2")
+    static let customDomainUpdate = jsonData(forJsonName: "CustomDomainUpdate")
     static let blockForward1 = jsonData(forJsonName: "BlockForward1")
     static let blockForward2 = jsonData(forJsonName: "BlockForward2")
     static let dummy = jsonData(forJsonName: "Dummy")
