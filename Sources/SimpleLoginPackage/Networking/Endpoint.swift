@@ -183,11 +183,11 @@ extension Endpoint {
 
     // MARK: - GET /api/v2/aliases
     // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2aliases
-    func getAliases(apiKey: ApiKey, page: Int, pinned: Bool = false) -> URLRequest {
+    func getAliases(apiKey: ApiKey, page: Int, option: AliasFilterOption?) -> URLRequest {
         var queryItems = [URLQueryItem]()
         queryItems.append(.init(name: "page_id", value: "\(page)"))
-        if pinned {
-            queryItems.append(.init(name: "pinned", value: nil))
+        if let option = option {
+            queryItems.append(option.queryItem)
         }
         let url = baseUrl.appending(path: "/api/v2/aliases", queryItems: queryItems)
         var request = URLRequest(url: url)

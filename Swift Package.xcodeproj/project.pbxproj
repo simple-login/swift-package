@@ -89,6 +89,7 @@
 		C0FDCCD22739CD2800370096 /* BlockForward2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0FDCCD12739CD2800370096 /* BlockForward2.json */; };
 		C0FDCCD42739CDBF00370096 /* BlockForwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FDCCD32739CDBF00370096 /* BlockForwardTests.swift */; };
 		EF1209F42812DA2700D0362F /* CustomDomainUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = EF1209F32812DA2700D0362F /* CustomDomainUpdate.json */; };
+		EF9A147D28194A23008ED9C7 /* AliasFilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A147C28194A23008ED9C7 /* AliasFilterOption.swift */; };
 		F74AC5E10D876744C624B68F /* Pods_Swift_Package_Swift_PackageTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE498BA5A88970AADF1AA9B3 /* Pods_Swift_Package_Swift_PackageTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,7 @@
 		C3E917704A89755827350AE9 /* Pods_Swift_Package.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Package.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D82162FA7E0C5930B301AE /* Pods-Swift Package.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift Package.release.xcconfig"; path = "Target Support Files/Pods-Swift Package/Pods-Swift Package.release.xcconfig"; sourceTree = "<group>"; };
 		EF1209F32812DA2700D0362F /* CustomDomainUpdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomDomainUpdate.json; sourceTree = "<group>"; };
+		EF9A147C28194A23008ED9C7 /* AliasFilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasFilterOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 				C07DB036270E42C400AE3969 /* AliasCreationOptions.swift */,
 				C07DB02E270E346800AE3969 /* AliasLatestActivity.swift */,
 				C063DCD526F28E0000BDBD5C /* AliasOptions.swift */,
+				EF9A147C28194A23008ED9C7 /* AliasFilterOption.swift */,
 				C07DB03C270E462E00AE3969 /* AliasRandomOptions.swift */,
 				C01CCD15271DFD3500B84B63 /* AliasUpdateOption.swift */,
 				C00B2CF5266ACCFA008E7108 /* ApiKey.swift */,
@@ -664,6 +667,7 @@
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */,
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
+				EF9A147D28194A23008ED9C7 /* AliasFilterOption.swift in Sources */,
 				C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */,
 				C01CCD22271E095800B84B63 /* Mailbox.swift in Sources */,
 				C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */,
