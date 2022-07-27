@@ -19,11 +19,13 @@ enum HttpMethod {
 }
 
 public struct SLClient {
+    public let baseUrlString: String
     let endpoint: Endpoint
     let session: URLSession
 
     public init?(session: URLSession, baseUrlString: String) {
         guard let baseUrl = URL(string: baseUrlString) else { return nil }
+        self.baseUrlString = baseUrlString
         self.endpoint = Endpoint(baseUrl: baseUrl)
         self.session = session
     }
