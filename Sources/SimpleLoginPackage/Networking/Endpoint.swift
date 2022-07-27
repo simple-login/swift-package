@@ -130,12 +130,35 @@ extension Endpoint {
         return request
     }
 
+    // MARK: - PATCH /api/user_info
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apiuser_info
     func updateProfileName(apiKey: ApiKey, name: String?) -> URLRequest {
         let url = baseUrl.appending(path: "/api/user_info")
         var request = URLRequest(url: url)
         request.httpMethod = HttpMethod.patch
         request.addApiKeyToHeaders(apiKey)
         request.addJsonRequestBody(["name": name])
+        return request
+    }
+
+    // MARK: - PATCH /api/sudo
+    // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apisudo
+    func enterSudoMode(apiKey: ApiKey, password: String) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/sudo")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.patch
+        request.addApiKeyToHeaders(apiKey)
+        request.addJsonRequestBody(["password": password])
+        return request
+    }
+
+    // MARK: - DELETE /api/user
+    // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apiuser
+    func deleteUser(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/user")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.delete
+        request.addApiKeyToHeaders(apiKey)
         return request
     }
 }

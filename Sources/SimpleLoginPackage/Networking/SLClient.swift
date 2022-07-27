@@ -280,6 +280,19 @@ public extension SLClient {
     }
 }
 
+// MARK: - Account
+public extension SLClient {
+    func enterSudoMode(apiKey: ApiKey, password: String) -> AnyPublisher<OkResponse, Error> {
+        let request = endpoint.enterSudoMode(apiKey: apiKey, password: password)
+        return perform(request)
+    }
+
+    func deleteUser(apiKey: ApiKey) -> AnyPublisher<OkResponse, Error> {
+        let request = endpoint.deleteUser(apiKey: apiKey)
+        return perform(request)
+    }
+}
+
 public extension SLClient {
     func processPayment(apiKey: ApiKey,
                         receiptData: String,
