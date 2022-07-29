@@ -1,0 +1,15 @@
+DERIVED_DATA_PATH = "fastlane/DerivedData/"
+
+lane :clean_up do
+    clear_derived_data(derived_data_path: DERIVED_DATA_PATH)
+end
+
+lane :unit_tests do
+    run_tests(
+        project: "Swift Package.xcodeproj",
+        scheme: "Swift Package",
+        device: "iPhone 13 Pro Max",
+        derived_data_path: DERIVED_DATA_PATH,
+        code_coverage: true
+    )
+end
