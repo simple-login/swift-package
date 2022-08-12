@@ -17,7 +17,7 @@ final class UserInfoTests: XCTestCase {
         XCTAssertTrue(userInfo1.inTrial)
         XCTAssertNil(userInfo1.profilePictureUrl)
         XCTAssertEqual(userInfo1.maxAliasFreePlan, 12)
-        XCTAssertTrue(userInfo1.isConnectedWithProton)
+        XCTAssertNil(userInfo1.connectedProtonAddress)
 
         let userInfo2 = try JSONDecoder().decode(UserInfo.self, from: MockedData.userInfo2)
         XCTAssertEqual(userInfo2.name, "Jane Doe")
@@ -26,6 +26,6 @@ final class UserInfoTests: XCTestCase {
         XCTAssertFalse(userInfo2.inTrial)
         XCTAssertEqual(userInfo2.profilePictureUrl, "https://profile.png")
         XCTAssertEqual(userInfo2.maxAliasFreePlan, 7)
-        XCTAssertFalse(userInfo2.isConnectedWithProton)
+        XCTAssertEqual(userInfo2.connectedProtonAddress, "jane.doe@proton.me")
     }
 }

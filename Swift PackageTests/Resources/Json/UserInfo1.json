@@ -5,5 +5,5 @@
   "in_trial": true,
   "profile_picture_url": null,
   "max_alias_free_plan": 12,
-  "is_connected_with_proton": true
+  "connected_proton_address": null
 }

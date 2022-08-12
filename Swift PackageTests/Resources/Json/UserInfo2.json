@@ -5,5 +5,5 @@
   "in_trial": false,
   "profile_picture_url": "https://profile.png",
   "max_alias_free_plan": 7,
-  "is_connected_with_proton": false
+  "connected_proton_address": "jane.doe@proton.me"
 }

@@ -14,7 +14,7 @@ public struct UserInfo: Decodable {
     public let isPremium: Bool
     public let inTrial: Bool
     public let maxAliasFreePlan: Int
-    public let isConnectedWithProton: Bool
+    public let connectedProtonAddress: String?
 
     private enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -23,7 +23,7 @@ public struct UserInfo: Decodable {
         case isPremium = "is_premium"
         case inTrial = "in_trial"
         case maxAliasFreePlan = "max_alias_free_plan"
-        case isConnectedWithProton = "is_connected_with_proton"
+        case connectedProtonAddress = "connected_proton_address"
     }
 
     public init(name: String,
@@ -32,13 +32,13 @@ public struct UserInfo: Decodable {
                 isPremium: Bool,
                 inTrial: Bool,
                 maxAliasFreePlan: Int,
-                isConnectedWithProton: Bool) {
+                connectedProtonAddress: String?) {
         self.name = name
         self.email = email
         self.profilePictureUrl = profilePictureUrl
         self.isPremium = isPremium
         self.inTrial = inTrial
         self.maxAliasFreePlan = maxAliasFreePlan
-        self.isConnectedWithProton = isConnectedWithProton
+        self.connectedProtonAddress = connectedProtonAddress
     }
 }
