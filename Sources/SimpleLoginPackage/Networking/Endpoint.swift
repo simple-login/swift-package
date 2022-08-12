@@ -448,6 +448,15 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - DELETE /api/setting/unlink_proton_account
+    func unlinkFromProton(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/setting/unlink_proton_account")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.delete
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }
 
 // MARK: - Misc

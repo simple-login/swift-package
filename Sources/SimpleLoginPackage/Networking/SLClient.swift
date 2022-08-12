@@ -278,6 +278,11 @@ public extension SLClient {
         let request = endpoint.getUsableDomains(apiKey: apiKey)
         return perform(request)
     }
+
+    func unlinkFromProton(apiKey: ApiKey) -> AnyPublisher<OkResponse, Error> {
+        let request = endpoint.unlinkFromProton(apiKey: apiKey)
+        return perform(request)
+    }
 }
 
 // MARK: - Account
