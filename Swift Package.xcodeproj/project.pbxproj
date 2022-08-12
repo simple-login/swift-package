@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		354899CF28A641F800E9B7FF /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899CE28A641F800E9B7FF /* UserInfoTests.swift */; };
 		3572F5C828914F7600A85837 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 3572F5C728914F7600A85837 /* Mocker */; };
 		C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA5271779FA00D18A7D /* DeletedResponse.swift */; };
 		C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA727177AB300D18A7D /* EnabledResponse.swift */; };
@@ -103,6 +104,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		354899CE28A641F800E9B7FF /* UserInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTests.swift; sourceTree = "<group>"; };
 		C0012DA5271779FA00D18A7D /* DeletedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedResponse.swift; sourceTree = "<group>"; };
 		C0012DA727177AB300D18A7D /* EnabledResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledResponse.swift; sourceTree = "<group>"; };
 		C0012DA9271780EC00D18A7D /* AliasActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasActivity.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				C01CCD25271E0AA300B84B63 /* MailboxTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
 				C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */,
+				354899CE28A641F800E9B7FF /* UserInfoTests.swift */,
 				C0727EE9266C0F46000C0B36 /* UserLoginTests.swift */,
 				C0CE57E52720AF1B00EC79C8 /* UserSettingsTests.swift */,
 			);
@@ -626,6 +629,7 @@
 				C01CCD32271E130500B84B63 /* CustomDomainTests.swift in Sources */,
 				C01CCD20271E02DE00B84B63 /* ContactTests.swift in Sources */,
 				C07DB035270E3C2C00AE3969 /* AliasTests.swift in Sources */,
+				354899CF28A641F800E9B7FF /* UserInfoTests.swift in Sources */,
 				C02924FC266CBC6800AFFE20 /* MessageResponseTests.swift in Sources */,
 				C0727ED2266B7023000C0B36 /* EndpointTests.swift in Sources */,
 				C0727EC9266B5C24000C0B36 /* BaseEndpointsTests.swift in Sources */,

@@ -3,5 +3,7 @@
   "is_premium": false,
   "email": "john@doe.com",
   "in_trial": true,
-  "profile_picture_url": "https://profile.png"
+  "profile_picture_url": null,
+  "max_alias_free_plan": 12,
+  "is_connected_with_proton": true
 }
