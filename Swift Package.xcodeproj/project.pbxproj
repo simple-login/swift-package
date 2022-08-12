@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		354899CF28A641F800E9B7FF /* UserInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899CE28A641F800E9B7FF /* UserInfoTests.swift */; };
+		354899D328A6480700E9B7FF /* Token.json in Resources */ = {isa = PBXBuildFile; fileRef = 354899D228A6480700E9B7FF /* Token.json */; };
+		354899D528A6482A00E9B7FF /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D428A6482A00E9B7FF /* TokenTests.swift */; };
+		354899D628A64B2000E9B7FF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D028A647B100E9B7FF /* Token.swift */; };
 		3572F5C828914F7600A85837 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 3572F5C728914F7600A85837 /* Mocker */; };
 		C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA5271779FA00D18A7D /* DeletedResponse.swift */; };
 		C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA727177AB300D18A7D /* EnabledResponse.swift */; };
@@ -105,6 +108,9 @@
 
 /* Begin PBXFileReference section */
 		354899CE28A641F800E9B7FF /* UserInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTests.swift; sourceTree = "<group>"; };
+		354899D028A647B100E9B7FF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		354899D228A6480700E9B7FF /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
+		354899D428A6482A00E9B7FF /* TokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
 		C0012DA5271779FA00D18A7D /* DeletedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedResponse.swift; sourceTree = "<group>"; };
 		C0012DA727177AB300D18A7D /* EnabledResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledResponse.swift; sourceTree = "<group>"; };
 		C0012DA9271780EC00D18A7D /* AliasActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasActivity.swift; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 				C02924F9266CBC3700AFFE20 /* Message.json */,
 				C02924F5266CB01500AFFE20 /* Mfa.json */,
 				C020018326D97C100057C345 /* Ok.json */,
+				354899D228A6480700E9B7FF /* Token.json */,
 				C0CE57EB2720B43700EC79C8 /* UsableDomain.json */,
 				C00B2CFE266ACDA8008E7108 /* UserInfo1.json */,
 				C00B2D00266ACDBB008E7108 /* UserInfo2.json */,
@@ -346,6 +353,7 @@
 				C02924F7266CBBC300AFFE20 /* MessageResponse.swift */,
 				C020018126D97B6D0057C345 /* OkResponse.swift */,
 				C063DCD726F28E8200BDBD5C /* Suffix.swift */,
+				354899D028A647B100E9B7FF /* Token.swift */,
 				C0E9C3DE2790C4B600D1A463 /* UpdateResponse.swift */,
 				C0CE57E92720B3B700EC79C8 /* UsableDomain.swift */,
 				C0727EC4266B596F000C0B36 /* UserInfo.swift */,
@@ -398,6 +406,7 @@
 				C0727EED266C1131000C0B36 /* ErrorResponseTests.swift */,
 				C01CCD25271E0AA300B84B63 /* MailboxTests.swift */,
 				C02924FB266CBC6800AFFE20 /* MessageResponseTests.swift */,
+				354899D428A6482A00E9B7FF /* TokenTests.swift */,
 				C0CE57ED2720B45C00EC79C8 /* UsableDomainTests.swift */,
 				354899CE28A641F800E9B7FF /* UserInfoTests.swift */,
 				C0727EE9266C0F46000C0B36 /* UserLoginTests.swift */,
@@ -537,6 +546,7 @@
 				C0FDCCD22739CD2800370096 /* BlockForward2.json in Resources */,
 				C0727EE4266C0C6B000C0B36 /* ErrorResponse2.json in Resources */,
 				C020018626D9815A0057C345 /* UserLogin1.json in Resources */,
+				354899D328A6480700E9B7FF /* Token.json in Resources */,
 				C01CCD1C271E02A200B84B63 /* Contact1.json in Resources */,
 				C020018426D97C100057C345 /* Ok.json in Resources */,
 				C00B2D01266ACDBB008E7108 /* UserInfo2.json in Resources */,
@@ -592,6 +602,7 @@
 				C0CE57E22720AD4700EC79C8 /* UserSettings.swift in Sources */,
 				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
 				C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */,
+				354899D628A64B2000E9B7FF /* Token.swift in Sources */,
 				C07DB02D270E33FE00AE3969 /* MailboxLite.swift in Sources */,
 				C0AC942E271F58E90036E694 /* CustomDomainUpdateOption.swift in Sources */,
 				C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */,
@@ -633,6 +644,7 @@
 				C02924FC266CBC6800AFFE20 /* MessageResponseTests.swift in Sources */,
 				C0727ED2266B7023000C0B36 /* EndpointTests.swift in Sources */,
 				C0727EC9266B5C24000C0B36 /* BaseEndpointsTests.swift in Sources */,
+				354899D528A6482A00E9B7FF /* TokenTests.swift in Sources */,
 				C01CCD26271E0AA300B84B63 /* MailboxTests.swift in Sources */,
 				C0012DB0271783AD00D18A7D /* AliasActivityTests.swift in Sources */,
 				C0727EF2266C188D000C0B36 /* SLClientErrorExtensions.swift in Sources */,
