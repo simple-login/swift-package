@@ -161,6 +161,16 @@ extension Endpoint {
         request.addApiKeyToHeaders(apiKey)
         return request
     }
+
+    // MARK: - GET /api/user/cookie_token
+    // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiusercookie_token
+    func getCookieToken(apiKey: ApiKey) -> URLRequest {
+        let url = baseUrl.appending(path: "/api/user/cookie_token")
+        var request = URLRequest(url: url)
+        request.httpMethod = HttpMethod.get
+        request.addApiKeyToHeaders(apiKey)
+        return request
+    }
 }
 
 // MARK: - Alias

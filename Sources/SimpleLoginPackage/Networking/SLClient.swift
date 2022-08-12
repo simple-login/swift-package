@@ -291,6 +291,11 @@ public extension SLClient {
         let request = endpoint.deleteUser(apiKey: apiKey)
         return perform(request)
     }
+
+    func getCookieToken(apiKey: ApiKey) -> AnyPublisher<Token, Error> {
+        let request = endpoint.getCookieToken(apiKey: apiKey)
+        return perform(request)
+    }
 }
 
 public extension SLClient {

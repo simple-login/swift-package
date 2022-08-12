@@ -13,33 +13,32 @@ public struct UserInfo: Decodable {
     public let profilePictureUrl: String?
     public let isPremium: Bool
     public let inTrial: Bool
+    public let maxAliasFreePlan: Int
+    public let isConnectedWithProton: Bool
 
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case name = "name"
         case email = "email"
         case profilePictureUrl = "profile_picture_url"
         case isPremium = "is_premium"
         case inTrial = "in_trial"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.name = try container.decode(String.self, forKey: .name)
-        self.email = try container.decode(String.self, forKey: .email)
-        self.profilePictureUrl = try container.decodeIfPresent(String.self, forKey: .profilePictureUrl)
-        self.isPremium = try container.decode(Bool.self, forKey: .isPremium)
-        self.inTrial = try container.decode(Bool.self, forKey: .inTrial)
+        case maxAliasFreePlan = "max_alias_free_plan"
+        case isConnectedWithProton = "is_connected_with_proton"
     }
 
     public init(name: String,
                 email: String,
                 profilePictureUrl: String?,
                 isPremium: Bool,
-                inTrial: Bool) {
+                inTrial: Bool,
+                maxAliasFreePlan: Int,
+                isConnectedWithProton: Bool) {
         self.name = name
         self.email = email
         self.profilePictureUrl = profilePictureUrl
         self.isPremium = isPremium
         self.inTrial = inTrial
+        self.maxAliasFreePlan = maxAliasFreePlan
+        self.isConnectedWithProton = isConnectedWithProton
     }
 }
