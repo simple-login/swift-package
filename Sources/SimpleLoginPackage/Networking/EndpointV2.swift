@@ -11,9 +11,9 @@ public protocol EndpointV2 {
     associatedtype Body: Encodable
     associatedtype Response: Decodable
 
-    var apiKey: ApiKey? { get }
     var path: String { get }
     var method: HTTPMethod { get }
+    var apiKey: String? { get }
     var body: Body? { get }
     var parameters: [String: String?]? { get }
 
@@ -21,8 +21,9 @@ public protocol EndpointV2 {
 }
 
 public extension EndpointV2 {
-    var apiKey: ApiKey? { nil }
     var method: HTTPMethod { .get }
+    var apiKey: String? { nil }
+    var body: Body? { nil }
     var parameters: [String: String?]? { nil }
 
     func makeRequest(from baseURL: URL) throws -> URLRequest {
@@ -45,7 +46,7 @@ public extension EndpointV2 {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         }
         if let apiKey {
-            request.addValue(apiKey.value, forHTTPHeaderField: "Authentication")
+            request.addValue(apiKey, forHTTPHeaderField: "Authentication")
         }
         return request
     }

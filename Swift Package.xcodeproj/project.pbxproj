@@ -17,6 +17,7 @@
 		35CF7FD828FDA52D00214B10 /* ActivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */; };
 		35CF7FDA28FDA64600214B10 /* ReactivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD928FDA64600214B10 /* ReactivateEndpoint.swift */; };
 		35CF7FDC28FDA73C00214B10 /* ForgotPasswordEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FDB28FDA73C00214B10 /* ForgotPasswordEndpoint.swift */; };
+		35CF7FDE28FDA85C00214B10 /* GetUserInfoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FDD28FDA85C00214B10 /* GetUserInfoEndpoint.swift */; };
 		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
 		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
 		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
@@ -124,6 +125,7 @@
 		35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD928FDA64600214B10 /* ReactivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactivateEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FDB28FDA73C00214B10 /* ForgotPasswordEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordEndpoint.swift; sourceTree = "<group>"; };
+		35CF7FDD28FDA85C00214B10 /* GetUserInfoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserInfoEndpoint.swift; sourceTree = "<group>"; };
 		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
 		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */,
 				35CF7FDB28FDA73C00214B10 /* ForgotPasswordEndpoint.swift */,
+				35CF7FDD28FDA85C00214B10 /* GetUserInfoEndpoint.swift */,
 				35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */,
 				35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */,
 				35CF7FD928FDA64600214B10 /* ReactivateEndpoint.swift */,
@@ -643,6 +646,7 @@
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
 				C020018226D97B6D0057C345 /* OkResponse.swift in Sources */,
 				C0CE57E22720AD4700EC79C8 /* UserSettings.swift in Sources */,
+				35CF7FDE28FDA85C00214B10 /* GetUserInfoEndpoint.swift in Sources */,
 				C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */,
 				C07DB02F270E346800AE3969 /* AliasLatestActivity.swift in Sources */,
 				354899D628A64B2000E9B7FF /* Token.swift in Sources */,

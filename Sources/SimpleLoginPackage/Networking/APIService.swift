@@ -78,3 +78,5 @@ public final class APIService: APIServiceProtocol {
         self.session = session
     }
 }
+
+public struct EmptyBody: Encodable {}
