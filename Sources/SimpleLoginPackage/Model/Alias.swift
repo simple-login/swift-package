@@ -7,8 +7,10 @@
 
 import Foundation
 
+public typealias AliasID = Int
+
 public struct Alias {
-    public let id: Int
+    public let id: AliasID
     public let email: String
     public let name: String?
     public let enabled: Bool
@@ -23,7 +25,7 @@ public struct Alias {
     public let latestActivity: AliasLatestActivity?
     public let pinned: Bool
 
-    public init(id: Int,
+    public init(id: AliasID,
                 email: String,
                 name: String?,
                 enabled: Bool,

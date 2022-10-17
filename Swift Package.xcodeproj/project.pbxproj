@@ -23,6 +23,7 @@
 		35CF7FE628FDB04500214B10 /* GetMailboxesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FE528FDB04500214B10 /* GetMailboxesEndpoint.swift */; };
 		35CF7FE828FDB23C00214B10 /* RandomAliasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FE728FDB23C00214B10 /* RandomAliasEndpoint.swift */; };
 		35CF7FEA28FDB42F00214B10 /* GetAliasesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FE928FDB42F00214B10 /* GetAliasesEndpoint.swift */; };
+		35CF7FEC28FDB69400214B10 /* GetAliasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FEB28FDB69400214B10 /* GetAliasEndpoint.swift */; };
 		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
 		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
 		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
@@ -135,6 +136,7 @@
 		35CF7FE528FDB04500214B10 /* GetMailboxesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMailboxesEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FE728FDB23C00214B10 /* RandomAliasEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAliasEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FE928FDB42F00214B10 /* GetAliasesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAliasesEndpoint.swift; sourceTree = "<group>"; };
+		35CF7FEB28FDB69400214B10 /* GetAliasEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAliasEndpoint.swift; sourceTree = "<group>"; };
 		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
 		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				35CF7FE228FDACBB00214B10 /* CreateAliasEndpoint.swift */,
+				35CF7FEB28FDB69400214B10 /* GetAliasEndpoint.swift */,
 				35CF7FE928FDB42F00214B10 /* GetAliasesEndpoint.swift */,
 				35CF7FE028FDABDC00214B10 /* GetAliasOptionsEndpoint.swift */,
 				35CF7FE728FDB23C00214B10 /* RandomAliasEndpoint.swift */,
@@ -686,6 +689,7 @@
 				C0AC942E271F58E90036E694 /* CustomDomainUpdateOption.swift in Sources */,
 				C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */,
 				C0727ECE266B682F000C0B36 /* Endpoint.swift in Sources */,
+				35CF7FEC28FDB69400214B10 /* GetAliasEndpoint.swift in Sources */,
 				C03760F526DC0C4700E5ECAC /* ErrorResponse.swift in Sources */,
 				35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */,
 				C063DCD626F28E0000BDBD5C /* AliasOptions.swift in Sources */,
