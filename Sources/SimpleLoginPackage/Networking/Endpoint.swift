@@ -220,7 +220,7 @@ extension Endpoint {
         var queryItems = [URLQueryItem]()
         queryItems.append(.init(name: "page_id", value: "\(page)"))
         if let option = option {
-            queryItems.append(option.queryItem)
+            queryItems.append(.init(name: option.rawValue, value: nil))
         }
         let url = baseUrl.appending(path: "/api/v2/aliases", queryItems: queryItems)
         var request = URLRequest(url: url)
