@@ -7,26 +7,6 @@
 
 import Foundation
 
-extension URL {
-    func appending(path: String, queryItems: [URLQueryItem]? = nil) -> URL {
-        var components = URLComponents()
-        components.scheme = scheme
-        components.host = host
-        components.path = path
-        components.queryItems = queryItems
-
-        guard let newUrl = components.url else {
-            fatalError("""
-                Error appending:
-                - Path: \(path)
-                - QueryItems: \(String(describing: queryItems))
-                - To: \(self)
-                """)
-        }
-        return newUrl
-    }
-}
-
 extension URLRequest {
     mutating func addApiKeyToHeaders(_ apiKey: ApiKey) {
         addValue(apiKey.value, forHTTPHeaderField: "Authentication")

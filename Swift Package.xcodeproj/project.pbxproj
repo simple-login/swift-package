@@ -12,6 +12,9 @@
 		354899D528A6482A00E9B7FF /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D428A6482A00E9B7FF /* TokenTests.swift */; };
 		354899D628A64B2000E9B7FF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D028A647B100E9B7FF /* Token.swift */; };
 		3572F5C828914F7600A85837 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 3572F5C728914F7600A85837 /* Mocker */; };
+		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
+		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
+		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
 		C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA5271779FA00D18A7D /* DeletedResponse.swift */; };
 		C0012DA827177AB300D18A7D /* EnabledResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA727177AB300D18A7D /* EnabledResponse.swift */; };
 		C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0012DA9271780EC00D18A7D /* AliasActivity.swift */; };
@@ -111,6 +114,9 @@
 		354899D028A647B100E9B7FF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		354899D228A6480700E9B7FF /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
 		354899D428A6482A00E9B7FF /* TokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
+		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
+		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
 		C0012DA5271779FA00D18A7D /* DeletedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedResponse.swift; sourceTree = "<group>"; };
 		C0012DA727177AB300D18A7D /* EnabledResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnabledResponse.swift; sourceTree = "<group>"; };
 		C0012DA9271780EC00D18A7D /* AliasActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasActivity.swift; sourceTree = "<group>"; };
@@ -218,6 +224,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35F8D30628FD8E1B0000AA0E /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				35F8D30728FD8E820000AA0E /* Account */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		35F8D30728FD8E820000AA0E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		C00B2CFC266ACD91008E7108 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +389,9 @@
 		C031FF2826638FD20098E474 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				35F8D30628FD8E1B0000AA0E /* Endpoints */,
+				35F8D30228FD8A670000AA0E /* APIService.swift */,
+				35F8D30428FD8AD30000AA0E /* EndpointV2.swift */,
 				C0727ECC266B6751000C0B36 /* Endpoint.swift */,
 				C00B2CF7266ACD2F008E7108 /* SLClient.swift */,
 				C0727EDC266B8C4A000C0B36 /* SLClientError.swift */,
@@ -608,16 +633,19 @@
 				C00B2CF6266ACCFA008E7108 /* ApiKey.swift in Sources */,
 				C0727ECE266B682F000C0B36 /* Endpoint.swift in Sources */,
 				C03760F526DC0C4700E5ECAC /* ErrorResponse.swift in Sources */,
+				35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */,
 				C063DCD626F28E0000BDBD5C /* AliasOptions.swift in Sources */,
 				C02924F8266CBBC300AFFE20 /* MessageResponse.swift in Sources */,
 				C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */,
 				C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */,
 				C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */,
+				35F8D30328FD8A670000AA0E /* APIService.swift in Sources */,
 				C0012DAC2717815100D18A7D /* ActivityAction.swift in Sources */,
 				C07DB031270E352300AE3969 /* AliasContact.swift in Sources */,
 				C031FF2A26638FEF0098E474 /* Alias.swift in Sources */,
 				C0CE57E82720B24F00EC79C8 /* UserSettingsUpdateOption.swift in Sources */,
 				C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */,
+				35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */,
 				C01CCD29271E0EB000B84B63 /* MailboxUpdateOption.swift in Sources */,
 				C00B2CF8266ACD2F008E7108 /* SLClient.swift in Sources */,
 				C0727EDE266B8C52000C0B36 /* SLClientError.swift in Sources */,
@@ -719,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -777,7 +805,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -801,7 +829,7 @@
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "Swift Package/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,7 +856,7 @@
 				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = "Swift Package/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
