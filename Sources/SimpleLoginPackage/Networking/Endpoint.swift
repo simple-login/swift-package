@@ -27,7 +27,6 @@ extension URL {
     }
 }
 
-
 extension URLRequest {
     mutating func addApiKeyToHeaders(_ apiKey: ApiKey) {
         addValue(apiKey.value, forHTTPHeaderField: "Authentication")
