@@ -15,6 +15,7 @@
 		35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */; };
 		35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */; };
 		35CF7FD828FDA52D00214B10 /* ActivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */; };
+		35CF7FDA28FDA64600214B10 /* ReactivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD928FDA64600214B10 /* ReactivateEndpoint.swift */; };
 		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
 		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
 		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
@@ -120,6 +121,7 @@
 		35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateEndpoint.swift; sourceTree = "<group>"; };
+		35CF7FD928FDA64600214B10 /* ReactivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactivateEndpoint.swift; sourceTree = "<group>"; };
 		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
 		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */,
 				35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */,
 				35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */,
+				35CF7FD928FDA64600214B10 /* ReactivateEndpoint.swift */,
 				35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */,
 			);
 			path = Account;
@@ -631,6 +634,7 @@
 				EF9A147D28194A23008ED9C7 /* AliasFilterOption.swift in Sources */,
 				C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */,
 				C01CCD22271E095800B84B63 /* Mailbox.swift in Sources */,
+				35CF7FDA28FDA64600214B10 /* ReactivateEndpoint.swift in Sources */,
 				C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */,
 				C01CCD18271E019F00B84B63 /* Contact.swift in Sources */,
 				C0727EC7266B59B7000C0B36 /* UserLogin.swift in Sources */,
