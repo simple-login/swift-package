@@ -18,6 +18,7 @@ public enum HTTPMethod: String {
 public enum APIServiceError: Error, CustomStringConvertible {
     case badUrlString(String)
     case clientError(ErrorResponse)
+    case failedToConstructURL(URLComponents)
     case notHttpResponse
     case unknown(statusCode: Int)
 
@@ -27,6 +28,8 @@ public enum APIServiceError: Error, CustomStringConvertible {
             return "Bad URL string \(urlString)"
         case .clientError(let error):
             return error.message
+        case .failedToConstructURL:
+            return "Failed to construct URL"
         case .notHttpResponse:
             return "Not HTTPResponse"
         case .unknown(let statusCode):
