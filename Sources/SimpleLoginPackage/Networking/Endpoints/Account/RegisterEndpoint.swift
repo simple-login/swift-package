@@ -9,7 +9,6 @@ import Foundation
 
 // POST /api/auth/register
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthregister
-
 public struct RegisterEndpoint: EndpointV2 {
     public typealias Body = RegisterRequest
     public typealias Response = MessageResponse
