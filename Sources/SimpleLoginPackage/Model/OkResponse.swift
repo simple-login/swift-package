@@ -7,9 +7,7 @@
 
 import Foundation
 
-/**
- Hold response from server in cases like update alias's mailboxes
- */
+/// Hold response from server in cases like update alias's mailboxes
 public struct OkResponse: Decodable {
     public let value: Bool
 

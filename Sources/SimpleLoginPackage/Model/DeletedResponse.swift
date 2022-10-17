@@ -7,9 +7,7 @@
 
 import Foundation
 
-/**
- Hold response from server when deleting something
- */
+/// Hold response from server when deleting something
 public struct DeletedResponse: Decodable {
     public let value: Bool
 
