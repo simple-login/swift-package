@@ -9,7 +9,7 @@ import Foundation
 
 public struct AliasLatestActivity: Decodable {
     public let action: ActivityAction
-    public let contact: AliasContact
+    public let contact: ContactLite
     public let timestamp: TimeInterval
 }
 
