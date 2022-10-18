@@ -22,6 +22,7 @@
 		357F16AB28FEBA690096C81E /* UnlinkProtonAccountEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16AA28FEBA690096C81E /* UnlinkProtonAccountEndpoint.swift */; };
 		357F16AE28FEBB3F0096C81E /* ProcessPaymentEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16AD28FEBB3F0096C81E /* ProcessPaymentEndpoint.swift */; };
 		357F16B028FEBCA60096C81E /* EnterSudoModeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16AF28FEBCA60096C81E /* EnterSudoModeEndpoint.swift */; };
+		357F16B228FEBD750096C81E /* GetCookieTokenEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16B128FEBD750096C81E /* GetCookieTokenEndpoint.swift */; };
 		35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */; };
 		35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */; };
 		35CF7FD828FDA52D00214B10 /* ActivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */; };
@@ -155,6 +156,7 @@
 		357F16AA28FEBA690096C81E /* UnlinkProtonAccountEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlinkProtonAccountEndpoint.swift; sourceTree = "<group>"; };
 		357F16AD28FEBB3F0096C81E /* ProcessPaymentEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessPaymentEndpoint.swift; sourceTree = "<group>"; };
 		357F16AF28FEBCA60096C81E /* EnterSudoModeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterSudoModeEndpoint.swift; sourceTree = "<group>"; };
+		357F16B128FEBD750096C81E /* GetCookieTokenEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCookieTokenEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateEndpoint.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				357F16AF28FEBCA60096C81E /* EnterSudoModeEndpoint.swift */,
+				357F16B128FEBD750096C81E /* GetCookieTokenEndpoint.swift */,
 				357F16AD28FEBB3F0096C81E /* ProcessPaymentEndpoint.swift */,
 			);
 			path = Misc;
@@ -765,6 +768,7 @@
 				35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */,
 				C0E9C3DF2790C4B600D1A463 /* UpdateResponse.swift in Sources */,
 				35CF7FEE28FDB7B300214B10 /* DeleteAliasEndpoint.swift in Sources */,
+				357F16B228FEBD750096C81E /* GetCookieTokenEndpoint.swift in Sources */,
 				357F169C28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift in Sources */,
 				357F16A928FEB97F0096C81E /* GetUsableDomainsEndpoint.swift in Sources */,
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
