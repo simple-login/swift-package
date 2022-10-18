@@ -15,12 +15,14 @@ public struct CreateAliasEndpoint: EndpointV2 {
 
     public var path: String
     public var method: HTTPMethod
+    public var apiKey: String?
     public var body: CreateAliasRequest?
     public var parameters: [String: String?]?
 
-    public init(request: CreateAliasRequest, hostname: String?) {
+    public init(apiKey: String, request: CreateAliasRequest, hostname: String?) {
         self.path = "/api/v3/alias/custom/new"
         self.method = .post
+        self.apiKey = apiKey
         self.body = request
         self.parameters = ["hostname": hostname]
     }
