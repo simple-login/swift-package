@@ -7,21 +7,13 @@
 
 import Foundation
 
-public struct DeletedAlias {
+public struct DeletedAlias: Decodable {
     public let alias: String
     public let deletionTimestamp: TimeInterval
-}
 
-extension DeletedAlias: Decodable {
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case alias = "alias"
         case deletionTimestamp = "deletion_timestamp"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.alias = try container.decode(String.self, forKey: .alias)
-        self.deletionTimestamp = try container.decode(TimeInterval.self, forKey: .deletionTimestamp)
     }
 }
 

@@ -13,6 +13,7 @@
 		354899D628A64B2000E9B7FF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D028A647B100E9B7FF /* Token.swift */; };
 		3572F5C828914F7600A85837 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 3572F5C728914F7600A85837 /* Mocker */; };
 		357F169A28FEB0130096C81E /* UpdateCustomDomainEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */; };
+		357F169C28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F169B28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift */; };
 		35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */; };
 		35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */; };
 		35CF7FD828FDA52D00214B10 /* ActivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */; };
@@ -137,6 +138,7 @@
 		354899D228A6480700E9B7FF /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
 		354899D428A6482A00E9B7FF /* TokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
 		357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomDomainEndpoint.swift; sourceTree = "<group>"; };
+		357F169B28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeletedAliasesEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateEndpoint.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				35EA797728FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift */,
+				357F169B28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift */,
 				357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */,
 			);
 			path = CustomDomain;
@@ -706,6 +709,7 @@
 				35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */,
 				C0E9C3DF2790C4B600D1A463 /* UpdateResponse.swift in Sources */,
 				35CF7FEE28FDB7B300214B10 /* DeleteAliasEndpoint.swift in Sources */,
+				357F169C28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift in Sources */,
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */,
 				35EA797328FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift in Sources */,
