@@ -7,30 +7,19 @@
 
 import Foundation
 
-public struct UserSettings {
+public struct UserSettings: Decodable {
     public let randomMode: RandomMode
     public let notification: Bool
     public let randomAliasDefaultDomain: String
     public let senderFormat: SenderFormat
     public let randomAliasSuffix: RandomAliasSuffix
-}
 
-extension UserSettings: Decodable {
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case randomMode = "alias_generator"
         case notification = "notification"
         case randomAliasDefaultDomain = "random_alias_default_domain"
         case senderFormat = "sender_format"
         case randomAliasSuffix = "random_alias_suffix"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.randomMode = try container.decode(RandomMode.self, forKey: .randomMode)
-        self.notification = try container.decode(Bool.self, forKey: .notification)
-        self.randomAliasDefaultDomain = try container.decode(String.self, forKey: .randomAliasDefaultDomain)
-        self.senderFormat = try container.decode(SenderFormat.self, forKey: .senderFormat)
-        self.randomAliasSuffix = try container.decode(RandomAliasSuffix.self, forKey: .randomAliasSuffix)
     }
 }
 
