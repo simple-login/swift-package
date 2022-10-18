@@ -7,8 +7,10 @@
 
 import Foundation
 
+public typealias MailboxID = Int
+
 public struct Mailbox: Decodable {
-    public let id: Int
+    public let id: MailboxID
     public let email: String
     public let `default`: Bool
     public let creationTimestamp: TimeInterval

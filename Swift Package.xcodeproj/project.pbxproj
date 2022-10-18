@@ -31,6 +31,7 @@
 		35EA796D28FE83D400BF2D34 /* GetContactsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA796C28FE83D400BF2D34 /* GetContactsEndpoint.swift */; };
 		35EA796F28FE875300BF2D34 /* CreateContactEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA796E28FE875300BF2D34 /* CreateContactEndpoint.swift */; };
 		35EA797128FE8D3300BF2D34 /* CreateMailboxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA797028FE8D3300BF2D34 /* CreateMailboxEndpoint.swift */; };
+		35EA797328FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA797228FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift */; };
 		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
 		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
 		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
@@ -151,6 +152,7 @@
 		35EA796C28FE83D400BF2D34 /* GetContactsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContactsEndpoint.swift; sourceTree = "<group>"; };
 		35EA796E28FE875300BF2D34 /* CreateContactEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContactEndpoint.swift; sourceTree = "<group>"; };
 		35EA797028FE8D3300BF2D34 /* CreateMailboxEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMailboxEndpoint.swift; sourceTree = "<group>"; };
+		35EA797228FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMailboxEndpoint.swift; sourceTree = "<group>"; };
 		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
 		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				35EA797028FE8D3300BF2D34 /* CreateMailboxEndpoint.swift */,
+				35EA797228FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift */,
 				35CF7FE528FDB04500214B10 /* GetMailboxesEndpoint.swift */,
 			);
 			path = Mailbox;
@@ -688,6 +691,7 @@
 				35CF7FEE28FDB7B300214B10 /* DeleteAliasEndpoint.swift in Sources */,
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */,
+				35EA797328FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift in Sources */,
 				C07DB038270E430600AE3969 /* AliasCreationOptions.swift in Sources */,
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
 				35EA797128FE8D3300BF2D34 /* CreateMailboxEndpoint.swift in Sources */,
