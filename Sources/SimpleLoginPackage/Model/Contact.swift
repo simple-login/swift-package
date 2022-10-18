@@ -7,8 +7,10 @@
 
 import Foundation
 
+public typealias ContactID = Int
+
 public struct Contact {
-    public let id: Int
+    public let id: ContactID
     public let email: String
     public let creationTimestamp: TimeInterval
     public let lastEmailSentTimestamp: TimeInterval?
