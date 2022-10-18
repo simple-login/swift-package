@@ -9,6 +9,7 @@ import Foundation
 
 public typealias AliasID = Int
 
+// swiftlint:disable function_default_parameter_at_end
 public struct Alias {
     public let id: AliasID
     public let email: String
@@ -24,6 +25,36 @@ public struct Alias {
     public let mailboxes: [MailboxLite]
     public let latestActivity: AliasLatestActivity?
     public let pinned: Bool
+
+    public init(id: AliasID,
+                email: String,
+                name: String? = nil,
+                enabled: Bool,
+                creationTimestamp: TimeInterval,
+                blockCount: Int,
+                forwardCount: Int,
+                replyCount: Int,
+                note: String? = nil,
+                pgpSupported: Bool,
+                pgpDisabled: Bool,
+                mailboxes: [MailboxLite],
+                latestActivity: AliasLatestActivity? = nil,
+                pinned: Bool) {
+        self.id = id
+        self.email = email
+        self.name = name
+        self.enabled = enabled
+        self.creationTimestamp = creationTimestamp
+        self.blockCount = blockCount
+        self.forwardCount = forwardCount
+        self.replyCount = replyCount
+        self.note = note
+        self.pgpSupported = pgpSupported
+        self.pgpDisabled = pgpDisabled
+        self.mailboxes = mailboxes
+        self.latestActivity = latestActivity
+        self.pinned = pinned
+    }
 }
 
 extension Alias: Decodable {

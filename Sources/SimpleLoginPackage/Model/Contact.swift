@@ -9,6 +9,7 @@ import Foundation
 
 public typealias ContactID = Int
 
+// swiftlint:disable function_default_parameter_at_end
 public struct Contact {
     public let id: ContactID
     public let email: String

@@ -9,6 +9,7 @@ import Foundation
 
 public typealias CustomDomainID = Int
 
+// swiftlint:disable function_default_parameter_at_end
 public struct CustomDomain: Decodable {
     public let id: CustomDomainID
     public let creationTimestamp: TimeInterval
@@ -30,6 +31,26 @@ public struct CustomDomain: Decodable {
         case randomPrefixGeneration = "random_prefix_generation"
         case mailboxes = "mailboxes"
         case catchAll = "catch_all"
+    }
+
+    public init(id: CustomDomainID,
+                creationTimestamp: TimeInterval,
+                domainName: String,
+                name: String? = nil,
+                verified: Bool,
+                aliasCount: Int,
+                randomPrefixGeneration: Bool,
+                mailboxes: [MailboxLite],
+                catchAll: Bool) {
+        self.id = id
+        self.creationTimestamp = creationTimestamp
+        self.domainName = domainName
+        self.name = name
+        self.verified = verified
+        self.aliasCount = aliasCount
+        self.randomPrefixGeneration = randomPrefixGeneration
+        self.mailboxes = mailboxes
+        self.catchAll = catchAll
     }
 }
 
