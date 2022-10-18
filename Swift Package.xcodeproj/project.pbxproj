@@ -27,6 +27,7 @@
 		35CF7FEE28FDB7B300214B10 /* DeleteAliasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FED28FDB7B300214B10 /* DeleteAliasEndpoint.swift */; };
 		35CF7FF028FDB88800214B10 /* ToggleAliasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FEF28FDB88800214B10 /* ToggleAliasEndpoint.swift */; };
 		35EA796928FE7D4500BF2D34 /* GetActivitiesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA796828FE7D4500BF2D34 /* GetActivitiesEndpoint.swift */; };
+		35EA796B28FE7F9500BF2D34 /* UpdateAliasEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA796A28FE7F9500BF2D34 /* UpdateAliasEndpoint.swift */; };
 		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
 		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
 		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
@@ -143,6 +144,7 @@
 		35CF7FED28FDB7B300214B10 /* DeleteAliasEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAliasEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FEF28FDB88800214B10 /* ToggleAliasEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleAliasEndpoint.swift; sourceTree = "<group>"; };
 		35EA796828FE7D4500BF2D34 /* GetActivitiesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetActivitiesEndpoint.swift; sourceTree = "<group>"; };
+		35EA796A28FE7F9500BF2D34 /* UpdateAliasEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAliasEndpoint.swift; sourceTree = "<group>"; };
 		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
 		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				35CF7FE028FDABDC00214B10 /* GetAliasOptionsEndpoint.swift */,
 				35CF7FE728FDB23C00214B10 /* RandomAliasEndpoint.swift */,
 				35CF7FEF28FDB88800214B10 /* ToggleAliasEndpoint.swift */,
+				35EA796A28FE7F9500BF2D34 /* UpdateAliasEndpoint.swift */,
 			);
 			path = Alias;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				C0727EC5266B596F000C0B36 /* UserInfo.swift in Sources */,
 				C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */,
 				C01CCD22271E095800B84B63 /* Mailbox.swift in Sources */,
+				35EA796B28FE7F9500BF2D34 /* UpdateAliasEndpoint.swift in Sources */,
 				35CF7FDA28FDA64600214B10 /* ReactivateEndpoint.swift in Sources */,
 				C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */,
 				C01CCD18271E019F00B84B63 /* Contact.swift in Sources */,
