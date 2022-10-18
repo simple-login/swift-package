@@ -7,17 +7,10 @@
 
 import Foundation
 
-public struct MessageResponse {
+public struct MessageResponse: Decodable {
     public let message: String
-}
 
-extension MessageResponse: Decodable {
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case message = "msg"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.message = try container.decode(String.self, forKey: .message)
     }
 }

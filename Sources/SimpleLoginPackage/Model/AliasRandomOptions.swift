@@ -27,8 +27,3 @@ public struct AliasRandomOptions {
          .init(name: "mode", value: mode.rawValue)]
     }
 }
-
-public enum RandomMode: String, Decodable, CaseIterable {
-    case uuid = "uuid"
-    case word = "word"
-}

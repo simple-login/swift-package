@@ -7,21 +7,14 @@
 
 import Foundation
 
-public struct ApiKey {
+public struct ApiKey: Decodable {
     public let value: String
 
-    public init(value: String) {
-        self.value = value
-    }
-}
-
-extension ApiKey: Decodable {
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case value = "api_key"
     }
 
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.value = try container.decode(String.self, forKey: .value)
+    public init(value: String) {
+        self.value = value
     }
 }

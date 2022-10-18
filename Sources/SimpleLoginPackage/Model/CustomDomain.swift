@@ -7,8 +7,10 @@
 
 import Foundation
 
-public struct CustomDomain {
-    public let id: Int
+public typealias CustomDomainID = Int
+
+public struct CustomDomain: Decodable {
+    public let id: CustomDomainID
     public let creationTimestamp: TimeInterval
     public let domainName: String
     public let name: String?
@@ -18,24 +20,16 @@ public struct CustomDomain {
     public let mailboxes: [MailboxLite]
     public let catchAll: Bool
 
-    public init(id: Int,
-                creationTimestamp: TimeInterval,
-                domainName: String,
-                name: String?,
-                verified: Bool,
-                aliasCount: Int,
-                randomPrefixGeneration: Bool,
-                mailboxes: [MailboxLite],
-                catchAll: Bool) {
-        self.id = id
-        self.creationTimestamp = creationTimestamp
-        self.domainName = domainName
-        self.name = name
-        self.verified = verified
-        self.aliasCount = aliasCount
-        self.randomPrefixGeneration = randomPrefixGeneration
-        self.mailboxes = mailboxes
-        self.catchAll = catchAll
+    private enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case creationTimestamp = "creation_timestamp"
+        case domainName = "domain_name"
+        case name = "name"
+        case verified = "is_verified"
+        case aliasCount = "nb_alias"
+        case randomPrefixGeneration = "random_prefix_generation"
+        case mailboxes = "mailboxes"
+        case catchAll = "catch_all"
     }
 }
 
@@ -59,30 +53,11 @@ public extension CustomDomain {
     }
 }
 
-extension CustomDomain: Decodable {
-    private enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case creationTimestamp = "creation_timestamp"
-        case domainName = "domain_name"
-        case name = "name"
-        case verified = "is_verified"
-        case aliasCount = "nb_alias"
-        case randomPrefixGeneration = "random_prefix_generation"
-        case mailboxes = "mailboxes"
-        case catchAll = "catch_all"
-    }
-}
-
 public struct CustomDomainArray: Decodable {
     public let customDomains: [CustomDomain]
 
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case customDomains = "custom_domains"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.customDomains = try container.decode([CustomDomain].self, forKey: .customDomains)
     }
 }
 

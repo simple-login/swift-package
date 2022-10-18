@@ -11,7 +11,7 @@ import XCTest
 final class UserLoginTests: XCTestCase {
     func testUserLoginWithApiKey() throws {
         let sut = try JSONDecoder().decode(UserLogin.self, from: MockedData.userLogin1)
-        XCTAssertEqual(sut.apiKey, ApiKey(value: "eacfxawdwmymniociltiabnodmibtbnc"))
+        XCTAssertEqual(sut.apiKey, "eacfxawdwmymniociltiabnodmibtbnc")
         XCTAssertEqual(sut.email, "john.doe@example.com")
         XCTAssertFalse(sut.isMfaEnabled)
         XCTAssertNil(sut.mfaKey)

@@ -1,4 +1,4 @@
-// swift-tools-version:5.4.0
+// swift-tools-version:5.7
 //
 //  Swift_PackageTests.swift
 //  Swift PackageTests
@@ -11,7 +11,7 @@ import PackageDescription
 let package = Package(
     name: "SimpleLoginPackage",
     platforms: [
-        .macOS(.v10_15), .iOS(.v13),
+        .iOS("15.0"),
     ],
     products: [
         .library(name: "SimpleLoginPackage", targets: ["SimpleLoginPackage"]),
@@ -20,8 +20,5 @@ let package = Package(
         .target(
             name: "SimpleLoginPackage",
             dependencies: []),
-        .testTarget(
-            name: "Swift PackageTests",
-            dependencies: ["SimpleLoginPackage"]),
     ]
 )

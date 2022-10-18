@@ -7,8 +7,10 @@
 
 import Foundation
 
+public typealias ContactID = Int
+
 public struct Contact {
-    public let id: Int
+    public let id: ContactID
     public let email: String
     public let creationTimestamp: TimeInterval
     public let lastEmailSentTimestamp: TimeInterval?
@@ -16,24 +18,6 @@ public struct Contact {
     public let reverseAliasAddress: String
     public let existed: Bool // Used when creating a new contact
     public let blockForward: Bool
-
-    public init(id: Int,
-                email: String,
-                creationTimestamp: TimeInterval,
-                lastEmailSentTimestamp: TimeInterval?,
-                reverseAlias: String,
-                reverseAliasAddress: String,
-                existed: Bool,
-                blockForward: Bool) {
-        self.id = id
-        self.email = email
-        self.creationTimestamp = creationTimestamp
-        self.lastEmailSentTimestamp = lastEmailSentTimestamp
-        self.reverseAlias = reverseAlias
-        self.reverseAliasAddress = reverseAliasAddress
-        self.existed = existed
-        self.blockForward = blockForward
-    }
 }
 
 extension Contact: Decodable {
@@ -66,18 +50,11 @@ public struct ContactArray: Decodable {
     public let contacts: [Contact]
 }
 
-public struct BlockForward {
+public struct BlockForward: Decodable {
     public let value: Bool
-}
 
-extension BlockForward: Decodable {
-    private enum Key: String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case value = "block_forward"
-    }
-
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: Key.self)
-        self.value = try container.decode(Bool.self, forKey: .value)
     }
 }
 
