@@ -24,36 +24,6 @@ public struct Alias {
     public let mailboxes: [MailboxLite]
     public let latestActivity: AliasLatestActivity?
     public let pinned: Bool
-
-    public init(id: AliasID,
-                email: String,
-                name: String?,
-                enabled: Bool,
-                creationTimestamp: TimeInterval,
-                blockCount: Int,
-                forwardCount: Int,
-                replyCount: Int,
-                note: String?,
-                pgpSupported: Bool,
-                pgpDisabled: Bool,
-                mailboxes: [MailboxLite],
-                latestActivity: AliasLatestActivity?,
-                pinned: Bool) {
-        self.id = id
-        self.email = email
-        self.name = name
-        self.enabled = enabled
-        self.creationTimestamp = creationTimestamp
-        self.blockCount = blockCount
-        self.forwardCount = forwardCount
-        self.replyCount = replyCount
-        self.note = note
-        self.pgpSupported = pgpSupported
-        self.pgpDisabled = pgpDisabled
-        self.mailboxes = mailboxes
-        self.latestActivity = latestActivity
-        self.pinned = pinned
-    }
 }
 
 extension Alias: Decodable {

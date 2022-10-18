@@ -33,6 +33,7 @@
 		35EA797128FE8D3300BF2D34 /* CreateMailboxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA797028FE8D3300BF2D34 /* CreateMailboxEndpoint.swift */; };
 		35EA797328FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA797228FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift */; };
 		35EA797528FE8F5D00BF2D34 /* UpdateMailboxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA797428FE8F5D00BF2D34 /* UpdateMailboxEndpoint.swift */; };
+		35EA797828FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EA797728FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift */; };
 		35F8D30328FD8A670000AA0E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30228FD8A670000AA0E /* APIService.swift */; };
 		35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30428FD8AD30000AA0E /* EndpointV2.swift */; };
 		35F8D30928FD8E9E0000AA0E /* LogInEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */; };
@@ -155,6 +156,7 @@
 		35EA797028FE8D3300BF2D34 /* CreateMailboxEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMailboxEndpoint.swift; sourceTree = "<group>"; };
 		35EA797228FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMailboxEndpoint.swift; sourceTree = "<group>"; };
 		35EA797428FE8F5D00BF2D34 /* UpdateMailboxEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateMailboxEndpoint.swift; sourceTree = "<group>"; };
+		35EA797728FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomDomainsEndpoint.swift; sourceTree = "<group>"; };
 		35F8D30228FD8A670000AA0E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		35F8D30428FD8AD30000AA0E /* EndpointV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointV2.swift; sourceTree = "<group>"; };
 		35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInEndpoint.swift; sourceTree = "<group>"; };
@@ -293,11 +295,20 @@
 			path = Mailbox;
 			sourceTree = "<group>";
 		};
+		35EA797628FE913300BF2D34 /* CustomDomain */ = {
+			isa = PBXGroup;
+			children = (
+				35EA797728FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift */,
+			);
+			path = CustomDomain;
+			sourceTree = "<group>";
+		};
 		35F8D30628FD8E1B0000AA0E /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
 				35F8D30728FD8E820000AA0E /* Account */,
 				35CF7FDF28FDABBD00214B10 /* Alias */,
+				35EA797628FE913300BF2D34 /* CustomDomain */,
 				35CF7FE428FDB02400214B10 /* Mailbox */,
 			);
 			path = Endpoints;
@@ -740,6 +751,7 @@
 				C07DB031270E352300AE3969 /* ContactLite.swift in Sources */,
 				C031FF2A26638FEF0098E474 /* Alias.swift in Sources */,
 				C0CE57E82720B24F00EC79C8 /* UserSettingsUpdateOption.swift in Sources */,
+				35EA797828FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift in Sources */,
 				C07DB03E270E463100AE3969 /* AliasRandomOptions.swift in Sources */,
 				35F8D30528FD8AD30000AA0E /* EndpointV2.swift in Sources */,
 				C01CCD29271E0EB000B84B63 /* MailboxUpdateOption.swift in Sources */,

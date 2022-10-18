@@ -25,20 +25,6 @@ public struct Mailbox: Decodable {
         case aliasCount = "nb_alias"
         case verified = "verified"
     }
-
-    public init(id: Int,
-                email: String,
-                default: Bool,
-                creationTimestamp: TimeInterval,
-                aliasCount: Int,
-                verified: Bool) {
-        self.id = id
-        self.email = email
-        self.default = `default`
-        self.creationTimestamp = creationTimestamp
-        self.aliasCount = aliasCount
-        self.verified = verified
-    }
 }
 
 public struct MailboxArray: Decodable {
