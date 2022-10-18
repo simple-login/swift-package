@@ -41,6 +41,7 @@ public enum APIServiceError: Error, CustomStringConvertible {
 public protocol APIServiceProtocol {
     var baseURL: URL { get }
     var session: URLSession { get }
+    var printDebugInformation: Bool { get }
 
     func execute<E: EndpointV2>(_ endpoint: E) async throws -> E.Response
 }
@@ -48,11 +49,14 @@ public protocol APIServiceProtocol {
 public extension APIServiceProtocol {
     func execute<E: EndpointV2>(_ endpoint: E) async throws -> E.Response {
         let request = try endpoint.makeRequest(from: baseURL)
+        printDebugInformation(request: request)
         let (data, response) = try await session.data(for: request)
 
         guard let httpResponse = response as? HTTPURLResponse else {
             throw APIServiceError.notHttpResponse
         }
+
+        printDebugInformation(data: data, request: request, response: httpResponse)
 
         switch httpResponse.statusCode {
         case 200...299:
@@ -69,13 +73,59 @@ public extension APIServiceProtocol {
     }
 }
 
+private extension APIServiceProtocol {
+    func printDebugInformation(request: URLRequest) {
+        guard printDebugInformation,
+              let method = request.httpMethod,
+              let urlString = request.url?.absoluteString else { return }
+        print("==> \(method) \(urlString)")
+
+        if let headers = request.allHTTPHeaderFields, !headers.isEmpty {
+            print("HEADERS:")
+            for header in headers {
+                print("\(header.key): \(header.value)")
+            }
+        }
+
+        if let data = request.httpBody,
+           let bodyString = String(data: data, encoding: .utf8) {
+            print("BODY:")
+            print(bodyString)
+        }
+
+        print("\n")
+    }
+
+    func printDebugInformation(data: Data, request: URLRequest, response: HTTPURLResponse) {
+        guard printDebugInformation,
+              let method = request.httpMethod,
+              let urlString = request.url?.absoluteString else { return }
+
+        print("<== \(response.statusCode) \(method) \(urlString)")
+
+        print("HEADERS:")
+        for header in response.allHeaderFields {
+            print("\(header.key): \(header.value)")
+        }
+
+        if let responseString = String(data: data, encoding: .utf8) {
+            print("RESPONSE:")
+            print(responseString)
+        }
+
+        print("\n")
+    }
+}
+
 public final class APIService: APIServiceProtocol {
     public let baseURL: URL
     public let session: URLSession
+    public let printDebugInformation: Bool
 
-    public init(baseURL: URL, session: URLSession) {
+    public init(baseURL: URL, session: URLSession, printDebugInformation: Bool) {
         self.baseURL = baseURL
         self.session = session
+        self.printDebugInformation = printDebugInformation
     }
 }
 
