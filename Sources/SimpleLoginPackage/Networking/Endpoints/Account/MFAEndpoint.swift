@@ -17,10 +17,10 @@ public struct MFAEndpoint: EndpointV2 {
     public var method: HTTPMethod
     public var body: MFARequest?
 
-    public init(request: MFARequest) {
+    public init(token: String, key: String, device: String) {
         self.path = "/api/auth/mfa"
         self.method = .post
-        self.body = request
+        self.body = .init(token: token, key: key, device: device)
     }
 }
 
@@ -33,11 +33,5 @@ public struct MFARequest: Encodable {
         case token = "mfa_token"
         case key = "mfa_key"
         case device = "device"
-    }
-
-    public init(token: String, key: String, device: String) {
-        self.token = token
-        self.key = key
-        self.device = device
     }
 }

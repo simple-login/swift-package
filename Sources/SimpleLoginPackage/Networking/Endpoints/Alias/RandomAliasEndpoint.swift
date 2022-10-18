@@ -20,13 +20,13 @@ public struct RandomAliasEndpoint: EndpointV2 {
     public var parameters: [String: String?]?
 
     public init(apiKey: String,
-                request: RandomAliasRequest,
+                note: String?,
                 mode: RandomMode,
                 hostname: String?) {
         self.path = "/api/alias/random/new"
         self.method = .post
         self.apiKey = apiKey
-        self.body = request
+        self.body = .init(note: note)
         self.parameters = ["mode": mode.rawValue,
                            "hostname": hostname]
     }
@@ -34,10 +34,6 @@ public struct RandomAliasEndpoint: EndpointV2 {
 
 public struct RandomAliasRequest: Encodable {
     let note: String?
-
-    public init(note: String? = nil) {
-        self.note = note
-    }
 }
 
 public enum RandomMode: String, Decodable, CaseIterable {

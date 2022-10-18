@@ -17,19 +17,14 @@ public struct ActivateEndpoint: EndpointV2 {
     public var method: HTTPMethod
     public var body: ActivateRequest?
 
-    public init(request: ActivateRequest) {
+    public init(email: String, code: String) {
         self.path = "/api/auth/activate"
         self.method = .post
-        self.body = request
+        self.body = .init(email: email, code: code)
     }
 }
 
 public struct ActivateRequest: Encodable {
     let email: String
     let code: String
-
-    public init(email: String, code: String) {
-        self.email = email
-        self.code = code
-    }
 }

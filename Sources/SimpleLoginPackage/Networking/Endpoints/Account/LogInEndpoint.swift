@@ -17,10 +17,10 @@ public struct LogInEndpoint: EndpointV2 {
     public var method: HTTPMethod
     public var body: LogInRequest?
 
-    public init(request: LogInRequest) {
+    public init(email: String, password: String, device: String) {
         self.path = "/api/auth/login"
         self.method = .post
-        self.body = request
+        self.body = .init(email: email, password: password, device: device)
     }
 }
 
@@ -28,10 +28,4 @@ public struct LogInRequest: Encodable {
     let email: String
     let password: String
     let device: String
-
-    public init(email: String, password: String, device: String) {
-        self.email = email
-        self.password = password
-        self.device = device
-    }
 }

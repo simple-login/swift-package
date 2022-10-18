@@ -17,19 +17,14 @@ public struct RegisterEndpoint: EndpointV2 {
     public var method: HTTPMethod
     public var body: RegisterRequest?
 
-    public init(request: RegisterRequest) {
+    public init(email: String, password: String) {
         self.path = "/api/auth/register"
         self.method = .post
-        self.body = request
+        self.body = .init(email: email, password: password)
     }
 }
 
 public struct RegisterRequest: Encodable {
     let email: String
     let password: String
-
-    public init(email: String, password: String) {
-        self.email = email
-        self.password = password
-    }
 }

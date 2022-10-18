@@ -17,17 +17,13 @@ public struct ForgotPasswordEndpoint: EndpointV2 {
     public var method: HTTPMethod
     public var body: ForgotPasswordRequest?
 
-    public init(request: ForgotPasswordRequest) {
+    public init(email: String) {
         self.path = "/api/auth/forgot_password"
         self.method = .post
-        self.body = request
+        self.body = .init(email: email)
     }
 }
 
 public struct ForgotPasswordRequest: Encodable {
     let email: String
-
-    public init(email: String) {
-        self.email = email
-    }
 }

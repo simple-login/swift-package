@@ -17,17 +17,13 @@ public struct ReactivateEndpoint: EndpointV2 {
     public var method: HTTPMethod
     public var body: ReactivateRequest?
 
-    public init(request: ReactivateRequest) {
+    public init(email: String) {
         self.path = "/api/auth/reactivate"
         self.method = .post
-        self.body = request
+        self.body = .init(email: email)
     }
 }
 
 public struct ReactivateRequest: Encodable {
     let email: String
-
-    public init(email: String) {
-        self.email = email
-    }
 }
