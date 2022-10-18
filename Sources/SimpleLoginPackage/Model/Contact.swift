@@ -18,6 +18,24 @@ public struct Contact {
     public let reverseAliasAddress: String
     public let existed: Bool // Used when creating a new contact
     public let blockForward: Bool
+
+    public init(id: ContactID,
+                email: String,
+                creationTimestamp: TimeInterval,
+                lastEmailSentTimestamp: TimeInterval? = nil,
+                reverseAlias: String,
+                reverseAliasAddress: String,
+                existed: Bool,
+                blockForward: Bool) {
+        self.id = id
+        self.email = email
+        self.creationTimestamp = creationTimestamp
+        self.lastEmailSentTimestamp = lastEmailSentTimestamp
+        self.reverseAlias = reverseAlias
+        self.reverseAliasAddress = reverseAliasAddress
+        self.existed = existed
+        self.blockForward = blockForward
+    }
 }
 
 extension Contact: Decodable {
