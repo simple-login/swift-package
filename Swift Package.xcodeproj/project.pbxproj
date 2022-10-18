@@ -18,6 +18,7 @@
 		357F16A128FEB4F20096C81E /* ToggleContactEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16A028FEB4F20096C81E /* ToggleContactEndpoint.swift */; };
 		357F16A528FEB5DA0096C81E /* GetUserSettingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16A428FEB5DA0096C81E /* GetUserSettingsEndpoint.swift */; };
 		357F16A728FEB6B80096C81E /* UpdateUserSettingsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16A628FEB6B80096C81E /* UpdateUserSettingsEndpoint.swift */; };
+		357F16A928FEB97F0096C81E /* GetUsableDomainsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F16A828FEB97F0096C81E /* GetUsableDomainsEndpoint.swift */; };
 		35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */; };
 		35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */; };
 		35CF7FD828FDA52D00214B10 /* ActivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */; };
@@ -147,6 +148,7 @@
 		357F16A028FEB4F20096C81E /* ToggleContactEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleContactEndpoint.swift; sourceTree = "<group>"; };
 		357F16A428FEB5DA0096C81E /* GetUserSettingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserSettingsEndpoint.swift; sourceTree = "<group>"; };
 		357F16A628FEB6B80096C81E /* UpdateUserSettingsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserSettingsEndpoint.swift; sourceTree = "<group>"; };
+		357F16A828FEB97F0096C81E /* GetUsableDomainsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUsableDomainsEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateEndpoint.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		357F16A328FEB5C60096C81E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				357F16A828FEB97F0096C81E /* GetUsableDomainsEndpoint.swift */,
 				357F16A428FEB5DA0096C81E /* GetUserSettingsEndpoint.swift */,
 				357F16A628FEB6B80096C81E /* UpdateUserSettingsEndpoint.swift */,
 			);
@@ -746,6 +749,7 @@
 				C0E9C3DF2790C4B600D1A463 /* UpdateResponse.swift in Sources */,
 				35CF7FEE28FDB7B300214B10 /* DeleteAliasEndpoint.swift in Sources */,
 				357F169C28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift in Sources */,
+				357F16A928FEB97F0096C81E /* GetUsableDomainsEndpoint.swift in Sources */,
 				C0012DA6271779FA00D18A7D /* DeletedResponse.swift in Sources */,
 				35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */,
 				35EA797328FE8E5600BF2D34 /* DeleteMailboxEndpoint.swift in Sources */,
