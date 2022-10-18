@@ -12,6 +12,7 @@
 		354899D528A6482A00E9B7FF /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D428A6482A00E9B7FF /* TokenTests.swift */; };
 		354899D628A64B2000E9B7FF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D028A647B100E9B7FF /* Token.swift */; };
 		3572F5C828914F7600A85837 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 3572F5C728914F7600A85837 /* Mocker */; };
+		357F169A28FEB0130096C81E /* UpdateCustomDomainEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */; };
 		35CF7FD428FDA04E00214B10 /* MFAEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */; };
 		35CF7FD628FDA3ED00214B10 /* RegisterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */; };
 		35CF7FD828FDA52D00214B10 /* ActivateEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */; };
@@ -135,6 +136,7 @@
 		354899D028A647B100E9B7FF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		354899D228A6480700E9B7FF /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
 		354899D428A6482A00E9B7FF /* TokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
+		357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomDomainEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD528FDA3ED00214B10 /* RegisterEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEndpoint.swift; sourceTree = "<group>"; };
 		35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateEndpoint.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				35EA797728FE914A00BF2D34 /* GetCustomDomainsEndpoint.swift */,
+				357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */,
 			);
 			path = CustomDomain;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				C02924F8266CBBC300AFFE20 /* MessageResponse.swift in Sources */,
 				C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */,
 				C01CCD16271DFD3500B84B63 /* AliasUpdateOption.swift in Sources */,
+				357F169A28FEB0130096C81E /* UpdateCustomDomainEndpoint.swift in Sources */,
 				35CF7FE328FDACBB00214B10 /* CreateAliasEndpoint.swift in Sources */,
 				C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */,
 				35F8D30328FD8A670000AA0E /* APIService.swift in Sources */,

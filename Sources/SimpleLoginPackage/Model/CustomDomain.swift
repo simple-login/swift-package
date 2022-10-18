@@ -7,8 +7,10 @@
 
 import Foundation
 
+public typealias CustomDomainID = Int
+
 public struct CustomDomain: Decodable {
-    public let id: Int
+    public let id: CustomDomainID
     public let creationTimestamp: TimeInterval
     public let domainName: String
     public let name: String?
