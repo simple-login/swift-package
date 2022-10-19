@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/apple/process_payment
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiappleprocess_payment
-public struct ProcessPaymentEndpoint: EndpointV2 {
+public struct ProcessPaymentEndpoint: Endpoint {
     public typealias Body = ProcessPaymentRequest
     public typealias Response = OkResponse
 

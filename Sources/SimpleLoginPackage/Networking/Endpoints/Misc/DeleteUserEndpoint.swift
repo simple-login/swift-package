@@ -9,7 +9,7 @@ import Foundation
 
 // DELETE /api/user
 // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apiuser
-public struct DeleteUserEndpoint: EndpointV2 {
+public struct DeleteUserEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = OkResponse
 

@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/alias/random/new
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apialiasrandomnew
-public struct RandomAliasEndpoint: EndpointV2 {
+public struct RandomAliasEndpoint: Endpoint {
     public typealias Body = RandomAliasRequest
     public typealias Response = Alias
 

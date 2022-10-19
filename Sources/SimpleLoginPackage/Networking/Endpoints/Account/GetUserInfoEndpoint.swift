@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/user_info
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiuser_info
-public struct GetUserInfoEndpoint: EndpointV2 {
+public struct GetUserInfoEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = UserInfo
 

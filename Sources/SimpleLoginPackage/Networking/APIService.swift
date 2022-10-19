@@ -43,11 +43,11 @@ public protocol APIServiceProtocol {
     var session: URLSession { get }
     var printDebugInformation: Bool { get }
 
-    func execute<E: EndpointV2>(_ endpoint: E) async throws -> E.Response
+    func execute<E: Endpoint>(_ endpoint: E) async throws -> E.Response
 }
 
 public extension APIServiceProtocol {
-    func execute<E: EndpointV2>(_ endpoint: E) async throws -> E.Response {
+    func execute<E: Endpoint>(_ endpoint: E) async throws -> E.Response {
         let request = try endpoint.makeRequest(from: baseURL)
         printDebugInformation(request: request)
         let (data, response) = try await session.data(for: request)

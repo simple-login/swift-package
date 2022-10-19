@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/aliases/:alias_id/contacts
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apialiasesalias_idcontacts
-public struct CreateContactEndpoint: EndpointV2 {
+public struct CreateContactEndpoint: Endpoint {
     public typealias Body = CreateContactRequest
     public typealias Response = Contact
 

@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/v3/alias/custom/new
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiv3aliascustomnew
-public struct CreateAliasEndpoint: EndpointV2 {
+public struct CreateAliasEndpoint: Endpoint {
     public typealias Body = CreateAliasRequest
     public typealias Response = Alias
 

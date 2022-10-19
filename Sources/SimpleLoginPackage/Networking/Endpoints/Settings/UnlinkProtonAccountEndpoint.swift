@@ -8,7 +8,7 @@
 import Foundation
 
 // DELETE /api/setting/unlink_proton_account
-public struct UnlinkProtonAccountEndpoint: EndpointV2 {
+public struct UnlinkProtonAccountEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = OkResponse
 

@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/auth/mfa
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthmfa
-public struct MFAEndpoint: EndpointV2 {
+public struct MFAEndpoint: Endpoint {
     public typealias Body = MFARequest
     public typealias Response = ApiKey
 

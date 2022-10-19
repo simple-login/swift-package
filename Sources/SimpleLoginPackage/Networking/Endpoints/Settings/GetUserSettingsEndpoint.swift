@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/setting
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apisetting
-public struct GetUserSettingsEndpoint: EndpointV2 {
+public struct GetUserSettingsEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = UserSettings
 

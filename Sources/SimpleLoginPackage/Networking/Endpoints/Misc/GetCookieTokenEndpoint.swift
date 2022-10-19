@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/user/cookie_token
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiusercookie_token
-public struct GetCookieTokenEndpoint: EndpointV2 {
+public struct GetCookieTokenEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = Token
 

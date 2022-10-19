@@ -9,7 +9,7 @@ import Foundation
 
 // DELETE /api/contacts/:contact_id
 // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apicontactscontact_id
-public struct DeleteContactEndpoint: EndpointV2 {
+public struct DeleteContactEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = DeletedResponse
 

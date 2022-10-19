@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/auth/forgot_password
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthforgot_password
-public struct ForgotPasswordEndpoint: EndpointV2 {
+public struct ForgotPasswordEndpoint: Endpoint {
     public typealias Body = ForgotPasswordRequest
     public typealias Response = OkResponse
 

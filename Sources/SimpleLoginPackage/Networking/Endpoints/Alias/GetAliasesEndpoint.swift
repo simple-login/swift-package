@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/v2/aliases
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2aliases
-public struct GetAliasesEndpoint: EndpointV2 {
+public struct GetAliasesEndpoint: Endpoint {
     public typealias Body = SearchAliasesRequest
     public typealias Response = AliasArray
 

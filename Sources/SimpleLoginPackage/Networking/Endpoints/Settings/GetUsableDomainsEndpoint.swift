@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/v2/setting/domains
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2settingdomains
-public struct GetUsableDomainsEndpoint: EndpointV2 {
+public struct GetUsableDomainsEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = [UsableDomain]
 

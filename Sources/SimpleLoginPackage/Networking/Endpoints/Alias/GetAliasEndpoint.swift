@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/aliases/:alias_id
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apialiasesalias_id
-public struct GetAliasEndpoint: EndpointV2 {
+public struct GetAliasEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = Alias
 

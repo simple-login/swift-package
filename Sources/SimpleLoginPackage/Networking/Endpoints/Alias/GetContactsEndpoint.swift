@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/aliases/:alias_id/contacts
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apialiasesalias_idcontacts
-public struct GetContactsEndpoint: EndpointV2 {
+public struct GetContactsEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = ContactArray
 

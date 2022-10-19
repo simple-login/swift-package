@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/contacts/:contact_id/toggle
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apicontactscontact_idtoggle
-public struct ToggleContactEndpoint: EndpointV2 {
+public struct ToggleContactEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = BlockForward
 

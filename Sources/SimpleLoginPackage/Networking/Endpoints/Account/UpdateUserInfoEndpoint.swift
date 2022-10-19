@@ -9,7 +9,7 @@ import Foundation
 
 // PATCH /api/user_info
 // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apiuser_info
-public struct UpdateUserInfoEndpoint: EndpointV2 {
+public struct UpdateUserInfoEndpoint: Endpoint {
     public typealias Body = UpdateUserInfoOption
     public typealias Response = UserInfo
 

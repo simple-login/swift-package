@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/custom_domains
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apicustom_domains
-public struct GetCustomDomainsEndpoint: EndpointV2 {
+public struct GetCustomDomainsEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = CustomDomainArray
 

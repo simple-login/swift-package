@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/auth/login
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthlogin
-public struct LogInEndpoint: EndpointV2 {
+public struct LogInEndpoint: Endpoint {
     public typealias Body = LogInRequest
     public typealias Response = UserLogin
 

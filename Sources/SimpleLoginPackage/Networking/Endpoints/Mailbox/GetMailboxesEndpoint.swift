@@ -9,8 +9,7 @@ import Foundation
 
 // GET /api/v2/mailboxes
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv2mailboxes
-
-public struct GetMailboxesEndpoint: EndpointV2 {
+public struct GetMailboxesEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = MailboxArray
 

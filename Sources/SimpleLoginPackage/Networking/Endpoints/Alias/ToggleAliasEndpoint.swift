@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/aliases/:alias_id/toggle
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apialiasesalias_idtoggle
-public struct ToggleAliasEndpoint: EndpointV2 {
+public struct ToggleAliasEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = EnabledResponse
 

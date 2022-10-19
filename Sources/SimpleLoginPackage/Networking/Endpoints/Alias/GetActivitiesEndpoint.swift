@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/aliases/:alias_id/activities
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apialiasesalias_idactivities
-public struct GetActivitiesEndpoint: EndpointV2 {
+public struct GetActivitiesEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = AliasActivityArray
 

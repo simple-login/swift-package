@@ -9,7 +9,7 @@ import Foundation
 
 // DELETE /api/mailboxes/:mailbox_id
 // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apimailboxesmailbox_id
-public struct DeleteMailboxEndpoint: EndpointV2 {
+public struct DeleteMailboxEndpoint: Endpoint {
     public typealias Body = DeleteMailboxRequest
     public typealias Response = DeletedResponse
 

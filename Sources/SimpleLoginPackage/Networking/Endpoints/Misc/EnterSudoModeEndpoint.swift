@@ -9,7 +9,7 @@ import Foundation
 
 // PATCH /api/sudo
 // https://github.com/simple-login/app/blob/master/docs/api.md#patch-apisudo
-public struct EnterSudoModeEndpoint: EndpointV2 {
+public struct EnterSudoModeEndpoint: Endpoint {
     public typealias Body = EnterSudoModeRequest
     public typealias Response = OkResponse
 

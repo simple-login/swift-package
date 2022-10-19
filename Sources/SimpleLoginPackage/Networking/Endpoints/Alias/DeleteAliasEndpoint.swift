@@ -9,7 +9,7 @@ import Foundation
 
 // DELETE /api/aliases/:alias_id
 // https://github.com/simple-login/app/blob/master/docs/api.md#delete-apialiasesalias_id
-public struct DeleteAliasEndpoint: EndpointV2 {
+public struct DeleteAliasEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = DeletedResponse
 

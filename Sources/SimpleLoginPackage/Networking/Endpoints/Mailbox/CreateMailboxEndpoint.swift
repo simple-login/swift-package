@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/mailboxes
 // https://github.com/simple-login/app/blob/master/docs/api.md#mailbox-endpoints
-public struct CreateMailboxEndpoint: EndpointV2 {
+public struct CreateMailboxEndpoint: Endpoint {
     public typealias Body = CreateMailboxRequest
     public typealias Response = Mailbox
 

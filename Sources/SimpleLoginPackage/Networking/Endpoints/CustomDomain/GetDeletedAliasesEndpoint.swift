@@ -9,7 +9,7 @@ import Foundation
 
 // GET /api/custom_domains/:custom_domain_id/trash
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apicustom_domainscustom_domain_idtrash
-public struct GetDeletedAliasesEndpoint: EndpointV2 {
+public struct GetDeletedAliasesEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = DeletedAliasArray
 

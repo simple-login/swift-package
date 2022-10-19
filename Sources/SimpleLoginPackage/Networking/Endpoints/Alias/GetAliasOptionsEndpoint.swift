@@ -9,8 +9,7 @@ import Foundation
 
 // GET /api/v5/alias/options
 // https://github.com/simple-login/app/blob/master/docs/api.md#get-apiv5aliasoptions
-
-public struct GetAliasOptionsEndpoint: EndpointV2 {
+public struct GetAliasOptionsEndpoint: Endpoint {
     public typealias Body = EmptyBody
     public typealias Response = AliasOptions
 

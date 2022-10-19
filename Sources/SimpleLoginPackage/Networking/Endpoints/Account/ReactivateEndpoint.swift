@@ -9,7 +9,7 @@ import Foundation
 
 // POST /api/auth/reactivate
 // https://github.com/simple-login/app/blob/master/docs/api.md#post-apiauthreactivate
-public struct ReactivateEndpoint: EndpointV2 {
+public struct ReactivateEndpoint: Endpoint {
     public typealias Body = ReactivateRequest
     public typealias Response = MessageResponse
 
