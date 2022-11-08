@@ -10,9 +10,7 @@ import PackageDescription
 
 let package = Package(
     name: "SimpleLoginPackage",
-    platforms: [
-        .iOS("15.0"),
-    ],
+    platforms: [.iOS(.v15), .macOS(.v12)],
     products: [
         .library(name: "SimpleLoginPackage", targets: ["SimpleLoginPackage"]),
     ],
