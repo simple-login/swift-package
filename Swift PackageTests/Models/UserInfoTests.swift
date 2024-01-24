@@ -18,6 +18,7 @@ final class UserInfoTests: XCTestCase {
         XCTAssertNil(userInfo1.profilePictureUrl)
         XCTAssertEqual(userInfo1.maxAliasFreePlan, 12)
         XCTAssertNil(userInfo1.connectedProtonAddress)
+        XCTAssertFalse(userInfo1.canCreateReverseAlias)
 
         let userInfo2 = try JSONDecoder().decode(UserInfo.self, from: MockedData.userInfo2)
         XCTAssertEqual(userInfo2.name, "Jane Doe")
@@ -27,5 +28,6 @@ final class UserInfoTests: XCTestCase {
         XCTAssertEqual(userInfo2.profilePictureUrl, "https://profile.png")
         XCTAssertEqual(userInfo2.maxAliasFreePlan, 7)
         XCTAssertEqual(userInfo2.connectedProtonAddress, "jane.doe@proton.me")
+        XCTAssertTrue(userInfo2.canCreateReverseAlias)
     }
 }

@@ -15,6 +15,7 @@ public struct UserInfo: Decodable {
     public let inTrial: Bool
     public let maxAliasFreePlan: Int
     public let connectedProtonAddress: String?
+    public let canCreateReverseAlias: Bool
 
     private enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -24,6 +25,7 @@ public struct UserInfo: Decodable {
         case inTrial = "in_trial"
         case maxAliasFreePlan = "max_alias_free_plan"
         case connectedProtonAddress = "connected_proton_address"
+        case canCreateReverseAlias = "can_create_reverse_alias"
     }
 
     public init(name: String,
@@ -32,7 +34,8 @@ public struct UserInfo: Decodable {
                 isPremium: Bool,
                 inTrial: Bool,
                 maxAliasFreePlan: Int,
-                connectedProtonAddress: String?) {
+                connectedProtonAddress: String?,
+                canCreateReverseAlias: Bool) {
         self.name = name
         self.email = email
         self.profilePictureUrl = profilePictureUrl
@@ -40,5 +43,21 @@ public struct UserInfo: Decodable {
         self.inTrial = inTrial
         self.maxAliasFreePlan = maxAliasFreePlan
         self.connectedProtonAddress = connectedProtonAddress
+        self.canCreateReverseAlias = canCreateReverseAlias
+    }
+
+    // Explicit init function because `canCreateReverseAlias` is added without versioning the endpoint
+    // This is for backward compatibility with outdated BE versions
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.email = try container.decode(String.self, forKey: .email)
+        self.profilePictureUrl = try container.decodeIfPresent(String.self, forKey: .profilePictureUrl)
+        self.isPremium = try container.decode(Bool.self, forKey: .isPremium)
+        self.inTrial = try container.decode(Bool.self, forKey: .inTrial)
+        self.maxAliasFreePlan = try container.decode(Int.self, forKey: .maxAliasFreePlan)
+        self.connectedProtonAddress = try container.decodeIfPresent(String.self, forKey: .connectedProtonAddress)
+        self.canCreateReverseAlias = try container.decodeIfPresent(Bool.self, 
+                                                                   forKey: .canCreateReverseAlias) ?? false
     }
 }
