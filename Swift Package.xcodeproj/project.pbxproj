@@ -12,6 +12,8 @@
 		354899D528A6482A00E9B7FF /* TokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D428A6482A00E9B7FF /* TokenTests.swift */; };
 		354899D628A64B2000E9B7FF /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354899D028A647B100E9B7FF /* Token.swift */; };
 		3572F5C828914F7600A85837 /* Mocker in Frameworks */ = {isa = PBXBuildFile; productRef = 3572F5C728914F7600A85837 /* Mocker */; };
+		357919B32B70F9CF0085B532 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357919B22B70F9CF0085B532 /* Stats.swift */; };
+		357919B52B70FA3D0085B532 /* GetStatsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357919B42B70FA3D0085B532 /* GetStatsEndpoint.swift */; };
 		357F169A28FEB0130096C81E /* UpdateCustomDomainEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */; };
 		357F169C28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F169B28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift */; };
 		357F169F28FEB3EA0096C81E /* DeleteContactEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F169E28FEB3EA0096C81E /* DeleteContactEndpoint.swift */; };
@@ -134,6 +136,8 @@
 		354899D028A647B100E9B7FF /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		354899D228A6480700E9B7FF /* Token.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Token.json; sourceTree = "<group>"; };
 		354899D428A6482A00E9B7FF /* TokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTests.swift; sourceTree = "<group>"; };
+		357919B22B70F9CF0085B532 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		357919B42B70FA3D0085B532 /* GetStatsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatsEndpoint.swift; sourceTree = "<group>"; };
 		357F169928FEB0130096C81E /* UpdateCustomDomainEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomDomainEndpoint.swift; sourceTree = "<group>"; };
 		357F169B28FEB2F40096C81E /* GetDeletedAliasesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeletedAliasesEndpoint.swift; sourceTree = "<group>"; };
 		357F169E28FEB3EA0096C81E /* DeleteContactEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteContactEndpoint.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 			children = (
 				35CF7FD728FDA52D00214B10 /* ActivateEndpoint.swift */,
 				35CF7FDB28FDA73C00214B10 /* ForgotPasswordEndpoint.swift */,
+				357919B42B70FA3D0085B532 /* GetStatsEndpoint.swift */,
 				35CF7FDD28FDA85C00214B10 /* GetUserInfoEndpoint.swift */,
 				35F8D30828FD8E9E0000AA0E /* LogInEndpoint.swift */,
 				35CF7FD328FDA04E00214B10 /* MFAEndpoint.swift */,
@@ -482,6 +487,7 @@
 				C02924F7266CBBC300AFFE20 /* MessageResponse.swift */,
 				C020018126D97B6D0057C345 /* OkResponse.swift */,
 				35B98E262B7094D200A50940 /* Perk.swift */,
+				357919B22B70F9CF0085B532 /* Stats.swift */,
 				C063DCD726F28E8200BDBD5C /* Suffix.swift */,
 				354899D028A647B100E9B7FF /* Token.swift */,
 				C0E9C3DE2790C4B600D1A463 /* UpdateResponse.swift */,
@@ -727,6 +733,7 @@
 				35EA797128FE8D3300BF2D34 /* CreateMailboxEndpoint.swift in Sources */,
 				C0012DAA271780EC00D18A7D /* AliasActivity.swift in Sources */,
 				C01CCD22271E095800B84B63 /* Mailbox.swift in Sources */,
+				357919B52B70FA3D0085B532 /* GetStatsEndpoint.swift in Sources */,
 				35EA796B28FE7F9500BF2D34 /* UpdateAliasEndpoint.swift in Sources */,
 				35CF7FDA28FDA64600214B10 /* ReactivateEndpoint.swift in Sources */,
 				C0AC9430271F5F080036E694 /* DeletedAlias.swift in Sources */,
@@ -765,6 +772,7 @@
 				C0CE57EA2720B3B700EC79C8 /* UsableDomain.swift in Sources */,
 				357F16A128FEB4F20096C81E /* ToggleContactEndpoint.swift in Sources */,
 				357F169A28FEB0130096C81E /* UpdateCustomDomainEndpoint.swift in Sources */,
+				357919B32B70F9CF0085B532 /* Stats.swift in Sources */,
 				35CF7FE328FDACBB00214B10 /* CreateAliasEndpoint.swift in Sources */,
 				C063DCD826F28E8200BDBD5C /* Suffix.swift in Sources */,
 				35F8D30328FD8A670000AA0E /* APIService.swift in Sources */,
